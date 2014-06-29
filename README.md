@@ -2,7 +2,7 @@ OjstrMessageBundle
 =================================
 
 **Warning** : This repo is under heavy customization please use original repo 
- http://github.com/codeconsortium/OjstrMessageMessageBundle
+ http://github.com/codeconsortium/CCDNMessageMessageBundle
 
 ## License.
 
