@@ -1,6 +1,8 @@
 OjstrMessageBundle
 =================================
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hasantayyar/OjstrMessageBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hasantayyar/OjstrMessageBundle/?branch=master)
+
 **Warning** : This repo is under heavy customization please use original repo 
  http://github.com/codeconsortium/CCDNMessageMessageBundle
 
