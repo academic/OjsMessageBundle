@@ -1,4 +1,4 @@
-OjstrMessage MessageBundle README.
+OjstrMessageBundle
 =================================
 
 **Warning** : This repo is under heavy customization please use original repo 
