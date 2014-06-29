@@ -28,8 +28,8 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
  * 
  *
  */
-class MessageFormType extends AbstractType
-{
+class MessageFormType extends AbstractType {
+
     /**
      *
      * @access protected
@@ -42,8 +42,7 @@ class MessageFormType extends AbstractType
      * @access public
      * @var string $messageClass
      */
-    public function __construct($messageClass)
-    {
+    public function __construct($messageClass) {
         $this->messageClass = $messageClass;
     }
 
@@ -52,38 +51,36 @@ class MessageFormType extends AbstractType
      * @access public
      * @param FormBuilder $builder, array $options
      */
-    public function buildForm(FormBuilderInterface $builder, array $options)
-    {
+    public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
-            ->add('send_to', 'text',
-                array(
-                    'data'               => $options['send_to'],
-                    'label'              => 'form.label.to',
+                ->add('send_to', 'text', array(
+                    'data' => $options['send_to'],
+                    'label' => 'form.label.to',
                     'translation_domain' => 'OjstrMessageMessageBundle',
+                    'attr' => array('class' => 'form-control')
+                        )
                 )
-            )
-            ->add('subject', 'text',
-                array(
-                    'data'               => $options['subject'],
-                    'label'              => 'form.label.subject',
+                ->add('subject', 'text', array(
+                    'data' => $options['subject'],
+                    'label' => 'form.label.subject',
                     'translation_domain' => 'OjstrMessageMessageBundle',
+                    'attr' => array('class' => 'form-control')
+                        )
                 )
-            )
-            ->add('body', 'textarea',
-                array(
-                    'data'               => $options['body'],
-                    'label'              => 'form.label.body',
+                ->add('body', 'textarea', array(
+                    'data' => $options['body'],
+                    'label' => 'form.label.body',
                     'translation_domain' => 'OjstrMessageMessageBundle',
+                    'attr' => array('class' => 'form-control')
+                        )
                 )
-            )
-            ->add('is_flagged', 'checkbox',
-                array(
-                    'required'           => false,
-                    'mapped'             => false,
-                    'label'              => 'form.label.flagged',
+                ->add('is_flagged', 'checkbox', array(
+                    'required' => false,
+                    'mapped' => false,
+                    'label' => 'form.label.flagged',
                     'translation_domain' => 'OjstrMessageMessageBundle',
+                        )
                 )
-            )
         ;
     }
 
@@ -92,18 +89,17 @@ class MessageFormType extends AbstractType
      * @access public
      * @param \Symfony\Component\OptionsResolver\OptionsResolverInterface $resolver
      */
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
-    {
+    public function setDefaultOptions(OptionsResolverInterface $resolver) {
         $resolver->setDefaults(array(
-            'data_class'         => $this->messageClass,
-            'csrf_protection'    => true,
-            'csrf_field_name'    => '_token',
+            'data_class' => $this->messageClass,
+            'csrf_protection' => true,
+            'csrf_field_name' => '_token',
             // a unique key to help generate the secret token
-            'intention'          => 'message_item',
-            'validation_groups'  => array('message_send'),
-            'send_to'            => '',
-            'subject'            => '',
-            'body'               => '',
+            'intention' => 'message_item',
+            'validation_groups' => array('message_send'),
+            'send_to' => '',
+            'subject' => '',
+            'body' => '',
         ));
     }
 
@@ -112,8 +108,8 @@ class MessageFormType extends AbstractType
      * @access public
      * @return string
      */
-    public function getName()
-    {
+    public function getName() {
         return 'Message';
     }
+
 }
