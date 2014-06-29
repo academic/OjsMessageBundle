@@ -1,0 +1,28 @@
+{% extends 'OjstrMessageMessageBundle:Common:Layout/base.html.twig' %}
+
+{% set LayoutTemplate = ojstr_message_message.message.show.layout_template %}
+
+{% block title %}
+	{{- 'title.message.show' |trans({'%message_subject%': envelope.getMessage().getSubject() }, 'OjstrMessageMessageBundle') |slice(0, ojstr_message_message.seo.title_length) -}}
+{% endblock %}
+
+
+{% block body_content %}
+
+	{%- spaceless -%}
+
+<section>
+		{%- if thread |length -%}
+			{%- for envelope in thread.getEnvelopes() -%}
+    <div class="btn-toolbar">
+					{%- include 'OjstrMessageMessageBundle:User:Message/Partial/message_actions.html.twig' -%}
+    </div>
+
+				{%- include 'OjstrMessageMessageBundle:User:Message/Partial/item_message.html.twig' with {'envelope': envelope} -%}
+			{%- endfor -%}
+		{%- endif -%}
+</section>
+
+	{%- endspaceless -%}
+
+{% endblock body_content %}

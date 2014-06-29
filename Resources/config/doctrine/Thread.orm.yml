@@ -1,0 +1,14 @@
+OjstrMessage\MessageBundle\Entity\Thread:
+    type: entity
+    table: cc_message_thread
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    oneToMany:
+        messages:
+            targetEntity: OjstrMessage\MessageBundle\Entity\Message
+            mappedBy: thread
+        envelopes:
+            targetEntity: OjstrMessage\MessageBundle\Entity\Envelope
+            mappedBy: thread

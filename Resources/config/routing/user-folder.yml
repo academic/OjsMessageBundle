@@ -1,0 +1,20 @@
+ojstr_message_message_user_index:
+    pattern:  /
+    defaults: { _controller: OjstrMessageMessageBundle:UserFolder:showFolderByName, _locale: en, folderName: inbox, page: 1 }
+
+#
+# Folders.
+#
+ojstr_message_message_user_folder_show:
+    pattern:  /folder/{folderName}
+    defaults: { _controller: OjstrMessageMessageBundle:UserFolder:showFolderByName, _locale: en, folderName: inbox, page: 1 }
+    requirements:
+        folderName: inbox|sent|drafts|junk|trash
+
+ojstr_message_message_user_folder_show_by_id:
+    pattern:  /folder/{folderId}
+    defaults: { _controller: OjstrMessageMessageBundle:UserFolder:showFolderById, _locale: en, page: 1 }
+
+ojstr_message_message_user_folder_mail_bulk_action:
+    pattern:  /folder/{folderName}/process-checked
+    defaults: { _controller: OjstrMessageMessageBundle:UserFolder:folderBulk, _locale: en }

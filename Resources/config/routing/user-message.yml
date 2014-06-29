@@ -1,0 +1,35 @@
+ojstr_message_message_user_mail_show_by_id:
+    pattern:  /{envelopeId}/show
+    defaults: { _controller: OjstrMessageMessageBundle:UserMessage:showMessage, _locale: en }
+
+ojstr_message_message_user_mail_compose:
+    pattern:  /compose
+    defaults: { _controller: OjstrMessageMessageBundle:UserMessage:compose, _locale: en, userId: null }
+
+ojstr_message_message_user_mail_compose_to:
+    pattern:  /compose-to/{userId}
+    defaults: { _controller: OjstrMessageMessageBundle:UserMessage:compose, _locale: en, userId: null }
+
+ojstr_message_message_user_mail_compose_reply:
+    pattern:  /{envelopeId}/reply
+    defaults: { _controller: OjstrMessageMessageBundle:UserMessage:reply, _locale: en }
+
+ojstr_message_message_user_mail_compose_forward:
+    pattern:  /{envelopeId}/forward
+    defaults: { _controller: OjstrMessageMessageBundle:UserMessage:forward, _locale: en }
+
+ojstr_message_message_user_mail_draft_send:
+    pattern:  /{envelopeId}/send
+    defaults: { _controller: OjstrMessageMessageBundle:UserMessage:sendDraft, _locale: en }
+
+ojstr_message_message_user_mail_mark_as_read:
+    pattern:  /{envelopeId}/mark-as-read
+    defaults: { _controller: OjstrMessageMessageBundle:UserMessage:markAsRead, _locale: en }
+
+ojstr_message_message_user_mail_mark_as_unread:
+    pattern:  /{envelopeId}/mark-as-unread
+    defaults: { _controller: OjstrMessageMessageBundle:UserMessage:markAsUnread, _locale: en }
+
+ojstr_message_message_user_mail_delete:
+    pattern:  /{envelopeId}/delete
+    defaults: { _controller: OjstrMessageMessageBundle:UserMessage:delete, _locale: en }

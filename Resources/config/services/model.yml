@@ -1,0 +1,51 @@
+parameters:
+
+    # Service Parameters defined in app/config.
+
+services:
+
+    #
+    # Models.
+    #
+
+    ojstr_message_message.model.folder:
+        class: %ojstr_message_message.model.folder.class%
+        arguments:
+            - @event_dispatcher
+            - @ojstr_message_message.repository.folder
+            - @ojstr_message_message.manager.folder
+
+    ojstr_message_message.model.envelope:
+        class: %ojstr_message_message.model.envelope.class%
+        arguments:
+            - @event_dispatcher
+            - @ojstr_message_message.repository.envelope
+            - @ojstr_message_message.manager.envelope
+
+    ojstr_message_message.model.message:
+        class: %ojstr_message_message.model.message.class%
+        arguments:
+            - @event_dispatcher
+            - @ojstr_message_message.repository.message
+            - @ojstr_message_message.manager.message
+
+    ojstr_message_message.model.thread:
+        class: %ojstr_message_message.model.thread.class%
+        arguments:
+            - @event_dispatcher
+            - @ojstr_message_message.repository.thread
+            - @ojstr_message_message.manager.thread
+
+    ojstr_message_message.model.user:
+        class: %ojstr_message_message.model.user.class%
+        arguments:
+            - @event_dispatcher
+            - @ojstr_message_message.repository.user
+            - @ojstr_message_message.manager.user
+
+    ojstr_message_message.model.registry:
+        class: %ojstr_message_message.model.registry.class%
+        arguments:
+            - @event_dispatcher
+            - @ojstr_message_message.repository.registry
+            - @ojstr_message_message.manager.registry

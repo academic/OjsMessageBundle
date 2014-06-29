@@ -1,0 +1,48 @@
+{%- spaceless -%}
+	{%- set sender = app.user -%}
+
+<table class="table table-striped table-bordered table-hover table-no-vertical-borders message-preview">
+    <tbody>
+        <tr>
+            <td class="right" style="width: 80px;">
+                <b>{{- 'message.sent-from-label' |trans({}, 'OjstrMessageMessageBundle') -}}</b>
+            </td>
+            <td class="left">
+					{{- sender.username -}}
+            </td>
+        </tr>
+        <tr>
+            <td class="right" style="width: 80px;">
+                <b>{{- 'message.send-to-label' |trans({}, 'OjstrMessageMessageBundle') -}}</b>
+            </td>
+            <td class="left" colspan="3">
+					{{- message.getSendto |title -}}
+            </td>
+        </tr>
+        <tr>
+            <td class="right" style="width: 80px;">
+                <b>{{- 'message.subject-label' |trans({}, 'OjstrMessageMessageBundle') -}}</b>
+            </td>
+            <td class="left" colspan="3">
+					{{- message.getSubject -}}
+            </td>
+        </tr>
+        <tr>
+            <td class="right" style="width: 80px;">
+                <b>{{- 'message.sent-datetime-label' |trans({}, 'OjstrMessageMessageBundle') -}}</b>
+            </td>
+            <td class="left">
+					{{- message.getCreatedDate |date(ojstr_message_message.message.show.sent_datetime_format) -}}
+            </td>
+        </tr>
+        <tr>
+            <td class="left" colspan="4" style="overflow: hidden; padding: 25px;">
+                <article>
+						{{- message.getBody -}}
+                    <br>
+                </article>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{%- endspaceless -%}

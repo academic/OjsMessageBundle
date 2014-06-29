@@ -1,0 +1,22 @@
+#namespaces:
+#    OjstrMessageMessageBundle: OjstrMessage\MessageBundle\Form\Validator\Constraints\
+#
+
+#%ojstr_message_message.entity.message.class%:
+OjstrMessage\MessageBundle\Entity\Message:
+    properties:
+        sendTo:
+            - Type: { type: string, groups: [message_send] }
+            - NotBlank: { groups: [message_send] }
+            - Length: { max: 255, groups: [message_send] }
+            - OjstrMessage\MessageBundle\Form\Validator\Constraints\SendTo: {  groups: [message_send] }
+        subject:
+            - Type: { type: string, groups: [message_send] }
+            - NotBlank: { groups: [message_send] }
+            - Length: { min: 5, max: 255, groups: [message_send] }
+        body:
+            - Type: { type: string, groups: [message_send] }
+            - NotBlank: { groups: [message_send] }
+            - Length: { min: 5, max: 5000, groups: [message_send] }
+        #isFlagged:
+        #    - Type: bool

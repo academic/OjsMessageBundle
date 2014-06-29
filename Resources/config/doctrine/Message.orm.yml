@@ -1,0 +1,39 @@
+OjstrMessage\MessageBundle\Entity\Message:
+    type: entity
+    table: cc_message_message
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        subject:
+            type: string
+        body:
+            type: text
+        createdDate:
+            type: datetime
+            column: created_date
+            nullable: true
+        sendTo:
+            type: text
+            column: send_to
+    manyToOne:
+        thread:
+            targetEntity: OjstrMessage\MessageBundle\Entity\Thread
+            inversedBy: messages
+            cascade: ["persist"]
+            joinColumn:
+                name: fk_thread_id
+                referencedColumnName: id
+                onDelete: SET NULL
+        sentFromUser:
+            targetEntity: Symfony\Component\Security\Core\User\UserInterface
+            cascade: ["persist"]
+            joinColumn:
+                name: fk_sent_from_user_id
+                referencedColumnName: id
+                onDelete: SET NULL
+    oneToMany:
+        envelopes:
+            targetEntity: OjstrMessage\MessageBundle\Entity\Envelope
+            mappedBy: message

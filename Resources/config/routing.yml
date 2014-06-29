@@ -1,0 +1,11 @@
+messages_bundle_licence:
+    pattern:  /{_locale}/messages/licence
+    defaults: { _controller: OjstrMessageMessageBundle:CustomPages:showLicence, _locale: en }
+    
+OjstrMessageMessageBundle-User-Folder:
+    resource: "@OjstrMessageMessageBundle/Resources/config/routing/user-folder.yml"
+    prefix: /{_locale}/messages
+
+OjstrMessageMessageBundle-User-Message:
+    resource: "@OjstrMessageMessageBundle/Resources/config/routing/user-message.yml"
+    prefix: /{_locale}/messages

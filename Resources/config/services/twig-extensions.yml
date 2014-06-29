@@ -1,0 +1,24 @@
+parameters:
+
+    # Service Parameters defined in app/config
+
+services:
+
+    #
+    # Twig Extensions.
+    #
+    ojstr_message_message.component.twig_extension.registry:
+        class: %ojstr_message_message.component.twig_extension.registry.class%
+        arguments:
+            - @ojstr_message_message.model.registry
+            - @security.context
+        tags:
+            - { name: twig.extension }
+
+    ojstr_message_message.component.twig_extension.folder_list:
+        class: %ojstr_message_message.component.twig_extension.folder_list.class%
+        arguments:
+            - @ojstr_message_message.component.helper.folder
+            - @security.context
+        tags:
+            - { name: twig.extension }

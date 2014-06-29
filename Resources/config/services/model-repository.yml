@@ -1,0 +1,39 @@
+parameters:
+
+    # Service Parameters defined in app/config
+
+services:
+
+    #
+    # Repositories.
+    #
+
+    ojstr_message_message.repository.folder:
+        class: %ojstr_message_message.repository.folder.class%
+        arguments:
+            - @ojstr_message_message.gateway.folder
+
+    ojstr_message_message.repository.envelope:
+        class: %ojstr_message_message.repository.envelope.class%
+        arguments:
+            - @ojstr_message_message.gateway.envelope
+
+    ojstr_message_message.repository.message:
+        class: %ojstr_message_message.repository.message.class%
+        arguments:
+            - @ojstr_message_message.gateway.message
+
+    ojstr_message_message.repository.thread:
+        class: %ojstr_message_message.repository.thread.class%
+        arguments:
+            - @ojstr_message_message.gateway.thread
+
+    ojstr_message_message.repository.registry:
+        class: %ojstr_message_message.repository.registry.class%
+        arguments:
+            - @ojstr_message_message.gateway.registry
+
+    ojstr_message_message.repository.user:
+        class: %ojstr_message_message.repository.user.class%
+        arguments:
+            - @ojstr_message_message.gateway.user
