@@ -62,7 +62,7 @@ form:
         save_draft:          "Sauvegarder dans les brouillons"
         cancel:              "Annuler"
     error:
-        user:                "Le destinataire "%username%" n'est pas enregistré."
+        user:                "Le destinataire %username% n'est pas enregistré."
 
 message:
     sent-from-label:         "À : "
