@@ -1,0 +1,91 @@
+dashboard:
+    pages:
+        account:             "Hesap"
+    categories:
+        account:             "Hesap"
+
+title:
+    folder:
+        index:               "Mesajlar"
+        sent:                "Gönderilenler"
+        inbox:               "Gelen Kutusu"
+        draft:               "Taslaklar"
+        trash:               "Silinenler"
+        current:             "Current folder"
+        show:                "Messages - %folderName%"
+    message:
+        show:                "Message: %message_subject%"
+        compose:             "Compose Message"
+        index:               "Inbox"
+
+crumbs:
+    user:
+        message:
+            compose:
+                new:         "Yeni Mesaj"
+                reply:       "Cevap Yaz"
+                forward:     "İlet"
+
+sidebar:
+    header:
+        tools:               "Tools"
+        folders:             "Folders"
+
+link:
+    message:
+        messages:            "Mesajlar"
+        compose:             "Yaz"
+        reply:               "Cevapla"
+        forward:             "İlet"
+        delete:              "Sil"
+        mark_as_read:        "Okundu olarak işaretle"
+        mark_as_unread:      "Okunmadı olarak işaretle"
+        move_to:             "Taşı"
+        send_draft:          "Send"
+        select_none:         "None"
+        select_all:          "Tümü"
+        select_all_read:     "Okundu"
+        select_all_unread:   "Okunmadı"
+        select_all_flagged:  "Önemli"
+        select_all_attached: "Ekli"
+        select_all_draft:    "Taslak"
+
+form:
+    required:                "Bu alan gereklidir"
+    label:
+        to:                  "To"
+        subject:             "Subject"
+        body:                "Message"
+        flagged:             "Flag as important"
+    button:
+        send:                "Send Message"
+        preview:             "Preview"
+        save_draft:          "Save Draft"
+        cancel:              "Cancel"
+
+message:
+    sent-from-label:         "From: "
+    send-to-label:           "To: "
+    subject-label:           "Subject: "
+    sent-datetime-label:     "Sent: "
+
+generic:
+    thead:
+        from:                "From"
+        to:                  "To"
+        subject:             "Subject"
+        sent:                "Sent"
+    message:
+        inbox_status:        "You have %message_count% messages"
+        none:                "You have no messages in this folder."
+
+flash:
+    success:
+        message:
+            sent:            "Message sent to %user%."
+        draft:
+            saved:           "Draft message saved."
+    error:
+        message:
+            inbox_full:      "The inbox for %user% is full and could not receive your message."
+            flood_control:   "Flood Control - You have sent too much at once, take a break before sending again."
