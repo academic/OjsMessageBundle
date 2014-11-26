@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,7 +11,7 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Controller;
+namespace OjsMessage\MessageBundle\Controller;
 
 use Symfony\Component\DependencyInjection\ContainerAware;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -21,7 +21,7 @@ use Symfony\Component\EventDispatcher\Event;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -70,44 +70,44 @@ class BaseController extends ContainerAware
 
     /**
      *
-     * @var \OjstrMessage\MessageBundle\Model\FrontModel\FolderModel $folderModel
+     * @var \OjsMessage\MessageBundle\Model\FrontModel\FolderModel $folderModel
      */
     private $folderModel;
 
     /**
      *
-     * @var \OjstrMessage\MessageBundle\Model\FrontModel\EnvelopeModel $envelopeModel
+     * @var \OjsMessage\MessageBundle\Model\FrontModel\EnvelopeModel $envelopeModel
      */
     private $envelopeModel;
 
     /**
      *
-     * @var \OjstrMessage\MessageBundle\Model\FrontModel\MessageModel $messageModel
+     * @var \OjsMessage\MessageBundle\Model\FrontModel\MessageModel $messageModel
      */
     private $messageModel;
 
     /**
      *
-     * @var \OjstrMessage\MessageBundle\Model\FrontModel\ThreadModel $threadModel
+     * @var \OjsMessage\MessageBundle\Model\FrontModel\ThreadModel $threadModel
      */
     private $threadModel;
 
     /**
      *
-     * @var \OjstrMessage\MessageBundle\Model\FrontModel\RegistryModel $registryModel
+     * @var \OjsMessage\MessageBundle\Model\FrontModel\RegistryModel $registryModel
      */
     private $registryModel;
 
     /**
      *
      * @access protected
-     * @var \OjstrMessage\MessageBundle\Model\FrontModel\UserModel $userModel
+     * @var \OjsMessage\MessageBundle\Model\FrontModel\UserModel $userModel
      */
     protected $userModel;
 
     /**
      *
-     * @var \OjstrMessage\MessageBundle\Component\FloodControl $floodControl;
+     * @var \OjsMessage\MessageBundle\Component\FloodControl $floodControl;
      */
     private $floodControl;
 
@@ -133,7 +133,7 @@ class BaseController extends ContainerAware
      * @param  string $bundle
      * @return string
      */
-    protected function trans($message, $params = array(), $bundle = 'OjstrMessageMessageBundle')
+    protected function trans($message, $params = array(), $bundle = 'OjsMessageMessageBundle')
     {
         return $this->getTranslator()->trans($message, $params, $bundle);
     }
@@ -263,7 +263,7 @@ class BaseController extends ContainerAware
      */
     protected function getEngine()
     {
-        return $this->container->getParameter('ojstr_message_message.template.engine');
+        return $this->container->getParameter('ojs_message_message.template.engine');
     }
 
     /**
@@ -380,12 +380,12 @@ class BaseController extends ContainerAware
     /**
      *
      * @access protected
-     * @return \OjstrMessage\MessageBundle\Model\FrontModel\FolderModel
+     * @return \OjsMessage\MessageBundle\Model\FrontModel\FolderModel
      */
     protected function getFolderModel()
     {
         if (null == $this->folderModel) {
-            $this->folderModel = $this->container->get('ojstr_message_message.model.folder');
+            $this->folderModel = $this->container->get('ojs_message_message.model.folder');
         }
 
         return $this->folderModel;
@@ -394,12 +394,12 @@ class BaseController extends ContainerAware
     /**
      *
      * @access protected
-     * @return \OjstrMessage\MessageBundle\Model\FrontModel\EnvelopeModel
+     * @return \OjsMessage\MessageBundle\Model\FrontModel\EnvelopeModel
      */
     protected function getEnvelopeModel()
     {
         if (null == $this->envelopeModel) {
-            $this->envelopeModel = $this->container->get('ojstr_message_message.model.envelope');
+            $this->envelopeModel = $this->container->get('ojs_message_message.model.envelope');
         }
 
         return $this->envelopeModel;
@@ -408,12 +408,12 @@ class BaseController extends ContainerAware
     /**
      *
      * @access protected
-     * @return \OjstrMessage\MessageBundle\Model\FrontModel\MessageModel
+     * @return \OjsMessage\MessageBundle\Model\FrontModel\MessageModel
      */
     protected function getMessageModel()
     {
         if (null == $this->messageModel) {
-            $this->messageModel = $this->container->get('ojstr_message_message.model.message');
+            $this->messageModel = $this->container->get('ojs_message_message.model.message');
         }
 
         return $this->messageModel;
@@ -422,12 +422,12 @@ class BaseController extends ContainerAware
     /**
      *
      * @access protected
-     * @return \OjstrMessage\MessageBundle\Model\FrontModel\ThreadModel
+     * @return \OjsMessage\MessageBundle\Model\FrontModel\ThreadModel
      */
     protected function getThreadModel()
     {
         if (null == $this->threadModel) {
-            $this->threadModel = $this->container->get('ojstr_message_message.model.thread');
+            $this->threadModel = $this->container->get('ojs_message_message.model.thread');
         }
 
         return $this->threadModel;
@@ -436,12 +436,12 @@ class BaseController extends ContainerAware
     /**
      *
      * @access protected
-     * @return \OjstrMessage\MessageBundle\Model\FrontModel\RegistryModel
+     * @return \OjsMessage\MessageBundle\Model\FrontModel\RegistryModel
      */
     protected function getRegistryModel()
     {
         if (null == $this->registryModel) {
-            $this->registryModel = $this->container->get('ojstr_message_message.model.registry');
+            $this->registryModel = $this->container->get('ojs_message_message.model.registry');
         }
 
         return $this->registryModel;
@@ -450,12 +450,12 @@ class BaseController extends ContainerAware
     /**
      *
      * @access protected
-     * @return \OjstrMessage\MessageBundle\Model\FrontModel\UserModel
+     * @return \OjsMessage\MessageBundle\Model\FrontModel\UserModel
      */
     protected function getUserModel()
     {
         if (null == $this->userModel) {
-            $this->userModel = $this->container->get('ojstr_message_message.model.user');
+            $this->userModel = $this->container->get('ojs_message_message.model.user');
         }
 
         return $this->userModel;
@@ -464,12 +464,12 @@ class BaseController extends ContainerAware
     /**
      *
      * @access protected
-     * @return \OjstrMessage\MessageBundle\Component\FloodControl
+     * @return \OjsMessage\MessageBundle\Component\FloodControl
      */
     protected function getFloodControl()
     {
         if (null == $this->floodControl) {
-            $this->floodControl = $this->container->get('ojstr_message_message.component.flood_control');
+            $this->floodControl = $this->container->get('ojs_message_message.component.flood_control');
         }
 
         return $this->floodControl;
@@ -481,7 +481,7 @@ class BaseController extends ContainerAware
      */
     protected function getCrumbs()
     {
-        return $this->container->get('ojstr_message_message.component.crumb_builder');
+        return $this->container->get('ojs_message_message.component.crumb_builder');
     }
 
     /**
@@ -490,6 +490,6 @@ class BaseController extends ContainerAware
      */
     protected function getFolderHelper()
     {
-        return $this->container->get('ojstr_message_message.component.helper.folder');
+        return $this->container->get('ojs_message_message.component.helper.folder');
     }
 }

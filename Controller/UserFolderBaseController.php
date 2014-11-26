@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,15 +11,15 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Controller;
+namespace OjsMessage\MessageBundle\Controller;
 
-use OjstrMessage\MessageBundle\Controller\BaseController;
+use OjsMessage\MessageBundle\Controller\BaseController;
 
-use OjstrMessage\MessageBundle\Entity\Folder;
+use OjsMessage\MessageBundle\Entity\Folder;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>

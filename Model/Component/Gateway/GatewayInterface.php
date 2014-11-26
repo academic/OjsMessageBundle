@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,7 +11,7 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Model\Component\Gateway;
+namespace OjsMessage\MessageBundle\Model\Component\Gateway;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\QueryBuilder;
@@ -19,7 +19,7 @@ use Knp\Component\Pager\Paginator;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -102,7 +102,7 @@ interface GatewayInterface
     /**
      *
      * @access public
-     * @return \OjstrMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function flush();
 }

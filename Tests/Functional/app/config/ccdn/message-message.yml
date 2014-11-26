@@ -1,4 +1,4 @@
-ojstr_message_message:
+ojs_message_message:
     entity:
         user:
-            class: OjstrMessage\MessageBundle\Tests\Functional\src\Entity\User
+            class: OjsMessage\MessageBundle\Tests\Functional\src\Entity\User

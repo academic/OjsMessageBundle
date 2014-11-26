@@ -60,23 +60,23 @@ doctrine:
         #auto_mapping: true
         resolve_target_entities:
             # For testing purposes only
-            'Symfony\Component\Security\Core\User\UserInterface': 'OjstrMessage\MessageBundle\Tests\Functional\src\Entity\User'
+            'Symfony\Component\Security\Core\User\UserInterface': 'OjsMessage\MessageBundle\Tests\Functional\src\Entity\User'
         entity_managers:
             default:
                 mappings:
-                    OjstrMessageMessageBundle:
+                    OjsMessageMessageBundle:
                         mapping:              true
                         type:                 yml
                         dir:                  "Resources/config/doctrine"
                         alias:                ~
-                        prefix:               OjstrMessage\MessageBundle\Entity
+                        prefix:               OjsMessage\MessageBundle\Entity
                         is_bundle:            true
-                    OjstrMessageMessageBundleUserEntity:
+                    OjsMessageMessageBundleUserEntity:
                         mapping:              true
                         type:                 yml
                         dir:                  "Tests/Functional/src/Resources/config/doctrine"
                         alias:                ~
-                        prefix:               OjstrMessage\MessageBundle\Tests\Functional\src\Entity
+                        prefix:               OjsMessage\MessageBundle\Tests\Functional\src\Entity
                         is_bundle:            false
 
 security:
@@ -119,4 +119,4 @@ security:
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
-    user_class: OjstrMessage\MessageBundle\Tests\Functional\src\Entity\User
+    user_class: OjsMessage\MessageBundle\Tests\Functional\src\Entity\User

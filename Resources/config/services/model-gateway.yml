@@ -8,50 +8,50 @@ services:
     # Gateways.
     #
 
-    ojstr_message_message.gateway.folder:
-        class: %ojstr_message_message.gateway.folder.class%
+    ojs_message_message.gateway.folder:
+        class: %ojs_message_message.gateway.folder.class%
         arguments:
             - @doctrine.orm.entity_manager
-            - %ojstr_message_message.entity.folder.class%
+            - %ojs_message_message.entity.folder.class%
             - @knp_paginator
-            - %ojstr_message_message.template.pager_theme%
+            - %ojs_message_message.template.pager_theme%
 
-    ojstr_message_message.gateway.envelope:
-        class: %ojstr_message_message.gateway.envelope.class%
+    ojs_message_message.gateway.envelope:
+        class: %ojs_message_message.gateway.envelope.class%
         arguments:
             - @doctrine.orm.entity_manager
-            - %ojstr_message_message.entity.envelope.class%
+            - %ojs_message_message.entity.envelope.class%
             - @knp_paginator
-            - %ojstr_message_message.template.pager_theme%
+            - %ojs_message_message.template.pager_theme%
 
-    ojstr_message_message.gateway.message:
-        class: %ojstr_message_message.gateway.message.class%
+    ojs_message_message.gateway.message:
+        class: %ojs_message_message.gateway.message.class%
         arguments:
             - @doctrine.orm.entity_manager
-            - %ojstr_message_message.entity.message.class%
+            - %ojs_message_message.entity.message.class%
             - @knp_paginator
-            - %ojstr_message_message.template.pager_theme%
+            - %ojs_message_message.template.pager_theme%
 
-    ojstr_message_message.gateway.thread:
-        class: %ojstr_message_message.gateway.thread.class%
+    ojs_message_message.gateway.thread:
+        class: %ojs_message_message.gateway.thread.class%
         arguments:
             - @doctrine.orm.entity_manager
-            - %ojstr_message_message.entity.thread.class%
+            - %ojs_message_message.entity.thread.class%
             - @knp_paginator
-            - %ojstr_message_message.template.pager_theme%
+            - %ojs_message_message.template.pager_theme%
 
-    ojstr_message_message.gateway.registry:
-        class: %ojstr_message_message.gateway.registry.class%
+    ojs_message_message.gateway.registry:
+        class: %ojs_message_message.gateway.registry.class%
         arguments:
             - @doctrine.orm.entity_manager
-            - %ojstr_message_message.entity.registry.class%
+            - %ojs_message_message.entity.registry.class%
             - @knp_paginator
-            - %ojstr_message_message.template.pager_theme%
+            - %ojs_message_message.template.pager_theme%
 
-    ojstr_message_message.gateway.user:
-        class: %ojstr_message_message.gateway.user.class%
+    ojs_message_message.gateway.user:
+        class: %ojs_message_message.gateway.user.class%
         arguments:
             - @doctrine.orm.entity_manager
-            - %ojstr_message_message.entity.user.class%
+            - %ojs_message_message.entity.user.class%
             - @knp_paginator
-            - %ojstr_message_message.template.pager_theme%
+            - %ojs_message_message.template.pager_theme%

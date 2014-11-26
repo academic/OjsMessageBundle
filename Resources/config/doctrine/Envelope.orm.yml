@@ -1,4 +1,4 @@
-OjstrMessage\MessageBundle\Entity\Envelope:
+OjsMessage\MessageBundle\Entity\Envelope:
     type: entity
     table: cc_message_envelope
     id:
@@ -24,7 +24,7 @@ OjstrMessage\MessageBundle\Entity\Envelope:
             nullable: true
     manyToOne:
         folder:
-            targetEntity: OjstrMessage\MessageBundle\Entity\Folder
+            targetEntity: OjsMessage\MessageBundle\Entity\Folder
             inversedBy: envelopes
             cascade: ["persist"]
             joinColumn:
@@ -32,7 +32,7 @@ OjstrMessage\MessageBundle\Entity\Envelope:
                 referencedColumnName: id
                 onDelete: SET NULL
         message:
-            targetEntity: OjstrMessage\MessageBundle\Entity\Message
+            targetEntity: OjsMessage\MessageBundle\Entity\Message
             inversedBy: envelopes
             cascade: ["persist"]
             nullable: true
@@ -41,7 +41,7 @@ OjstrMessage\MessageBundle\Entity\Envelope:
                 referencedColumnName: id
                 onDelete: SET NULL
         thread:
-            targetEntity: OjstrMessage\MessageBundle\Entity\Thread
+            targetEntity: OjsMessage\MessageBundle\Entity\Thread
             inversedBy: envelopes
             cascade: ["persist"]
             nullable: true

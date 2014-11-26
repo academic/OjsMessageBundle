@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,16 +11,16 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Component\Crumbs\Factory;
+namespace OjsMessage\MessageBundle\Component\Crumbs\Factory;
 
 use Symfony\Bundle\FrameworkBundle\Translation\Translator;
 use Symfony\Bundle\FrameworkBundle\Routing\Router;
 
-use OjstrMessage\MessageBundle\Component\Crumbs\Factory\CrumbTrail;
+use OjsMessage\MessageBundle\Component\Crumbs\Factory\CrumbTrail;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,14 +11,14 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Component\Crumbs;
+namespace OjsMessage\MessageBundle\Component\Crumbs;
 
-use OjstrMessage\MessageBundle\Entity\Folder;
-use OjstrMessage\MessageBundle\Entity\Envelope;
+use OjsMessage\MessageBundle\Entity\Folder;
+use OjsMessage\MessageBundle\Entity\Envelope;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -32,21 +32,21 @@ class CrumbBuilder extends BaseCrumbBuilder
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Entity\Message                      $folder
-     * @return \OjstrMessage\MessageBundle\Component\Crumbs\Factory\CrumbTrail
+     * @param  \OjsMessage\MessageBundle\Entity\Message                      $folder
+     * @return \OjsMessage\MessageBundle\Component\Crumbs\Factory\CrumbTrail
      */
     public function addUserFolderShow(Folder $folder)
     {
         if ($folder->getSpecialType() < 1) {
             $pathParams = array(
-                'route' => 'ojstr_message_message_user_folder_show_by_id',
+                'route' => 'ojs_message_message_user_folder_show_by_id',
                 'params' => array(
                     'FolderId' => $folder->getId()
                 )
             );
         } else {
             $pathParams = array(
-                'route' => 'ojstr_message_message_user_index',
+                'route' => 'ojs_message_message_user_index',
                 'params' => array(
                     'FolderName' => $folder->getName()
                 )
@@ -64,8 +64,8 @@ class CrumbBuilder extends BaseCrumbBuilder
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Entity\Envelope                     $envelope
-     * @return \OjstrMessage\MessageBundle\Component\Crumbs\Factory\CrumbTrail
+     * @param  \OjsMessage\MessageBundle\Entity\Envelope                     $envelope
+     * @return \OjsMessage\MessageBundle\Component\Crumbs\Factory\CrumbTrail
      */
     public function addUserMessageShow(Envelope $envelope)
     {
@@ -73,7 +73,7 @@ class CrumbBuilder extends BaseCrumbBuilder
             ->add(
                 $envelope->getMessage()->getSubject(),
                 array(
-                    'route' => 'ojstr_message_message_user_mail_show_by_id',
+                    'route' => 'ojs_message_message_user_mail_show_by_id',
                     'params' => array(
                         'envelopeId' => $envelope->getId(),
                     )
@@ -85,8 +85,8 @@ class CrumbBuilder extends BaseCrumbBuilder
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Entity\Folder                       $folder
-     * @return \OjstrMessage\MessageBundle\Component\Crumbs\Factory\CrumbTrail
+     * @param  \OjsMessage\MessageBundle\Entity\Folder                       $folder
+     * @return \OjsMessage\MessageBundle\Component\Crumbs\Factory\CrumbTrail
      */
     public function addUserMessageCreate(Folder $folder)
     {
@@ -96,7 +96,7 @@ class CrumbBuilder extends BaseCrumbBuilder
                     'label' => 'crumbs.user.message.compose.new',
                 ),
                 array(
-                    'route' => 'ojstr_message_message_user_mail_compose',
+                    'route' => 'ojs_message_message_user_mail_compose',
                     'params' => array()
                 )
             )
@@ -106,8 +106,8 @@ class CrumbBuilder extends BaseCrumbBuilder
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Entity\Envelope                     $envelope
-     * @return \OjstrMessage\MessageBundle\Component\Crumbs\Factory\CrumbTrail
+     * @param  \OjsMessage\MessageBundle\Entity\Envelope                     $envelope
+     * @return \OjsMessage\MessageBundle\Component\Crumbs\Factory\CrumbTrail
      */
     public function addUserMessageReply(Envelope $envelope)
     {
@@ -117,7 +117,7 @@ class CrumbBuilder extends BaseCrumbBuilder
                     'label' => 'crumbs.user.message.compose.reply',
                 ),
                 array(
-                    'route' => 'ojstr_message_message_user_mail_compose_reply',
+                    'route' => 'ojs_message_message_user_mail_compose_reply',
                     'params' => array(
                         'envelopeId' => $envelope->getId(),
                     )
@@ -129,8 +129,8 @@ class CrumbBuilder extends BaseCrumbBuilder
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Entity\Envelope                     $envelope
-     * @return \OjstrMessage\MessageBundle\Component\Crumbs\Factory\CrumbTrail
+     * @param  \OjsMessage\MessageBundle\Entity\Envelope                     $envelope
+     * @return \OjsMessage\MessageBundle\Component\Crumbs\Factory\CrumbTrail
      */
     public function addUserMessageForward(Envelope $envelope)
     {
@@ -140,7 +140,7 @@ class CrumbBuilder extends BaseCrumbBuilder
                     'label' => 'crumbs.user.message.compose.forward',
                 ),
                 array(
-                    'route' => 'ojstr_message_message_user_mail_compose_forward',
+                    'route' => 'ojs_message_message_user_mail_compose_forward',
                     'params' => array(
                         'envelopeId' => $envelope->getId(),
                     )

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,18 +11,18 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Model\Component\Gateway;
+namespace OjsMessage\MessageBundle\Model\Component\Gateway;
 
 use Doctrine\ORM\QueryBuilder;
 
-use OjstrMessage\MessageBundle\Model\Component\Gateway\GatewayInterface;
-use OjstrMessage\MessageBundle\Model\Component\Gateway\BaseGateway;
+use OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface;
+use OjsMessage\MessageBundle\Model\Component\Gateway\BaseGateway;
 
-use OjstrMessage\MessageBundle\Entity\Registry;
+use OjsMessage\MessageBundle\Entity\Registry;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -103,8 +103,8 @@ class RegistryGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Entity\Registry                          $registry
-     * @return \OjstrMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @param  \OjsMessage\MessageBundle\Entity\Registry                          $registry
+     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function saveRegistry(Registry $registry)
     {
@@ -116,8 +116,8 @@ class RegistryGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Entity\Registry                          $registry
-     * @return \OjstrMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @param  \OjsMessage\MessageBundle\Entity\Registry                          $registry
+     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function updateRegistry(Registry $registry)
     {
@@ -129,8 +129,8 @@ class RegistryGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Entity\Registry                          $registry
-     * @return \OjstrMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @param  \OjsMessage\MessageBundle\Entity\Registry                          $registry
+     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function deleteRegistry(Registry $registry)
     {
@@ -142,7 +142,7 @@ class RegistryGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @return \OjstrMessage\MessageBundle\Entity\Registry
+     * @return \OjsMessage\MessageBundle\Entity\Registry
      */
     public function createRegistry()
     {

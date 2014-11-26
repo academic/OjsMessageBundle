@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,18 +11,18 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Model\FrontModel;
+namespace OjsMessage\MessageBundle\Model\FrontModel;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 
-use OjstrMessage\MessageBundle\Model\FrontModel\BaseModel;
-use OjstrMessage\MessageBundle\Model\FrontModel\ModelInterface;
+use OjsMessage\MessageBundle\Model\FrontModel\BaseModel;
+use OjsMessage\MessageBundle\Model\FrontModel\ModelInterface;
 
-use OjstrMessage\MessageBundle\Entity\Folder;
+use OjsMessage\MessageBundle\Entity\Folder;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -36,7 +36,7 @@ class FolderModel extends BaseModel implements ModelInterface
     /**
      *
      * @access public
-     * @return \OjstrMessage\MessageBundle\Entity\Folder
+     * @return \OjsMessage\MessageBundle\Entity\Folder
      */
     public function createFolder()
     {
@@ -57,8 +57,8 @@ class FolderModel extends BaseModel implements ModelInterface
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Entity\Folder                         $folder
-     * @return \OjstrMessage\MessageBundle\Model\Component\Manager\FolderManager
+     * @param  \OjsMessage\MessageBundle\Entity\Folder                         $folder
+     * @return \OjsMessage\MessageBundle\Model\Component\Manager\FolderManager
      */
     public function saveFolder(Folder $folder)
     {
@@ -68,8 +68,8 @@ class FolderModel extends BaseModel implements ModelInterface
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Entity\Folder                         $folder
-     * @return \OjstrMessage\MessageBundle\Model\Component\Manager\FolderManager
+     * @param  \OjsMessage\MessageBundle\Entity\Folder                         $folder
+     * @return \OjsMessage\MessageBundle\Model\Component\Manager\FolderManager
      */
     public function updateFolder(Folder $folder)
     {
@@ -80,7 +80,7 @@ class FolderModel extends BaseModel implements ModelInterface
      *
      * @access public
      * @param  \Symfony\Component\Security\Core\User\UserInterface              $user
-     * @return \OjstrMessage\MessageBundle\Model\Component\Manager\FolderManager
+     * @return \OjsMessage\MessageBundle\Model\Component\Manager\FolderManager
      */
     public function setupDefaults(UserInterface $user)
     {

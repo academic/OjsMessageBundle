@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,14 +11,14 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Model\Component\Manager;
+namespace OjsMessage\MessageBundle\Model\Component\Manager;
 
-use OjstrMessage\MessageBundle\Model\Component\Manager\ManagerInterface;
-use OjstrMessage\MessageBundle\Model\Component\Manager\BaseManager;
+use OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface;
+use OjsMessage\MessageBundle\Model\Component\Manager\BaseManager;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -32,7 +32,7 @@ class ThreadManager extends BaseManager implements ManagerInterface
     /**
      *
      * @access public
-     * @return \OjstrMessage\MessageBundle\Entity\Thread
+     * @return \OjsMessage\MessageBundle\Entity\Thread
      */
     public function createThread()
     {

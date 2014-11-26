@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,25 +11,25 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Form\Handler\User;
+namespace OjsMessage\MessageBundle\Form\Handler\User;
 
 use Symfony\Component\Form\Form;
 use Symfony\Component\Form\FormFactory;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
-use OjstrMessage\MessageBundle\Form\Handler\BaseFormHandler;
-use OjstrMessage\MessageBundle\Model\FrontModel\ModelInterface;
-use OjstrMessage\MessageBundle\Entity\Message;
+use OjsMessage\MessageBundle\Form\Handler\BaseFormHandler;
+use OjsMessage\MessageBundle\Model\FrontModel\ModelInterface;
+use OjsMessage\MessageBundle\Entity\Message;
 
-use OjstrMessage\MessageBundle\Component\Server\MessageServer;
-use OjstrMessage\MessageBundle\Component\FloodControl;
-use OjstrMessage\MessageBundle\Component\Dispatcher\MessageEvents;
-use OjstrMessage\MessageBundle\Component\Dispatcher\Event\UserMessageFloodEvent;
+use OjsMessage\MessageBundle\Component\Server\MessageServer;
+use OjsMessage\MessageBundle\Component\FloodControl;
+use OjsMessage\MessageBundle\Component\Dispatcher\MessageEvents;
+use OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageFloodEvent;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -43,14 +43,14 @@ class MessageForwardFormHandler extends BaseFormHandler
     /**
      *
      * @access protected
-     * @var \OjstrMessage\MessageBundle\Form\Type\MessageFormType $messageFormType
+     * @var \OjsMessage\MessageBundle\Form\Type\MessageFormType $messageFormType
      */
     protected $messageFormType;
 
     /**
      *
      * @access protected
-     * @var \OjstrMessage\MessageBundle\Model\FrontModel\ModelInterface $model
+     * @var \OjsMessage\MessageBundle\Model\FrontModel\ModelInterface $model
      */
     protected $model;
 
@@ -71,21 +71,21 @@ class MessageForwardFormHandler extends BaseFormHandler
     /**
      *
      * @access protected
-     * @var \OjstrMessage\MessageBundle\Entity\Message $forwardingMessage
+     * @var \OjsMessage\MessageBundle\Entity\Message $forwardingMessage
      */
     protected $forwardingMessage;
 
     /**
      *
      * @access protected
-     * @var \OjstrMessage\MessageBundle\Component\FloodControl $floodControl
+     * @var \OjsMessage\MessageBundle\Component\FloodControl $floodControl
      */
     protected $floodControl;
 
     /**
      *
      * @access protected
-     * @var \OjstrMessage\MessageBundle\Component\Server\MessageServer $messageServer
+     * @var \OjsMessage\MessageBundle\Component\Server\MessageServer $messageServer
      */
     protected $messageServer;
 
@@ -94,10 +94,10 @@ class MessageForwardFormHandler extends BaseFormHandler
      * @access public
      * @param Symfony\Component\EventDispatcher\EventDispatcherInterface $dispatcher
      * @param \Symfony\Component\Form\FormFactory                        $factory
-     * @param \OjstrMessage\MessageBundle\Form\Type\MessageFormType       $messageFormType
-     * @param \OjstrMessage\MessageBundle\Model\FrontModel\ModelInterface $model
-     * @param |OjstrMessage\MessageBundle\Component\FloodControl          $floodControl
-     * @param \OjstrMessage\MessageBundle\Component\Server\MessageServer  $messageServer
+     * @param \OjsMessage\MessageBundle\Form\Type\MessageFormType       $messageFormType
+     * @param \OjsMessage\MessageBundle\Model\FrontModel\ModelInterface $model
+     * @param |OjsMessage\MessageBundle\Component\FloodControl          $floodControl
+     * @param \OjsMessage\MessageBundle\Component\Server\MessageServer  $messageServer
      */
     public function __construct(EventDispatcherInterface  $dispatcher, FormFactory $factory, $messageFormType, ModelInterface $model, FloodControl $floodControl, MessageServer $messageServer)
     {
@@ -113,7 +113,7 @@ class MessageForwardFormHandler extends BaseFormHandler
      *
      * @access public
      * @param  \Symfony\Component\Security\Core\User\UserInterface        $sender
-     * @return \OjstrMessage\MessageBundle\Form\Handler\MessageFormHandler
+     * @return \OjsMessage\MessageBundle\Form\Handler\MessageFormHandler
      */
     public function setSender(UserInterface $sender)
     {
@@ -126,7 +126,7 @@ class MessageForwardFormHandler extends BaseFormHandler
      *
      * @access public
      * @param  \Symfony\Component\Security\Core\User\UserInterface        $sender
-     * @return \OjstrMessage\MessageBundle\Form\Handler\MessageFormHandler
+     * @return \OjsMessage\MessageBundle\Form\Handler\MessageFormHandler
      */
     public function setRecipient(UserInterface $recipient)
     {
@@ -138,8 +138,8 @@ class MessageForwardFormHandler extends BaseFormHandler
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Entity\Message                  $forwardingMessage
-     * @return \OjstrMessage\MessageBundle\Form\Handler\MessageFormHandler
+     * @param  \OjsMessage\MessageBundle\Entity\Message                  $forwardingMessage
+     * @return \OjsMessage\MessageBundle\Form\Handler\MessageFormHandler
      */
     public function setMessageToForward(Message $forwardingMessage)
     {
@@ -219,8 +219,8 @@ class MessageForwardFormHandler extends BaseFormHandler
     /**
      *
      * @access protected
-     * @param  \OjstrMessage\MessageBundle\Entity\Message                  $message
-     * @return \OjstrMessage\MessageBundle\Model\FrontModel\ModelInterface
+     * @param  \OjsMessage\MessageBundle\Entity\Message                  $message
+     * @return \OjsMessage\MessageBundle\Model\FrontModel\ModelInterface
      */
     protected function onSuccess(Message $message, $isFlagged)
     {

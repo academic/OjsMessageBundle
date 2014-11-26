@@ -1,8 +1,8 @@
 <?php
 
-namespace OjstrMessage\MessageBundle\Controller;
+namespace OjsMessage\MessageBundle\Controller;
 
-use OjstrMessage\MessageBundle\Controller\BaseController as Controller;
+use OjsMessage\MessageBundle\Controller\BaseController as Controller;
 
 class CustomPagesController extends Controller {
 
@@ -13,7 +13,7 @@ class CustomPagesController extends Controller {
      */
     public function showLicenceAction() {
 
-        return $this->renderResponse('OjstrMessageMessageBundle::licence.html.');
+        return $this->renderResponse('OjsMessageMessageBundle::licence.html.');
     }
 
 }

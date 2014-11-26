@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,9 +11,9 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Tests\Repository;
+namespace OjsMessage\MessageBundle\Tests\Repository;
 
-use OjstrMessage\MessageBundle\Tests\TestBase;
+use OjsMessage\MessageBundle\Tests\TestBase;
 
 class ThreadRepositoryTest extends TestBase
 {
@@ -27,7 +27,7 @@ class ThreadRepositoryTest extends TestBase
 		$threadFound = $this->getThreadModel()->findThreadWithAllEnvelopesByThreadIdAndUserId($messages[0]->getThread()->getId(), $user->getId());
 
 		$this->assertNotNull($threadFound);
-		$this->assertInstanceOf('OjstrMessage\MessageBundle\Entity\Thread', $threadFound);
+		$this->assertInstanceOf('OjsMessage\MessageBundle\Entity\Thread', $threadFound);
 		$this->assertCount(5, $threadFound->getEnvelopes());
 	}
 }

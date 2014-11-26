@@ -54,14 +54,14 @@
 			{%- endif -%}
     </td>
     <td>
-        <a href="{{- path('ojstr_message_message_user_mail_show_by_id', {'envelopeId': envelope.getId }) -}}#{{- envelope.id -}}" title="{{- message.getSubject -}}">
-				{{- message.getSubject |slice(0, ojstr_message_message.folder.show.subject_truncate) -}}
+        <a href="{{- path('ojs_message_message_user_mail_show_by_id', {'envelopeId': envelope.getId }) -}}#{{- envelope.id -}}" title="{{- message.getSubject -}}">
+				{{- message.getSubject |slice(0, ojs_message_message.folder.show.subject_truncate) -}}
         </a>
     </td>
     <td>
 			{%- if envelope.getSentDate -%}
         <abbr class="timestamper" title="{{- envelope.getSentDate |date('Y-m-d H:i:s T Z', 'Europe/London') -}}">
-					{{- envelope.getSentDate |date(ojstr_message_message.folder.show.sent_datetime_format) -}}
+					{{- envelope.getSentDate |date(ojs_message_message.folder.show.sent_datetime_format) -}}
         </abbr>
 			{%- endif -%}
     </td>

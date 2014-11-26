@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,10 +11,10 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Tests\Repository;
+namespace OjsMessage\MessageBundle\Tests\Repository;
 
-use OjstrMessage\MessageBundle\Tests\TestBase;
-use OjstrMessage\MessageBundle\Entity\Folder;
+use OjsMessage\MessageBundle\Tests\TestBase;
+use OjsMessage\MessageBundle\Entity\Folder;
 
 class EnvelopeManagerTest extends TestBase
 {

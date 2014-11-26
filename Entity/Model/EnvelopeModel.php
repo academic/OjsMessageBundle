@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,17 +11,17 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Entity\Model;
+namespace OjsMessage\MessageBundle\Entity\Model;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 
-use OjstrMessage\MessageBundle\Entity\Message;
-use OjstrMessage\MessageBundle\Entity\Thread;
-use OjstrMessage\MessageBundle\Entity\Folder;
+use OjsMessage\MessageBundle\Entity\Message;
+use OjsMessage\MessageBundle\Entity\Thread;
+use OjsMessage\MessageBundle\Entity\Folder;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -36,13 +36,13 @@ abstract class EnvelopeModel
 {
     /**
      *
-     * @var \OjstrMessage\MessageBundle\Entity\Folder $folder
+     * @var \OjsMessage\MessageBundle\Entity\Folder $folder
      */
     protected $folder = null;
 
     /**
      *
-     * @var \OjstrMessage\MessageBundle\Entity\Message $message
+     * @var \OjsMessage\MessageBundle\Entity\Message $message
      */
     protected $message = null;
 
@@ -59,7 +59,7 @@ abstract class EnvelopeModel
 
     /**
      *
-     * @var \OjstrMessage\MessageBundle\Entity\Thread $thread
+     * @var \OjsMessage\MessageBundle\Entity\Thread $thread
      */
     protected $thread = null;
 
@@ -75,7 +75,7 @@ abstract class EnvelopeModel
     /**
      * Get folder
      *
-     * @return \OjstrMessage\MessageBundle\Entity\Folder
+     * @return \OjsMessage\MessageBundle\Entity\Folder
      */
     public function getFolder()
     {
@@ -85,8 +85,8 @@ abstract class EnvelopeModel
     /**
      * Set folder
      *
-     * @param  \OjstrMessage\MessageBundle\Entity\Folder   $folder
-     * @return \OjstrMessage\MessageBundle\Entity\Envelope
+     * @param  \OjsMessage\MessageBundle\Entity\Folder   $folder
+     * @return \OjsMessage\MessageBundle\Entity\Envelope
      */
     public function setFolder(Folder $folder = null)
     {
@@ -98,7 +98,7 @@ abstract class EnvelopeModel
     /**
      * Get message
      *
-     * @return \OjstrMessage\MessageBundle\Entity\Message
+     * @return \OjsMessage\MessageBundle\Entity\Message
      */
     public function getMessage()
     {
@@ -108,8 +108,8 @@ abstract class EnvelopeModel
     /**
      * Set message
      *
-     * @param  \OjstrMessage\MessageBundle\Entity\Message  $message
-     * @return \OjstrMessage\MessageBundle\Entity\Envelope
+     * @param  \OjsMessage\MessageBundle\Entity\Message  $message
+     * @return \OjsMessage\MessageBundle\Entity\Envelope
      */
     public function setMessage(Message $message)
     {
@@ -121,7 +121,7 @@ abstract class EnvelopeModel
     /**
      * Get thread
      *
-     * @return \OjstrMessage\MessageBundle\Entity\Thread
+     * @return \OjsMessage\MessageBundle\Entity\Thread
      */
     public function getThread()
     {
@@ -131,8 +131,8 @@ abstract class EnvelopeModel
     /**
      * Set thread
      *
-     * @param  \OjstrMessage\MessageBundle\Entity\Thread  $thread
-     * @return \OjstrMessage\MessageBundle\Entity\Message
+     * @param  \OjsMessage\MessageBundle\Entity\Thread  $thread
+     * @return \OjsMessage\MessageBundle\Entity\Message
      */
     public function setThread(Thread $thread)
     {
@@ -155,7 +155,7 @@ abstract class EnvelopeModel
      * Set ownedByUser
      *
      * @param  \Symfony\Component\Security\Core\User\UserInterface $ownedByUser
-     * @return \OjstrMessage\MessageBundle\Entity\Envelope
+     * @return \OjsMessage\MessageBundle\Entity\Envelope
      */
     public function setOwnedByUser(UserInterface $ownedByUser = null)
     {
@@ -178,7 +178,7 @@ abstract class EnvelopeModel
      * Set sentToUser
      *
      * @param  \Symfony\Component\Security\Core\User\UserInterface $sentToUser
-     * @return \OjstrMessage\MessageBundle\Entity\Envelope
+     * @return \OjsMessage\MessageBundle\Entity\Envelope
      */
     public function setSentToUser(UserInterface $sentToUser = null)
     {

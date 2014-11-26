@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,19 +11,19 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Tests;
+namespace OjsMessage\MessageBundle\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
 use Doctrine\Common\DataFixtures\Executor\ORMExecutor;
 
-use OjstrMessage\MessageBundle\Entity\Folder;
-use OjstrMessage\MessageBundle\Entity\Message;
-use OjstrMessage\MessageBundle\Entity\Envelope;
-use OjstrMessage\MessageBundle\Entity\Thread;
-use OjstrMessage\MessageBundle\Entity\Registry;
+use OjsMessage\MessageBundle\Entity\Folder;
+use OjsMessage\MessageBundle\Entity\Message;
+use OjsMessage\MessageBundle\Entity\Envelope;
+use OjsMessage\MessageBundle\Entity\Thread;
+use OjsMessage\MessageBundle\Entity\Registry;
 
-use OjstrMessage\MessageBundle\Tests\Functional\src\Entity\User;
+use OjsMessage\MessageBundle\Tests\Functional\src\Entity\User;
 //use CCDNUser\UserBundle\Entity\User;
 
 class TestBase extends WebTestCase
@@ -263,49 +263,49 @@ class TestBase extends WebTestCase
 
     /**
      *
-     * @var \OjstrMessage\MessageBundle\Model\FrontModel\FolderModel $folderModel
+     * @var \OjsMessage\MessageBundle\Model\FrontModel\FolderModel $folderModel
      */
     private $folderModel;
 
     /**
      *
-     * @var \OjstrMessage\MessageBundle\Model\FrontModel\MessageModel $messageModel
+     * @var \OjsMessage\MessageBundle\Model\FrontModel\MessageModel $messageModel
      */
     private $messageModel;
 
     /**
      *
-     * @var \OjstrMessage\MessageBundle\Model\FrontModel\EnvelopeModel $envelopeModel
+     * @var \OjsMessage\MessageBundle\Model\FrontModel\EnvelopeModel $envelopeModel
      */
     private $envelopeModel;
 
     /**
      *
-     * @var \OjstrMessage\MessageBundle\Model\FrontModel\ThreadModel $threadModel
+     * @var \OjsMessage\MessageBundle\Model\FrontModel\ThreadModel $threadModel
      */
     private $threadModel;
 
     /**
      *
-     * @var \OjstrMessage\MessageBundle\Model\FrontModel\RegistryModel $registryModel
+     * @var \OjsMessage\MessageBundle\Model\FrontModel\RegistryModel $registryModel
      */
     private $registryModel;
 
     /**
      *
-     * @var \OjstrMessage\MessageBundle\Model\FrontModel\UserModel $userModel
+     * @var \OjsMessage\MessageBundle\Model\FrontModel\UserModel $userModel
      */
     private $userModel;
 
     /**
      *
      * @access protected
-     * @return \OjstrMessage\MessageBundle\Model\FrontModel\FolderModel
+     * @return \OjsMessage\MessageBundle\Model\FrontModel\FolderModel
      */
     protected function getFolderModel()
     {
         if (null == $this->folderModel) {
-            $this->folderModel = $this->container->get('ojstr_message_message.model.folder');
+            $this->folderModel = $this->container->get('ojs_message_message.model.folder');
         }
 
         return $this->folderModel;
@@ -314,12 +314,12 @@ class TestBase extends WebTestCase
     /**
      *
      * @access protected
-     * @return \OjstrMessage\MessageBundle\Model\FrontModel\MessageModel
+     * @return \OjsMessage\MessageBundle\Model\FrontModel\MessageModel
      */
     protected function getMessageModel()
     {
         if (null == $this->messageModel) {
-            $this->messageModel = $this->container->get('ojstr_message_message.model.message');
+            $this->messageModel = $this->container->get('ojs_message_message.model.message');
         }
 
         return $this->messageModel;
@@ -328,12 +328,12 @@ class TestBase extends WebTestCase
     /**
      *
      * @access protected
-     * @return \OjstrMessage\MessageBundle\Model\FrontModel\EnvelopeModel
+     * @return \OjsMessage\MessageBundle\Model\FrontModel\EnvelopeModel
      */
     protected function getEnvelopeModel()
     {
         if (null == $this->envelopeModel) {
-            $this->envelopeModel = $this->container->get('ojstr_message_message.model.envelope');
+            $this->envelopeModel = $this->container->get('ojs_message_message.model.envelope');
         }
 
         return $this->envelopeModel;
@@ -342,12 +342,12 @@ class TestBase extends WebTestCase
     /**
      *
      * @access protected
-     * @return \OjstrMessage\MessageBundle\Model\FrontModel\ThreadModel
+     * @return \OjsMessage\MessageBundle\Model\FrontModel\ThreadModel
      */
     protected function getThreadModel()
     {
         if (null == $this->threadModel) {
-            $this->threadModel = $this->container->get('ojstr_message_message.model.thread');
+            $this->threadModel = $this->container->get('ojs_message_message.model.thread');
         }
 
         return $this->threadModel;
@@ -356,12 +356,12 @@ class TestBase extends WebTestCase
     /**
      *
      * @access protected
-     * @return \OjstrMessage\MessageBundle\Model\FrontModel\RegistryModel
+     * @return \OjsMessage\MessageBundle\Model\FrontModel\RegistryModel
      */
     protected function getRegistryModel()
     {
         if (null == $this->registryModel) {
-            $this->registryModel = $this->container->get('ojstr_message_message.model.registry');
+            $this->registryModel = $this->container->get('ojs_message_message.model.registry');
         }
 
         return $this->registryModel;
@@ -370,12 +370,12 @@ class TestBase extends WebTestCase
     /**
      *
      * @access protected
-     * @return \OjstrMessage\MessageBundle\Model\FrontModel\UserModel
+     * @return \OjsMessage\MessageBundle\Model\FrontModel\UserModel
      */
     protected function getUserModel()
     {
         if (null == $this->userModel) {
-            $this->userModel = $this->container->get('ojstr_message_message.model.user');
+            $this->userModel = $this->container->get('ojs_message_message.model.user');
         }
 
         return $this->userModel;

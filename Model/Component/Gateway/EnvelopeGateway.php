@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,18 +11,18 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Model\Component\Gateway;
+namespace OjsMessage\MessageBundle\Model\Component\Gateway;
 
 use Doctrine\ORM\QueryBuilder;
 
-use OjstrMessage\MessageBundle\Model\Component\Gateway\GatewayInterface;
-use OjstrMessage\MessageBundle\Model\Component\Gateway\BaseGateway;
+use OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface;
+use OjsMessage\MessageBundle\Model\Component\Gateway\BaseGateway;
 
-use OjstrMessage\MessageBundle\Entity\Envelope;
+use OjsMessage\MessageBundle\Entity\Envelope;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -105,8 +105,8 @@ class EnvelopeGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Entity\Envelope                          $envelope
-     * @return \OjstrMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @param  \OjsMessage\MessageBundle\Entity\Envelope                          $envelope
+     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function saveEnvelope(Envelope $envelope)
     {
@@ -118,8 +118,8 @@ class EnvelopeGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Entity\Envelope                          $envelope
-     * @return \OjstrMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @param  \OjsMessage\MessageBundle\Entity\Envelope                          $envelope
+     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function updateEnvelope(Envelope $envelope)
     {
@@ -131,8 +131,8 @@ class EnvelopeGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Entity\Envelope                          $envelope
-     * @return \OjstrMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @param  \OjsMessage\MessageBundle\Entity\Envelope                          $envelope
+     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function deleteEnvelope(Envelope $envelope)
     {
@@ -144,7 +144,7 @@ class EnvelopeGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @return \OjstrMessage\MessageBundle\Entity\Envelope
+     * @return \OjsMessage\MessageBundle\Entity\Envelope
      */
     public function createEnvelope()
     {

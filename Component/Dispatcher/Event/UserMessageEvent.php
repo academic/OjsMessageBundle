@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,16 +11,16 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Component\Dispatcher\Event;
+namespace OjsMessage\MessageBundle\Component\Dispatcher\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\HttpFoundation\Request;
 
-use OjstrMessage\MessageBundle\Entity\Message;
+use OjsMessage\MessageBundle\Entity\Message;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -41,7 +41,7 @@ class UserMessageEvent extends Event
     /**
      *
      * @access protected
-     * @var \OjstrMessage\MessageBundle\Entity\Message $message
+     * @var \OjsMessage\MessageBundle\Entity\Message $message
      */
     protected $message;
 
@@ -49,7 +49,7 @@ class UserMessageEvent extends Event
      *
      * @access public
      * @param \Symfony\Component\HttpFoundation\Request $request
-     * @param \OjstrMessage\MessageBundle\Entity\Message $message
+     * @param \OjsMessage\MessageBundle\Entity\Message $message
      */
     public function __construct(Request $request, Message $message = null)
     {
@@ -70,7 +70,7 @@ class UserMessageEvent extends Event
     /**
      *
      * @access public
-     * @return \OjstrMessage\MessageBundle\Entity\Message
+     * @return \OjsMessage\MessageBundle\Entity\Message
      */
     public function getMessage()
     {

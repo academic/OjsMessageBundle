@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,22 +11,22 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Component\Dispatcher\Listener;
+namespace OjsMessage\MessageBundle\Component\Dispatcher\Listener;
 
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\Session\Session;
 
-use OjstrMessage\MessageBundle\Component\Dispatcher\MessageEvents;
-use OjstrMessage\MessageBundle\Component\Dispatcher\Event\UserMessageFloodEvent;
-use OjstrMessage\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveEvent;
-use OjstrMessage\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveFailedInboxFullEvent;
-use OjstrMessage\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveFailedOutboxFullEvent;
-use OjstrMessage\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent;
+use OjsMessage\MessageBundle\Component\Dispatcher\MessageEvents;
+use OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageFloodEvent;
+use OjsMessage\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveEvent;
+use OjsMessage\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveFailedInboxFullEvent;
+use OjsMessage\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveFailedOutboxFullEvent;
+use OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>

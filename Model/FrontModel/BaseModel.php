@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,15 +11,15 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Model\FrontModel;
+namespace OjsMessage\MessageBundle\Model\FrontModel;
 
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use OjstrMessage\MessageBundle\Model\Component\Manager\ManagerInterface;
-use OjstrMessage\MessageBundle\Model\Component\Repository\RepositoryInterface;
+use OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface;
+use OjsMessage\MessageBundle\Model\Component\Repository\RepositoryInterface;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -34,14 +34,14 @@ abstract class BaseModel
     /**
      *
      * @access protected
-     * @var \OjstrMessage\MessageBundle\Model\Component\Repository\RepositoryInterface
+     * @var \OjsMessage\MessageBundle\Model\Component\Repository\RepositoryInterface
      */
     protected $repository;
 
     /**
      *
      * @access protected
-     * @var \OjstrMessage\MessageBundle\Model\Component\Manager\ManagerInterface
+     * @var \OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface
      */
     protected $manager;
 
@@ -56,8 +56,8 @@ abstract class BaseModel
      *
      * @access public
      * @param \Symfony\Component\EventDispatcher\EventDispatcherInterface               $dispatcher
-     * @param \OjstrMessage\MessageBundle\Model\Component\Repository\RepositoryInterface $repository
-     * @param \OjstrMessage\MessageBundle\Model\Component\Manager\ManagerInterface       $manager
+     * @param \OjsMessage\MessageBundle\Model\Component\Repository\RepositoryInterface $repository
+     * @param \OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface       $manager
      */
     public function __construct(EventDispatcherInterface $dispatcher, RepositoryInterface $repository, ManagerInterface $manager)
     {
@@ -73,7 +73,7 @@ abstract class BaseModel
     /**
      *
      * @access public
-     * @return \OjstrMessage\MessageBundle\Model\Component\Repository\RepositoryInterface
+     * @return \OjsMessage\MessageBundle\Model\Component\Repository\RepositoryInterface
      */
     public function getRepository()
     {
@@ -83,7 +83,7 @@ abstract class BaseModel
     /**
      *
      * @access public
-     * @return \OjstrMessage\MessageBundle\Model\Component\Manager\ManagerInterface
+     * @return \OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface
      */
     public function getManager()
     {

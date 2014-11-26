@@ -8,7 +8,7 @@ echo 'parameters:
     database_driver: pdo_mysql
     database_host: 127.0.0.1
     database_port: null
-    database_name: ojstr_test
+    database_name: ojs_test
     database_user: ccdnroot
     database_password: root
     locale: en

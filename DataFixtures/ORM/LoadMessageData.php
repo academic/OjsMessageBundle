@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,19 +11,19 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\DataFixtures\ORM;
+namespace OjsMessage\MessageBundle\DataFixtures\ORM;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use OjstrMessage\MessageBundle\Entity\Registry;
-use OjstrMessage\MessageBundle\Entity\Folder;
-use OjstrMessage\MessageBundle\Entity\Message;
+use OjsMessage\MessageBundle\Entity\Registry;
+use OjsMessage\MessageBundle\Entity\Folder;
+use OjsMessage\MessageBundle\Entity\Message;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>

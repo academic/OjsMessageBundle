@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,14 +11,14 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Controller;
+namespace OjsMessage\MessageBundle\Controller;
 
-use OjstrMessage\MessageBundle\Controller\BaseController;
-use OjstrMessage\MessageBundle\Entity\Envelope;
+use OjsMessage\MessageBundle\Controller\BaseController;
+use OjsMessage\MessageBundle\Entity\Envelope;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -33,11 +33,11 @@ class UserMessageBaseController extends BaseController
      *
      * @access protected
      * @param  int                                                        $userId
-     * @return \OjstrMessage\MessageBundle\Form\Handler\MessageFormHandler
+     * @return \OjsMessage\MessageBundle\Form\Handler\MessageFormHandler
      */
     protected function getFormHandlerToSendMessage($userId = null)
     {
-        $formHandler = $this->container->get('ojstr_message_message.form.handler.message');
+        $formHandler = $this->container->get('ojs_message_message.form.handler.message');
         $formHandler->setRequest($this->getRequest());
 
         $formHandler->setSender($this->getUser());
@@ -55,13 +55,13 @@ class UserMessageBaseController extends BaseController
     /**
      *
      * @access protected
-     * @param \OjstrMessage\MessageBundle\Entity\Envelope
+     * @param \OjsMessage\MessageBundle\Entity\Envelope
      * @param  int                                                             $userId
-     * @return \OjstrMessage\MessageBundle\Form\Handler\MessageReplyFormHandler
+     * @return \OjsMessage\MessageBundle\Form\Handler\MessageReplyFormHandler
      */
     protected function getFormHandlerToReplyToMessage(Envelope $inResponseEnvelope, $userId = null)
     {
-        $formHandler = $this->container->get('ojstr_message_message.form.handler.message_reply');
+        $formHandler = $this->container->get('ojs_message_message.form.handler.message_reply');
         $formHandler->setRequest($this->getRequest());
 
         $formHandler->setSender($this->getUser());
@@ -81,13 +81,13 @@ class UserMessageBaseController extends BaseController
     /**
      *
      * @access protected
-     * @param \OjstrMessage\MessageBundle\Entity\Envelope
+     * @param \OjsMessage\MessageBundle\Entity\Envelope
      * @param  int                                                               $userId
-     * @return \OjstrMessage\MessageBundle\Form\Handler\MessageForwardFormHandler
+     * @return \OjsMessage\MessageBundle\Form\Handler\MessageForwardFormHandler
      */
     protected function getFormHandlerToForwardMessage(Envelope $envelopeToForward, $userId = null)
     {
-        $formHandler = $this->container->get('ojstr_message_message.form.handler.message_forward');
+        $formHandler = $this->container->get('ojs_message_message.form.handler.message_forward');
         $formHandler->setRequest($this->getRequest());
 
         $formHandler->setSender($this->getUser());

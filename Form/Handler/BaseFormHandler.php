@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,14 +11,14 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Form\Handler;
+namespace OjsMessage\MessageBundle\Form\Handler;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -68,7 +68,7 @@ class BaseFormHandler
      *
      * @access public
      * @param  \Symfony\Component\Security\Core\User\UserInterface     $user
-     * @return \OjstrMessage\MessageBundle\Form\Handler\BaseFormHandler
+     * @return \OjsMessage\MessageBundle\Form\Handler\BaseFormHandler
      */
     public function setUser(UserInterface $user)
     {
@@ -81,7 +81,7 @@ class BaseFormHandler
      *
      * @access public
      * @param  \Symfony\Component\HttpFoundation\Request               $request
-     * @return \OjstrMessage\MessageBundle\Form\Handler\BaseFormHandler
+     * @return \OjsMessage\MessageBundle\Form\Handler\BaseFormHandler
      */
     public function setRequest(Request $request)
     {

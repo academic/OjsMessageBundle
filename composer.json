@@ -1,8 +1,8 @@
 {
-    "name": "ojstr/ojstr-message-bundle",
-    "description": "Messaging Bundle",
+    "name": "okulbilisim/ojs-message-bundle",
+    "description": "Messaging Bundle for Ojs.io",
     "keywords": ["message", "symfony"],
-    "homepage": "http://github.com/hasantayyar/OjstrMessageBundle",
+    "homepage": "http://github.com/hasantayyar/OjsMessageBundle",
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
@@ -45,7 +45,7 @@
         "reecefowell/jquery-checkboxes": "dev-master"
     },
     "autoload": {
-        "psr-0": {"OjstrMessage\\MessageBundle": ""}
+        "psr-0": {"OjsMessage\\MessageBundle": ""}
     },
-    "target-dir": "OjstrMessage/MessageBundle"
+    "target-dir": "OjsMessage/MessageBundle"
 }

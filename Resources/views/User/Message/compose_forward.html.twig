@@ -1,6 +1,6 @@
-{% extends 'OjstrMessageMessageBundle:Common:Layout/base.html.twig' %}
+{% extends 'OjsMessageMessageBundle:Common:Layout/base.html.twig' %}
 
-{% set LayoutTemplate = ojstr_message_message.message.compose.layout_template %}
+{% set LayoutTemplate = ojs_message_message.message.compose.layout_template %}
 
 
 {% block javascripts %}
@@ -8,7 +8,7 @@
 <script src="{{- asset('bundles/ccdncomponentbbcode/js/jquery.bbeditor.js') -}}" type="text/javascript"></script>
 {% endblock %}
 
-{% block title %}{{- 'title.message.compose' |trans({}, 'OjstrMessageMessageBundle') |slice(0, ojstr_message_message.seo.title_length) -}}{% endblock %}
+{% block title %}{{- 'title.message.compose' |trans({}, 'OjsMessageMessageBundle') |slice(0, ojs_message_message.seo.title_length) -}}{% endblock %}
 
 
 {% block body_content %}
@@ -16,14 +16,14 @@
 	{%- spaceless -%}
 
 <section>
-		{%- form_theme form ojstr_message_message.message.compose.form_theme -%}
-    <form action="{{- path('ojstr_message_message_user_mail_compose_forward', {'envelopeId': envelope.id }) -}}"
+		{%- form_theme form ojs_message_message.message.compose.form_theme -%}
+    <form action="{{- path('ojs_message_message_user_mail_compose_forward', {'envelopeId': envelope.id }) -}}"
           method="post" {{ form_enctype(form) }} class="form-horizontal" role="form">
         <fieldset>
 
             <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
-                    <h4>{{- 'title.message.compose' |trans({}, 'OjstrMessageMessageBundle') -}}</h4>
+                    <h4>{{- 'title.message.compose' |trans({}, 'OjsMessageMessageBundle') -}}</h4>
                 </div>
             </div>
 
@@ -34,15 +34,15 @@
             <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
                     <button type="submit" class="btn btn-primary" name="submit[send]">
-							{{- 'form.button.send' | trans({}, 'OjstrMessageMessageBundle') -}}
+							{{- 'form.button.send' | trans({}, 'OjsMessageMessageBundle') -}}
                     </button>
 
                     <button type="submit" class="btn btn-default" name="submit[preview]">
-							{{- 'form.button.preview' | trans({}, 'OjstrMessageMessageBundle') -}}
+							{{- 'form.button.preview' | trans({}, 'OjsMessageMessageBundle') -}}
                     </button>
 
-                    <a href="{{- path('ojstr_message_message_user_folder_show', {'folderName': 'inbox' }) -}}" class="btn btn-default">
-							{{- 'form.button.cancel' |trans({}, 'OjstrMessageMessageBundle') -}}
+                    <a href="{{- path('ojs_message_message_user_folder_show', {'folderName': 'inbox' }) -}}" class="btn btn-default">
+							{{- 'form.button.cancel' |trans({}, 'OjsMessageMessageBundle') -}}
                     </a>
                 </div>
             </div>
@@ -52,7 +52,7 @@
 
 	{%- if preview is not empty -%}
 <section>
-			{%- include 'OjstrMessageMessageBundle:Message:Item/item_preview.html.twig' with {'message': preview } -%}
+			{%- include 'OjsMessageMessageBundle:Message:Item/item_preview.html.twig' with {'message': preview } -%}
 </section>
 	{%- endif -%}
 

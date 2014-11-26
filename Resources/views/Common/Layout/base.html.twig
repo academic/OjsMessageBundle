@@ -33,7 +33,7 @@
                     <div class="row">
                                 {%- block crumb_trail -%}
                                         {%- if crumbs is defined -%}
-                                                {%- include 'OjstrMessageMessageBundle:Common:Layout/crumbs.html.twig' with {'crumbs': crumbs } -%}
+                                                {%- include 'OjsMessageMessageBundle:Common:Layout/crumbs.html.twig' with {'crumbs': crumbs } -%}
                                         {%- endif -%}
                                 {%- endblock crumb_trail -%}
                     </div>
@@ -53,7 +53,7 @@
 	{%- spaceless -%}
 
     {{ parent() }}
-    {%- include 'OjstrMessageMessageBundle:Common:Layout/Sidebar/sidebar.html.twig' -%}
+    {%- include 'OjsMessageMessageBundle:Common:Layout/Sidebar/sidebar.html.twig' -%}
 
 	{%- endspaceless -%}
 {% endblock %}
@@ -63,7 +63,7 @@
 {% block body %}
 	{%- spaceless -%}
 
-    {%- include 'OjstrMessageMessageBundle:Common:Layout/flashes.html.twig' -%}
+    {%- include 'OjsMessageMessageBundle:Common:Layout/flashes.html.twig' -%}
 
 	{%- block body_content -%}
 	{%- endblock body_content -%}
@@ -71,7 +71,7 @@
 	{%- block body_footer -%}
 <hr>
 
-		{%- include 'OjstrMessageMessageBundle:Common:Layout/footer.html.twig' -%}
+		{%- include 'OjsMessageMessageBundle:Common:Layout/footer.html.twig' -%}
 	{%- endblock body_footer -%}
 
 	{%- endspaceless -%}

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,16 +11,16 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Model\Component\Manager;
+namespace OjsMessage\MessageBundle\Model\Component\Manager;
 
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Doctrine\ORM\QueryBuilder;
-use OjstrMessage\MessageBundle\Model\Component\Gateway\GatewayInterface;
-use OjstrMessage\MessageBundle\Model\FrontModel\ModelInterface;
+use OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface;
+use OjsMessage\MessageBundle\Model\FrontModel\ModelInterface;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -36,14 +36,14 @@ abstract class BaseManager
     /**
      *
      * @access protected
-     * @var \OjstrMessage\MessageBundle\Model\Component\Manager\ManagerInterface $gateway
+     * @var \OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface $gateway
      */
     protected $gateway;
 
     /**
      *
      * @access protected
-     * @var \OjstrMessage\MessageBundle\Model\FrontModel\ModelInterface $model
+     * @var \OjsMessage\MessageBundle\Model\FrontModel\ModelInterface $model
      */
     protected $model;
 
@@ -58,7 +58,7 @@ abstract class BaseManager
      *
      * @access public
      * @param \Symfony\Component\EventDispatcher\EventDispatcherInterface         $dispatcher
-     * @param \OjstrMessage\MessageBundle\Model\Component\Gateway\GatewayInterface $gateway
+     * @param \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface $gateway
      */
     public function __construct(EventDispatcherInterface  $dispatcher, GatewayInterface $gateway)
     {
@@ -69,8 +69,8 @@ abstract class BaseManager
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Model\FrontModel\ModelInterface                $model
-     * @return \OjstrMessage\MessageBundle\Model\Component\Repository\RepositoryInterface
+     * @param  \OjsMessage\MessageBundle\Model\FrontModel\ModelInterface                $model
+     * @return \OjsMessage\MessageBundle\Model\Component\Repository\RepositoryInterface
      */
     public function setModel(ModelInterface $model)
     {
@@ -82,7 +82,7 @@ abstract class BaseManager
     /**
      *
      * @access public
-     * @return \OjstrMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function getGateway()
     {
@@ -148,7 +148,7 @@ abstract class BaseManager
      *
      * @access public
      * @param  Object                                                              $entity
-     * @return \OjstrMessage\MessageBundle\Model\Component\Manager\ManagerInterface
+     * @return \OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface
      */
     public function persist($entity)
     {
@@ -161,7 +161,7 @@ abstract class BaseManager
      *
      * @access public
      * @param  Object                                                              $entity
-     * @return \OjstrMessage\MessageBundle\Model\Component\Manager\ManagerInterface
+     * @return \OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface
      */
     public function remove($entity)
     {
@@ -173,7 +173,7 @@ abstract class BaseManager
     /**
      *
      * @access public
-     * @return \OjstrMessage\MessageBundle\Model\Component\Manager\ManagerInterface
+     * @return \OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface
      */
     public function flush()
     {
@@ -186,7 +186,7 @@ abstract class BaseManager
      *
      * @access public
      * @param  Object                                                              $entity
-     * @return \OjstrMessage\MessageBundle\Model\Component\Manager\ManagerInterface
+     * @return \OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface
      */
     public function refresh($entity)
     {

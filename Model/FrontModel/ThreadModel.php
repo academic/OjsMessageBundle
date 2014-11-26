@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,14 +11,14 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Model\FrontModel;
+namespace OjsMessage\MessageBundle\Model\FrontModel;
 
-use OjstrMessage\MessageBundle\Model\FrontModel\BaseModel;
-use OjstrMessage\MessageBundle\Model\FrontModel\ModelInterface;
+use OjsMessage\MessageBundle\Model\FrontModel\BaseModel;
+use OjsMessage\MessageBundle\Model\FrontModel\ModelInterface;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -32,7 +32,7 @@ class ThreadModel extends BaseModel implements ModelInterface
     /**
      *
      * @access public
-     * @return \OjstrMessage\MessageBundle\Entity\Thread
+     * @return \OjsMessage\MessageBundle\Entity\Thread
      */
     public function createThread()
     {
@@ -44,7 +44,7 @@ class ThreadModel extends BaseModel implements ModelInterface
      * @access public
      * @param  int                                        $envelopeId
      * @param  int                                        $userId
-     * @return \OjstrMessage\MessageBundle\Entity\Envelope
+     * @return \OjsMessage\MessageBundle\Entity\Envelope
      */
     public function findThreadWithAllEnvelopesByThreadIdAndUserId($threadId, $userId)
     {

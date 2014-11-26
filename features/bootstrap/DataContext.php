@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,7 +11,7 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\features\bootstrap;
+namespace OjsMessage\MessageBundle\features\bootstrap;
 
 use Behat\Behat\Context\BehatContext;
 use Behat\Gherkin\Node\TableNode;
@@ -19,18 +19,18 @@ use Behat\Symfony2Extension\Context\KernelAwareInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
-use OjstrMessage\MessageBundle\Tests\Functional\src\Entity\User;
+use OjsMessage\MessageBundle\Tests\Functional\src\Entity\User;
 
-use OjstrMessage\MessageBundle\Entity\Folder;
-use OjstrMessage\MessageBundle\Entity\Message;
-use OjstrMessage\MessageBundle\Entity\Envelope;
-use OjstrMessage\MessageBundle\Entity\Thread;
+use OjsMessage\MessageBundle\Entity\Folder;
+use OjsMessage\MessageBundle\Entity\Message;
+use OjsMessage\MessageBundle\Entity\Envelope;
+use OjsMessage\MessageBundle\Entity\Thread;
 
 /**
  *
  * Features context.
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>

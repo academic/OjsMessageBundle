@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,17 +11,17 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Component\Dispatcher\Event;
+namespace OjsMessage\MessageBundle\Component\Dispatcher\Event;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\HttpFoundation\Request;
 
-use OjstrMessage\MessageBundle\Entity\Envelope;
+use OjsMessage\MessageBundle\Entity\Envelope;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -42,7 +42,7 @@ class UserEnvelopeReceiveFailedInboxFullEvent extends Event
     /**
      *
      * @access protected
-     * @var \OjstrMessage\MessageBundle\Entity\Envelope $envelope
+     * @var \OjsMessage\MessageBundle\Entity\Envelope $envelope
      */
     protected $envelope;
 
@@ -57,7 +57,7 @@ class UserEnvelopeReceiveFailedInboxFullEvent extends Event
      *
      * @access public
      * @param \Symfony\Component\HttpFoundation\Request           $request
-     * @param \OjstrMessage\MessageBundle\Entity\Envelope          $envelope
+     * @param \OjsMessage\MessageBundle\Entity\Envelope          $envelope
      * @param \Symfony\Component\Security\Core\User\UserInterface $user
      */
     public function __construct(Request $request, Envelope $envelope, UserInterface $user)
@@ -80,7 +80,7 @@ class UserEnvelopeReceiveFailedInboxFullEvent extends Event
     /**
      *
      * @access public
-     * @return \OjstrMessage\MessageBundle\Entity\Envelope
+     * @return \OjsMessage\MessageBundle\Entity\Envelope
      */
     public function getEnvelope()
     {

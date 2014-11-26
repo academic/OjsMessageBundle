@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,14 +11,14 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Entity\Model;
+namespace OjsMessage\MessageBundle\Entity\Model;
 
-use OjstrMessage\MessageBundle\Entity\Envelope;
-use OjstrMessage\MessageBundle\Entity\Message;
+use OjsMessage\MessageBundle\Entity\Envelope;
+use OjsMessage\MessageBundle\Entity\Message;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -66,7 +66,7 @@ abstract class ThreadModel
      * Set messages
      *
      * @param  \Doctrine\Common\Collections\ArrayCollection|Array $messages
-     * @return \OjstrMessage\MessageBundle\Entity\Thread
+     * @return \OjsMessage\MessageBundle\Entity\Thread
      */
     public function setMessages($messages = null)
     {
@@ -78,8 +78,8 @@ abstract class ThreadModel
     /**
      * Add message
      *
-     * @param  \OjstrMessage\MessageBundle\Entity\Message $message
-     * @return \OjstrMessage\MessageBundle\Entity\Thread
+     * @param  \OjsMessage\MessageBundle\Entity\Message $message
+     * @return \OjsMessage\MessageBundle\Entity\Thread
      */
     public function addMessage(Message $message)
     {
@@ -102,7 +102,7 @@ abstract class ThreadModel
      * Set envelopes
      *
      * @param  \Doctrine\Common\Collections\ArrayCollection|Array $envelopes
-     * @return \OjstrMessage\MessageBundle\Entity\Thread
+     * @return \OjsMessage\MessageBundle\Entity\Thread
      */
     public function setEnvelopes($envelopes = null)
     {
@@ -114,8 +114,8 @@ abstract class ThreadModel
     /**
      * Add envelope
      *
-     * @param  \OjstrMessage\MessageBundle\Entity\Envelope $envelope
-     * @return \OjstrMessage\MessageBundle\Entity\Thread
+     * @param  \OjsMessage\MessageBundle\Entity\Envelope $envelope
+     * @return \OjsMessage\MessageBundle\Entity\Thread
      */
     public function addEnvelope(Envelope $envelope)
     {

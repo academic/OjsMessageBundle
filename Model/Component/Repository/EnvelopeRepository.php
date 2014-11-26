@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,15 +11,15 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Model\Component\Repository;
+namespace OjsMessage\MessageBundle\Model\Component\Repository;
 
-use OjstrMessage\MessageBundle\Model\Component\Repository\BaseRepository;
-use OjstrMessage\MessageBundle\Model\Component\Repository\RepositoryInterface;
+use OjsMessage\MessageBundle\Model\Component\Repository\BaseRepository;
+use OjsMessage\MessageBundle\Model\Component\Repository\RepositoryInterface;
 
 /**
  * EnvelopeRepository
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -35,7 +35,7 @@ class EnvelopeRepository extends BaseRepository implements RepositoryInterface
      * @access public
      * @param  int                                        $envelopeId
      * @param  int                                        $userId
-     * @return \OjstrMessage\MessageBundle\Entity\Envelope
+     * @return \OjsMessage\MessageBundle\Entity\Envelope
      */
     public function findEnvelopeByIdForUser($envelopeId, $userId)
     {

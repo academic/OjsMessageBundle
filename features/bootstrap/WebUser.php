@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,18 +11,18 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\features\bootstrap;
+namespace OjsMessage\MessageBundle\features\bootstrap;
 
 use Behat\MinkExtension\Context\MinkContext;
 use Behat\Symfony2Extension\Context\KernelAwareInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
-use OjstrMessage\MessageBundle\features\bootstrap\DataContext;
+use OjsMessage\MessageBundle\features\bootstrap\DataContext;
 
 /**
  *
  * Web user context.
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>

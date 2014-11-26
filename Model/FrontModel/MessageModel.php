@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,16 +11,16 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Model\FrontModel;
+namespace OjsMessage\MessageBundle\Model\FrontModel;
 
-use OjstrMessage\MessageBundle\Model\FrontModel\BaseModel;
-use OjstrMessage\MessageBundle\Model\FrontModel\ModelInterface;
+use OjsMessage\MessageBundle\Model\FrontModel\BaseModel;
+use OjsMessage\MessageBundle\Model\FrontModel\ModelInterface;
 
-use OjstrMessage\MessageBundle\Entity\Message;
+use OjsMessage\MessageBundle\Entity\Message;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -34,7 +34,7 @@ class MessageModel extends BaseModel implements ModelInterface
     /**
      *
      * @access public
-     * @return \OjstrMessage\MessageBundle\Entity\Message
+     * @return \OjsMessage\MessageBundle\Entity\Message
      */
     public function createMessage()
     {
@@ -45,7 +45,7 @@ class MessageModel extends BaseModel implements ModelInterface
      *
      * @access public
      * @param  int                                       $messageId
-     * @return \OjstrMessage\MessageBundle\Entity\Message
+     * @return \OjsMessage\MessageBundle\Entity\Message
      */
     public function getAllEnvelopesForMessageById($messageId)
     {
@@ -55,8 +55,8 @@ class MessageModel extends BaseModel implements ModelInterface
     /**
      *
      * @access public
-     * @param  \OjstrMessage\MessageBundle\Entity\Message                         $message
-     * @return \OjstrMessage\MessageBundle\Model\Component\Manager\MessageManager
+     * @param  \OjsMessage\MessageBundle\Entity\Message                         $message
+     * @return \OjsMessage\MessageBundle\Model\Component\Manager\MessageManager
      */
     public function saveMessage(Message $message)
     {

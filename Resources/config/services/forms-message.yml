@@ -7,44 +7,44 @@ services:
     #
     # Message Forms.
     #
-    ojstr_message_message.form.type.message:
-        class: %ojstr_message_message.form.type.message.class%
+    ojs_message_message.form.type.message:
+        class: %ojs_message_message.form.type.message.class%
         arguments:
-            - %ojstr_message_message.entity.message.class%
+            - %ojs_message_message.entity.message.class%
 
-    ojstr_message_message.form.handler.message:
-        class: %ojstr_message_message.form.handler.message.class%
+    ojs_message_message.form.handler.message:
+        class: %ojs_message_message.form.handler.message.class%
         arguments:
             - @event_dispatcher
             - @form.factory
-            - @ojstr_message_message.form.type.message
-            - @ojstr_message_message.model.message
-            - @ojstr_message_message.component.flood_control
-            - @ojstr_message_message.component.server.message
+            - @ojs_message_message.form.type.message
+            - @ojs_message_message.model.message
+            - @ojs_message_message.component.flood_control
+            - @ojs_message_message.component.server.message
 
-    ojstr_message_message.form.handler.message_reply:
-        class: %ojstr_message_message.form.handler.message_reply.class%
+    ojs_message_message.form.handler.message_reply:
+        class: %ojs_message_message.form.handler.message_reply.class%
         arguments:
             - @event_dispatcher
             - @form.factory
-            - @ojstr_message_message.form.type.message
-            - @ojstr_message_message.model.message
-            - @ojstr_message_message.component.flood_control
-            - @ojstr_message_message.component.server.message
+            - @ojs_message_message.form.type.message
+            - @ojs_message_message.model.message
+            - @ojs_message_message.component.flood_control
+            - @ojs_message_message.component.server.message
 
-    ojstr_message_message.form.handler.message_forward:
-        class: %ojstr_message_message.form.handler.message_forward.class%
+    ojs_message_message.form.handler.message_forward:
+        class: %ojs_message_message.form.handler.message_forward.class%
         arguments:
             - @event_dispatcher
             - @form.factory
-            - @ojstr_message_message.form.type.message
-            - @ojstr_message_message.model.message
-            - @ojstr_message_message.component.flood_control
-            - @ojstr_message_message.component.server.message
+            - @ojs_message_message.form.type.message
+            - @ojs_message_message.model.message
+            - @ojs_message_message.component.flood_control
+            - @ojs_message_message.component.server.message
 
-    ojstr_message_message.form.validator.send_to:
-        class: %ojstr_message_message.form.validator.send_to.class%
+    ojs_message_message.form.validator.send_to:
+        class: %ojs_message_message.form.validator.send_to.class%
         arguments:
-            - @ojstr_message_message.model.user
+            - @ojs_message_message.model.user
         tags:
             - { name: validator.constraint_validator, alias: SendToValidator }

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,14 +11,14 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Entity\Model;
+namespace OjsMessage\MessageBundle\Entity\Model;
 
 use Symfony\Component\Security\Core\User\UserInterface;
-use OjstrMessage\MessageBundle\Entity\Thread;
+use OjsMessage\MessageBundle\Entity\Thread;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -37,7 +37,7 @@ abstract class MessageModel
     protected $envelopes = null;
 
     /**
-     * @var \OjstrMessage\MessageBundle\Entity\Thread $thread
+     * @var \OjsMessage\MessageBundle\Entity\Thread $thread
      */
     protected $thread = null;
 
@@ -69,7 +69,7 @@ abstract class MessageModel
      * Set envelopes
      *
      * @param $envelopes
-     * @return \OjstrMessage\MessageBundle\Entity\Message
+     * @return \OjsMessage\MessageBundle\Entity\Message
      */
     public function setEnvelopes($envelopes = null)
     {
@@ -81,7 +81,7 @@ abstract class MessageModel
     /**
      * Get thread
      *
-     * @return \OjstrMessage\MessageBundle\Entity\Thread
+     * @return \OjsMessage\MessageBundle\Entity\Thread
      */
     public function getThread()
     {
@@ -91,8 +91,8 @@ abstract class MessageModel
     /**
      * Set thread
      *
-     * @param  \OjstrMessage\MessageBundle\Entity\Thread  $thread
-     * @return \OjstrMessage\MessageBundle\Entity\Message
+     * @param  \OjsMessage\MessageBundle\Entity\Thread  $thread
+     * @return \OjsMessage\MessageBundle\Entity\Message
      */
     public function setThread(Thread $thread)
     {
@@ -115,7 +115,7 @@ abstract class MessageModel
      * Set sentFromUser
      *
      * @param  \Symfony\Component\Security\Core\User\UserInterface $sentFromUser
-     * @return \OjstrMessage\MessageBundle\Entity\Envelope
+     * @return \OjsMessage\MessageBundle\Entity\Envelope
      */
     public function setSentFromUser(UserInterface $sentFromUser = null)
     {

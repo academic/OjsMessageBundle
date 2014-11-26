@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,15 +11,15 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Form\Validator;
+namespace OjsMessage\MessageBundle\Form\Validator;
 
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Constraint;
-use OjstrMessage\MessageBundle\Model\FrontModel\ModelInterface;
+use OjsMessage\MessageBundle\Model\FrontModel\ModelInterface;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -35,14 +35,14 @@ class SendToValidator extends ConstraintValidator
     /**
      *
      * @access protected
-     * @var \OjstrMessage\MessageBundle\Model\FrontModel\ModelInterface $userModel
+     * @var \OjsMessage\MessageBundle\Model\FrontModel\ModelInterface $userModel
      */
     protected $userModel;
 
     /**
      *
      * @access public
-     * @param \OjstrMessage\MessageBundle\Model\FrontModel\ModelInterface $userModel
+     * @param \OjsMessage\MessageBundle\Model\FrontModel\ModelInterface $userModel
      */
     public function __construct(ModelInterface $userModel)
     {

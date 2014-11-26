@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,13 +11,13 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Entity\Model;
+namespace OjsMessage\MessageBundle\Entity\Model;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -65,7 +65,7 @@ abstract class FolderModel
      * Set ownedByUser
      *
      * @param  \Symfony\Component\Security\Core\User\UserInterface $ownedBy
-     * @return \OjstrMessage\MessageBundle\Entity\Folder
+     * @return \OjsMessage\MessageBundle\Entity\Folder
      */
     public function setOwnedByUser(UserInterface $ownedByUser = null)
     {

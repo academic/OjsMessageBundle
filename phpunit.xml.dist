@@ -14,7 +14,7 @@
 >
 
     <testsuites>
-        <testsuite name="OjstrMessage MessageBundle Test Suite">
+        <testsuite name="OjsMessage MessageBundle Test Suite">
             <directory>./Tests/Repository</directory>
 			<directory>./Tests/Manager</directory>
         </testsuite>

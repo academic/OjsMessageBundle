@@ -1,4 +1,4 @@
-OjstrMessage\MessageBundle\Entity\Registry:
+OjsMessage\MessageBundle\Entity\Registry:
     type: entity
     table: cc_message_registry
     id:

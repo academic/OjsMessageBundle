@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,13 +11,13 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Controller;
+namespace OjsMessage\MessageBundle\Controller;
 
-use OjstrMessage\MessageBundle\Controller\UserFolderBaseController;
+use OjsMessage\MessageBundle\Controller\UserFolderBaseController;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -41,7 +41,7 @@ class UserFolderController extends UserFolderBaseController
         $this->isFound($currentFolder = $this->getFolderHelper()->filterFolderByName($folders, $folderName));
         $messagesPager = $this->getEnvelopeModel()->findAllEnvelopesForFolderByIdPaginated($currentFolder->getId(), $this->getUser()->getId(), $this->getQuery('page', 1), 25);
 
-        return $this->renderResponse('OjstrMessageMessageBundle:User:Folder/show.html.', array(
+        return $this->renderResponse('OjsMessageMessageBundle:User:Folder/show.html.', array(
             'crumbs' => $this->getCrumbs()->addUserFolderShow($currentFolder),
             'folders' => $folders,
             'current_folder' => $currentFolder,
@@ -61,6 +61,6 @@ class UserFolderController extends UserFolderBaseController
 
         $this->bulkAction();
 
-        return $this->redirectResponse($this->path('ojstr_message_message_user_folder_show', array('folderName' => $folderName)));
+        return $this->redirectResponse($this->path('ojs_message_message_user_folder_show', array('folderName' => $folderName)));
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjstrMessage MessageBundle
+ * This file is part of the OjsMessage MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,17 +11,17 @@
  * file that was distributed with this source code.
  */
 
-namespace OjstrMessage\MessageBundle\Model\Component\Manager;
+namespace OjsMessage\MessageBundle\Model\Component\Manager;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 
-use OjstrMessage\MessageBundle\Model\Component\Manager\ManagerInterface;
-use OjstrMessage\MessageBundle\Model\Component\Manager\BaseManager;
-use OjstrMessage\MessageBundle\Entity\Registry;
+use OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface;
+use OjsMessage\MessageBundle\Model\Component\Manager\BaseManager;
+use OjsMessage\MessageBundle\Entity\Registry;
 
 /**
  *
- * @category OjstrMessage
+ * @category OjsMessage
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -35,7 +35,7 @@ class RegistryManager extends BaseManager implements ManagerInterface
     /**
      *
      * @access public
-     * @return \OjstrMessage\MessageBundle\Entity\Registry
+     * @return \OjsMessage\MessageBundle\Entity\Registry
      */
     public function createRegistry()
     {
@@ -53,7 +53,7 @@ class RegistryManager extends BaseManager implements ManagerInterface
      *
      * @access public
      * @param  \Symfony\Component\Security\Core\User\UserInterface              $user
-     * @return \OjstrMessage\MessageBundle\Model\Component\Manager\FolderManager
+     * @return \OjsMessage\MessageBundle\Model\Component\Manager\FolderManager
      */
     public function setupDefaults(UserInterface $user)
     {

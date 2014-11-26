@@ -5,7 +5,7 @@
     <tbody>
         <tr>
             <td class="right" style="width: 80px;">
-                <b>{{- 'message.sent-from-label' |trans({}, 'OjstrMessageMessageBundle') -}}</b>
+                <b>{{- 'message.sent-from-label' |trans({}, 'OjsMessageMessageBundle') -}}</b>
             </td>
             <td class="left">
 					{{- sender.username -}}
@@ -13,7 +13,7 @@
         </tr>
         <tr>
             <td class="right" style="width: 80px;">
-                <b>{{- 'message.send-to-label' |trans({}, 'OjstrMessageMessageBundle') -}}</b>
+                <b>{{- 'message.send-to-label' |trans({}, 'OjsMessageMessageBundle') -}}</b>
             </td>
             <td class="left" colspan="3">
 					{{- message.getSendto |title -}}
@@ -21,7 +21,7 @@
         </tr>
         <tr>
             <td class="right" style="width: 80px;">
-                <b>{{- 'message.subject-label' |trans({}, 'OjstrMessageMessageBundle') -}}</b>
+                <b>{{- 'message.subject-label' |trans({}, 'OjsMessageMessageBundle') -}}</b>
             </td>
             <td class="left" colspan="3">
 					{{- message.getSubject -}}
@@ -29,10 +29,10 @@
         </tr>
         <tr>
             <td class="right" style="width: 80px;">
-                <b>{{- 'message.sent-datetime-label' |trans({}, 'OjstrMessageMessageBundle') -}}</b>
+                <b>{{- 'message.sent-datetime-label' |trans({}, 'OjsMessageMessageBundle') -}}</b>
             </td>
             <td class="left">
-					{{- message.getCreatedDate |date(ojstr_message_message.message.show.sent_datetime_format) -}}
+					{{- message.getCreatedDate |date(ojs_message_message.message.show.sent_datetime_format) -}}
             </td>
         </tr>
         <tr>

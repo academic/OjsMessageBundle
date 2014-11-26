@@ -1,88 +1,88 @@
 parameters:
 
     # Service Parameters defined in app/config.
-    ojstr_message_message.component.server.message.class: OjstrMessage\MessageBundle\Component\Server\MessageServer
-    ojstr_message_message.component.helper.pagination_config.class: OjstrMessage\MessageBundle\Component\Helper\PaginationConfigHelper
-    ojstr_message_message.component.crumb_builder.class: OjstrMessage\MessageBundle\Component\Crumbs\CrumbBuilder
-    ojstr_message_message.component.crumb_factory.class: OjstrMessage\MessageBundle\Component\Crumbs\Factory\CrumbFactory
-    ojstr_message_message.component.helper.folder.class: OjstrMessage\MessageBundle\Component\Helper\FolderHelper
-    ojstr_message_message.component.helper.quota.class:  OjstrMessage\MessageBundle\Component\Helper\QuotaHelper
-    ojstr_message_message.component.event_listener.flash.class: OjstrMessage\MessageBundle\Component\Dispatcher\Listener\FlashListener
-    ojstr_message_message.component.event_listener.stats.class: OjstrMessage\MessageBundle\Component\Dispatcher\Listener\StatListener
+    ojs_message_message.component.server.message.class: OjsMessage\MessageBundle\Component\Server\MessageServer
+    ojs_message_message.component.helper.pagination_config.class: OjsMessage\MessageBundle\Component\Helper\PaginationConfigHelper
+    ojs_message_message.component.crumb_builder.class: OjsMessage\MessageBundle\Component\Crumbs\CrumbBuilder
+    ojs_message_message.component.crumb_factory.class: OjsMessage\MessageBundle\Component\Crumbs\Factory\CrumbFactory
+    ojs_message_message.component.helper.folder.class: OjsMessage\MessageBundle\Component\Helper\FolderHelper
+    ojs_message_message.component.helper.quota.class:  OjsMessage\MessageBundle\Component\Helper\QuotaHelper
+    ojs_message_message.component.event_listener.flash.class: OjsMessage\MessageBundle\Component\Dispatcher\Listener\FlashListener
+    ojs_message_message.component.event_listener.stats.class: OjsMessage\MessageBundle\Component\Dispatcher\Listener\StatListener
 
 services:
 
-    ojstr_message_message.component.server.message:
-        class: %ojstr_message_message.component.server.message.class%
+    ojs_message_message.component.server.message:
+        class: %ojs_message_message.component.server.message.class%
         arguments:
             - @event_dispatcher
-            - @ojstr_message_message.model.folder
-            - @ojstr_message_message.model.message
-            - @ojstr_message_message.model.envelope
-            - @ojstr_message_message.model.user
-            - @ojstr_message_message.component.helper.quota
-            - @ojstr_message_message.component.helper.folder
+            - @ojs_message_message.model.folder
+            - @ojs_message_message.model.message
+            - @ojs_message_message.model.envelope
+            - @ojs_message_message.model.user
+            - @ojs_message_message.component.helper.quota
+            - @ojs_message_message.component.helper.folder
 
-    ojstr_message_message.component.helper.folder:
-        class: %ojstr_message_message.component.helper.folder.class%
+    ojs_message_message.component.helper.folder:
+        class: %ojs_message_message.component.helper.folder.class%
         arguments:
-            - @ojstr_message_message.model.folder
+            - @ojs_message_message.model.folder
 
-    ojstr_message_message.component.helper.quota:
-        class: %ojstr_message_message.component.helper.quota.class%
+    ojs_message_message.component.helper.quota:
+        class: %ojs_message_message.component.helper.quota.class%
         arguments:
-            - %ojstr_message_message.quotas.max_messages%
+            - %ojs_message_message.quotas.max_messages%
 
-    ojstr_message_message.component.helper.pagination_config:
-        class: %ojstr_message_message.component.helper.pagination_config.class%
+    ojs_message_message.component.helper.pagination_config:
+        class: %ojs_message_message.component.helper.pagination_config.class%
         arguments:
-            - %ojstr_message_message.folder.show.messages_per_page%
+            - %ojs_message_message.folder.show.messages_per_page%
 
     #
     # Dashboard Integrator.
     #
-    ojstr_message_message.component.dashboard.integrator:
-        class: %ojstr_message_message.component.dashboard.integrator.class%
+    ojs_message_message.component.dashboard.integrator:
+        class: %ojs_message_message.component.dashboard.integrator.class%
         tags:
-            - { name: ojstr_component_dashboard.integrator }
+            - { name: ojs_component_dashboard.integrator }
 
-    ojstr_message_message.component.flood_control:
-        class: %ojstr_message_message.component.flood_control.class%
+    ojs_message_message.component.flood_control:
+        class: %ojs_message_message.component.flood_control.class%
         arguments:
             - @security.context
             - @session
             - %kernel.environment%
-            - %ojstr_message_message.message.flood_control.send_limit%
-            - %ojstr_message_message.message.flood_control.block_for_minutes%
+            - %ojs_message_message.message.flood_control.send_limit%
+            - %ojs_message_message.message.flood_control.block_for_minutes%
 
     #
     # Event Subscribers.
     #
-    ojstr_message_message.component.event_listener.flash:
-        class: %ojstr_message_message.component.event_listener.flash.class%
+    ojs_message_message.component.event_listener.flash:
+        class: %ojs_message_message.component.event_listener.flash.class%
         arguments: [@session]
         tags:
             - { name: kernel.event_subscriber }
 
-    ojstr_message_message.component.event_listener.stats:
-        class: %ojstr_message_message.component.event_listener.stats.class%
+    ojs_message_message.component.event_listener.stats:
+        class: %ojs_message_message.component.event_listener.stats.class%
         arguments:
-            - @ojstr_message_message.model.folder
-            - @ojstr_message_message.model.envelope
-            - @ojstr_message_message.model.registry
+            - @ojs_message_message.model.folder
+            - @ojs_message_message.model.envelope
+            - @ojs_message_message.model.registry
         tags:
             - { name: kernel.event_subscriber }
 
     #
     # Crumbs.
     #
-    ojstr_message_message.component.crumb_factory:
-        class: %ojstr_message_message.component.crumb_factory.class%
+    ojs_message_message.component.crumb_factory:
+        class: %ojs_message_message.component.crumb_factory.class%
         arguments:
             - @translator
             - @router
 
-    ojstr_message_message.component.crumb_builder:
-        class: %ojstr_message_message.component.crumb_builder.class%
+    ojs_message_message.component.crumb_builder:
+        class: %ojs_message_message.component.crumb_builder.class%
         arguments:
-            - @ojstr_message_message.component.crumb_factory
+            - @ojs_message_message.component.crumb_factory
