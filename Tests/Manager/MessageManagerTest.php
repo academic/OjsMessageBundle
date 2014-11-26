@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,9 +11,9 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Tests\Repository;
+namespace Okulbilisim\MessageBundle\Tests\Repository;
 
-use OjsMessage\MessageBundle\Tests\TestBase;
+use Okulbilisim\MessageBundle\Tests\TestBase;
 
 class MessageManagerTest extends TestBase
 {

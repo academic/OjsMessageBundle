@@ -1,8 +1,8 @@
-{% extends 'OjsMessageMessageBundle:Common:Layout/base.html.twig' %}
+{% extends 'OkulbilisimMessageBundle:Common:Layout/base.html.twig' %}
 
-{% set LayoutTemplate = ojs_message_message.folder.show.layout_template %}
+{% set LayoutTemplate = okulbilisim_message.folder.show.layout_template %}
 
-{% block title %}{{- 'title.message.index' |trans({'%folder_name%': current_folder.getName |title }, 'OjsMessageMessageBundle') |slice(0, ojs_message_message.seo.title_length) -}}{% endblock %}
+{% block title %}{{- 'title.message.index' |trans({'%folder_name%': current_folder.getName |title }, 'OkulbilisimMessageBundle') |slice(0, okulbilisim_message.seo.title_length) -}}{% endblock %}
 
 
 {% block body_content %}
@@ -10,9 +10,9 @@
 	{%- spaceless -%}
 
 <section>
-    <form method="POST" action="{{- path('ojs_message_message_user_folder_mail_bulk_action', {'folderName': current_folder.getName()}) -}}" class="form-inline">
+    <form method="POST" action="{{- path('okulbilisim_message_user_folder_mail_bulk_action', {'folderName': current_folder.getName()}) -}}" class="form-inline">
         <div class="btn-toolbar">
-					{%- include 'OjsMessageMessageBundle:User:Folder/Partial/folder_actions.html.twig' -%}
+					{%- include 'OkulbilisimMessageBundle:User:Folder/Partial/folder_actions.html.twig' -%}
         </div>
 
 				{{- knp_pagination_render(pager) -}}
@@ -24,19 +24,19 @@
                     <th style="width: 16px;"><i class="glyphicon glyphicon-flag"></i></th>
                     <th style="width: 16px;"><i class="glyphicon glyphicon-inbox"></i></th>
                     <th style="width: 16px;"><i class="glyphicon glyphicon-eye-open"></i></th>
-                    <th style="width: 60px;">{{- ((current_folder.name == 'sent') ? 'generic.thead.to' :'generic.thead.from') | trans({}, 'OjsMessageMessageBundle') -}}</th>
-                    <th>{{- 'generic.thead.subject' | trans({}, 'OjsMessageMessageBundle') -}}</th>
-                    <th style="width: 140px;">{{- 'generic.thead.sent' | trans({}, 'OjsMessageMessageBundle') -}}</th>
+                    <th style="width: 60px;">{{- ((current_folder.name == 'sent') ? 'generic.thead.to' :'generic.thead.from') | trans({}, 'OkulbilisimMessageBundle') -}}</th>
+                    <th>{{- 'generic.thead.subject' | trans({}, 'OkulbilisimMessageBundle') -}}</th>
+                    <th style="width: 140px;">{{- 'generic.thead.sent' | trans({}, 'OkulbilisimMessageBundle') -}}</th>
                 </tr>
             </thead>
             <tbody>
 						{%- for row, envelope in pager.getItems() -%}
 							{%- set message = envelope.getMessage() -%}
-							{%- include 'OjsMessageMessageBundle:User:Folder/Partial/item_message.html.twig' with {'message': message} -%}
+							{%- include 'OkulbilisimMessageBundle:User:Folder/Partial/item_message.html.twig' with {'message': message} -%}
 						{%- else -%}
                 <tr>
                     <td colspan="8" class="center">
-									{{- 'generic.message.none' | trans({}, 'OjsMessageMessageBundle') -}}
+									{{- 'generic.message.none' | trans({}, 'OkulbilisimMessageBundle') -}}
                     </td>
                 </tr>
 						{%- endfor -%}

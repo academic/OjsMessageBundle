@@ -8,38 +8,38 @@ services:
     # Managers.
     #
 
-    ojs_message_message.manager.folder:
-        class: %ojs_message_message.manager.folder.class%
+    okulbilisim_message.manager.folder:
+        class: %okulbilisim_message.manager.folder.class%
         arguments:
             - @event_dispatcher
-            - @ojs_message_message.gateway.folder
+            - @okulbilisim_message.gateway.folder
 
-    ojs_message_message.manager.envelope:
-        class: %ojs_message_message.manager.envelope.class%
+    okulbilisim_message.manager.envelope:
+        class: %okulbilisim_message.manager.envelope.class%
         arguments:
             - @event_dispatcher
-            - @ojs_message_message.gateway.envelope
+            - @okulbilisim_message.gateway.envelope
 
-    ojs_message_message.manager.message:
-        class: %ojs_message_message.manager.message.class%
+    okulbilisim_message.manager.message:
+        class: %okulbilisim_message.manager.message.class%
         arguments:
             - @event_dispatcher
-            - @ojs_message_message.gateway.message
+            - @okulbilisim_message.gateway.message
 
-    ojs_message_message.manager.thread:
-        class: %ojs_message_message.manager.thread.class%
+    okulbilisim_message.manager.thread:
+        class: %okulbilisim_message.manager.thread.class%
         arguments:
             - @event_dispatcher
-            - @ojs_message_message.gateway.thread
+            - @okulbilisim_message.gateway.thread
 
-    ojs_message_message.manager.registry:
-        class: %ojs_message_message.manager.registry.class%
+    okulbilisim_message.manager.registry:
+        class: %okulbilisim_message.manager.registry.class%
         arguments:
             - @event_dispatcher
-            - @ojs_message_message.gateway.registry
+            - @okulbilisim_message.gateway.registry
 
-    ojs_message_message.manager.user:
-        class: %ojs_message_message.manager.user.class%
+    okulbilisim_message.manager.user:
+        class: %okulbilisim_message.manager.user.class%
         arguments:
             - @event_dispatcher
-            - @ojs_message_message.gateway.user
+            - @okulbilisim_message.gateway.user

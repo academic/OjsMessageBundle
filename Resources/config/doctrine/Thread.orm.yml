@@ -1,4 +1,4 @@
-OjsMessage\MessageBundle\Entity\Thread:
+Okulbilisim\MessageBundle\Entity\Thread:
     type: entity
     table: cc_message_thread
     id:
@@ -7,8 +7,8 @@ OjsMessage\MessageBundle\Entity\Thread:
             generator: { strategy: AUTO }
     oneToMany:
         messages:
-            targetEntity: OjsMessage\MessageBundle\Entity\Message
+            targetEntity: Okulbilisim\MessageBundle\Entity\Message
             mappedBy: thread
         envelopes:
-            targetEntity: OjsMessage\MessageBundle\Entity\Envelope
+            targetEntity: Okulbilisim\MessageBundle\Entity\Envelope
             mappedBy: thread

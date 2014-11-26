@@ -1,4 +1,4 @@
-ojs_message_message:
+okulbilisim_message:
     entity:
         user:
-            class: OjsMessage\MessageBundle\Tests\Functional\src\Entity\User
+            class: Okulbilisim\MessageBundle\Tests\Functional\src\Entity\User

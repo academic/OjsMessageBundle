@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,10 +11,10 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Component\TwigExtension;
+namespace Okulbilisim\MessageBundle\Component\TwigExtension;
 
 use Symfony\Component\Security\Core\SecurityContext;
-use OjsMessage\MessageBundle\Model\FrontModel\RegistryModel;
+use Okulbilisim\MessageBundle\Model\FrontModel\RegistryModel;
 
 /**
  *
@@ -26,7 +26,7 @@ class RegistryExtension extends \Twig_Extension
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Model\FrontModel\RegistryModel $registryModel
+     * @var \Okulbilisim\MessageBundle\Model\FrontModel\RegistryModel $registryModel
      */
     protected $registryModel;
 
@@ -40,7 +40,7 @@ class RegistryExtension extends \Twig_Extension
     /**
      *
      * @access public
-     * @param \OjsMessage\MessageBundle\Model\FrontModel\RegistryModel $registryHelper
+     * @param \Okulbilisim\MessageBundle\Model\FrontModel\RegistryModel $registryHelper
      * @param \Symfony\Component\Security\Core\SecurityContext          $securityContext
      */
     public function __construct(RegistryModel $registryModel, SecurityContext $securityContext)

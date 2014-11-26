@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,16 +11,16 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Model\FrontModel;
+namespace Okulbilisim\MessageBundle\Model\FrontModel;
 
-use OjsMessage\MessageBundle\Model\FrontModel\BaseModel;
-use OjsMessage\MessageBundle\Model\FrontModel\ModelInterface;
+use Okulbilisim\MessageBundle\Model\FrontModel\BaseModel;
+use Okulbilisim\MessageBundle\Model\FrontModel\ModelInterface;
 
-use OjsMessage\MessageBundle\Entity\Message;
+use Okulbilisim\MessageBundle\Entity\Message;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -34,7 +34,7 @@ class MessageModel extends BaseModel implements ModelInterface
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Entity\Message
+     * @return \Okulbilisim\MessageBundle\Entity\Message
      */
     public function createMessage()
     {
@@ -45,7 +45,7 @@ class MessageModel extends BaseModel implements ModelInterface
      *
      * @access public
      * @param  int                                       $messageId
-     * @return \OjsMessage\MessageBundle\Entity\Message
+     * @return \Okulbilisim\MessageBundle\Entity\Message
      */
     public function getAllEnvelopesForMessageById($messageId)
     {
@@ -55,8 +55,8 @@ class MessageModel extends BaseModel implements ModelInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Message                         $message
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\MessageManager
+     * @param  \Okulbilisim\MessageBundle\Entity\Message                         $message
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\MessageManager
      */
     public function saveMessage(Message $message)
     {

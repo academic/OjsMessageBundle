@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,18 +11,18 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Model\Component\Gateway;
+namespace Okulbilisim\MessageBundle\Model\Component\Gateway;
 
 use Doctrine\ORM\QueryBuilder;
 
-use OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface;
-use OjsMessage\MessageBundle\Model\Component\Gateway\BaseGateway;
+use Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface;
+use Okulbilisim\MessageBundle\Model\Component\Gateway\BaseGateway;
 
-use OjsMessage\MessageBundle\Entity\Message;
+use Okulbilisim\MessageBundle\Entity\Message;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -106,8 +106,8 @@ class MessageGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Message                           $message
-     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @param  \Okulbilisim\MessageBundle\Entity\Message                           $message
+     * @return \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function saveMessage(Message $message)
     {
@@ -119,8 +119,8 @@ class MessageGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Message                           $message
-     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @param  \Okulbilisim\MessageBundle\Entity\Message                           $message
+     * @return \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function updateMessage(Message $message)
     {
@@ -132,8 +132,8 @@ class MessageGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Message                           $message
-     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @param  \Okulbilisim\MessageBundle\Entity\Message                           $message
+     * @return \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function deleteMessage(Message $message)
     {
@@ -145,7 +145,7 @@ class MessageGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Entity\Message
+     * @return \Okulbilisim\MessageBundle\Entity\Message
      */
     public function createMessage()
     {

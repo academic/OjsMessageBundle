@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,14 +11,14 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Entity\Model;
+namespace Okulbilisim\MessageBundle\Entity\Model;
 
-use OjsMessage\MessageBundle\Entity\Envelope;
-use OjsMessage\MessageBundle\Entity\Message;
+use Okulbilisim\MessageBundle\Entity\Envelope;
+use Okulbilisim\MessageBundle\Entity\Message;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -66,7 +66,7 @@ abstract class ThreadModel
      * Set messages
      *
      * @param  \Doctrine\Common\Collections\ArrayCollection|Array $messages
-     * @return \OjsMessage\MessageBundle\Entity\Thread
+     * @return \Okulbilisim\MessageBundle\Entity\Thread
      */
     public function setMessages($messages = null)
     {
@@ -78,8 +78,8 @@ abstract class ThreadModel
     /**
      * Add message
      *
-     * @param  \OjsMessage\MessageBundle\Entity\Message $message
-     * @return \OjsMessage\MessageBundle\Entity\Thread
+     * @param  \Okulbilisim\MessageBundle\Entity\Message $message
+     * @return \Okulbilisim\MessageBundle\Entity\Thread
      */
     public function addMessage(Message $message)
     {
@@ -102,7 +102,7 @@ abstract class ThreadModel
      * Set envelopes
      *
      * @param  \Doctrine\Common\Collections\ArrayCollection|Array $envelopes
-     * @return \OjsMessage\MessageBundle\Entity\Thread
+     * @return \Okulbilisim\MessageBundle\Entity\Thread
      */
     public function setEnvelopes($envelopes = null)
     {
@@ -114,8 +114,8 @@ abstract class ThreadModel
     /**
      * Add envelope
      *
-     * @param  \OjsMessage\MessageBundle\Entity\Envelope $envelope
-     * @return \OjsMessage\MessageBundle\Entity\Thread
+     * @param  \Okulbilisim\MessageBundle\Entity\Envelope $envelope
+     * @return \Okulbilisim\MessageBundle\Entity\Thread
      */
     public function addEnvelope(Envelope $envelope)
     {

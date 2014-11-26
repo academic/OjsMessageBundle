@@ -7,18 +7,18 @@ services:
     #
     # Twig Extensions.
     #
-    ojs_message_message.component.twig_extension.registry:
-        class: %ojs_message_message.component.twig_extension.registry.class%
+    okulbilisim_message.component.twig_extension.registry:
+        class: %okulbilisim_message.component.twig_extension.registry.class%
         arguments:
-            - @ojs_message_message.model.registry
+            - @okulbilisim_message.model.registry
             - @security.context
         tags:
             - { name: twig.extension }
 
-    ojs_message_message.component.twig_extension.folder_list:
-        class: %ojs_message_message.component.twig_extension.folder_list.class%
+    okulbilisim_message.component.twig_extension.folder_list:
+        class: %okulbilisim_message.component.twig_extension.folder_list.class%
         arguments:
-            - @ojs_message_message.component.helper.folder
+            - @okulbilisim_message.component.helper.folder
             - @security.context
         tags:
             - { name: twig.extension }

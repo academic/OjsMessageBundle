@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,16 +11,16 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Controller;
+namespace Okulbilisim\MessageBundle\Controller;
 
-use OjsMessage\MessageBundle\Controller\UserMessageBaseController;
-use OjsMessage\MessageBundle\Component\Dispatcher\MessageEvents;
-use OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent;
-use OjsMessage\MessageBundle\Entity\Folder;
+use Okulbilisim\MessageBundle\Controller\UserMessageBaseController;
+use Okulbilisim\MessageBundle\Component\Dispatcher\MessageEvents;
+use Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent;
+use Okulbilisim\MessageBundle\Entity\Folder;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -46,7 +46,7 @@ class UserMessageController extends UserMessageBaseController
         $folders = $this->getFolderHelper()->findAllFoldersForUserById($user);
         $this->getEnvelopeModel()->markAsRead($envelope);
 
-        return $this->renderResponse('OjsMessageMessageBundle:User:Message/show.html.', array(
+        return $this->renderResponse('OkulbilisimMessageBundle:User:Message/show.html.', array(
             'crumbs' => $this->getCrumbs()->addUserMessageShow($envelope),
             'folders' => $folders,
             'envelope' => $envelope,
@@ -66,11 +66,11 @@ class UserMessageController extends UserMessageBaseController
         $formHandler = $this->getFormHandlerToSendMessage($userId);
 
         if ($formHandler->process()) {
-            $response = $this->redirectResponse($this->path('ojs_message_message_user_folder_show', array('folderName' => 'sent')));
+            $response = $this->redirectResponse($this->path('okulbilisim_message_user_folder_show', array('folderName' => 'sent')));
         } else {
             $folders = $this->getFolderHelper()->findAllFoldersForUserById($this->getUser());
             $currentFolder = $this->getFolderHelper()->filterFolderBySpecialType($folders, Folder::SPECIAL_TYPE_DRAFTS);
-            $response = $this->renderResponse('OjsMessageMessageBundle:User:Message/compose.html.', array(
+            $response = $this->renderResponse('OkulbilisimMessageBundle:User:Message/compose.html.', array(
                 'crumbs' => $this->getCrumbs()->addUserMessageCreate($currentFolder),
                 'form' => $formHandler->getForm()->createView(),
                 'preview' => $formHandler->getForm()->getData(),
@@ -95,9 +95,9 @@ class UserMessageController extends UserMessageBaseController
         $formHandler = $this->getFormHandlerToReplyToMessage($envelope);
 
         if ($formHandler->process()) {
-            $response = $this->redirectResponse($this->path('ojs_message_message_user_folder_show', array('folderName' => 'sent')));
+            $response = $this->redirectResponse($this->path('okulbilisim_message_user_folder_show', array('folderName' => 'sent')));
         } else {
-            $response = $this->renderResponse('OjsMessageMessageBundle:User:Message/compose_reply.html.', array(
+            $response = $this->renderResponse('OkulbilisimMessageBundle:User:Message/compose_reply.html.', array(
                 'crumbs' => $this->getCrumbs()->addUserMessageReply($envelope),
                 'form' => $formHandler->getForm()->createView(),
                 'preview' => $formHandler->getForm()->getData(),
@@ -123,9 +123,9 @@ class UserMessageController extends UserMessageBaseController
         $formHandler = $this->getFormHandlerToForwardMessage($envelope);
 
         if ($formHandler->process()) {
-            $response = $this->redirectResponse($this->path('ojs_message_message_user_folder_show', array('folderName' => 'sent')));
+            $response = $this->redirectResponse($this->path('okulbilisim_message_user_folder_show', array('folderName' => 'sent')));
         } else {
-            $response = $this->renderResponse('OjsMessageMessageBundle:User:Message/compose_forward.html.', array(
+            $response = $this->renderResponse('OkulbilisimMessageBundle:User:Message/compose_forward.html.', array(
                 'crumbs' => $this->getCrumbs()->addUserMessageForward($envelope),
                 'form' => $formHandler->getForm()->createView(),
                 'preview' => $formHandler->getForm()->getData(),
@@ -156,7 +156,7 @@ class UserMessageController extends UserMessageBaseController
             $this->setFlash('warning', $this->trans('flash.error.message.flood_control'));
         }
 
-        $response = $this->redirectResponse($this->path('ojs_message_message_user_folder_show', array('folderName' => 'sent' )));
+        $response = $this->redirectResponse($this->path('okulbilisim_message_user_folder_show', array('folderName' => 'sent' )));
 
         $this->dispatch(MessageEvents::USER_MESSAGE_DRAFT_SEND_RESPONSE, new UserMessageResponseEvent($this->getRequest(), $response, $message));
 
@@ -178,7 +178,7 @@ class UserMessageController extends UserMessageBaseController
         $currentFolder = $this->getFolderHelper()->filterFolderByName($folders, $envelope->getFolder()->getName());
         $this->getEnvelopeModel()->markAsRead($envelope);
 
-        $response = $this->redirectResponse($this->path('ojs_message_message_user_folder_show', array('folderName' => $currentFolder->getName() )));
+        $response = $this->redirectResponse($this->path('okulbilisim_message_user_folder_show', array('folderName' => $currentFolder->getName() )));
 
         $this->dispatch(MessageEvents::USER_MESSAGE_MARK_AS_READ_RESPONSE, new UserMessageResponseEvent($this->getRequest(), $response, $envelope->getMessage()));
 
@@ -200,7 +200,7 @@ class UserMessageController extends UserMessageBaseController
         $currentFolder = $this->getFolderHelper()->filterFolderByName($folders, $envelope->getFolder()->getName());
         $this->getEnvelopeModel()->markAsUnread($envelope, $folders)->flush();
 
-        $response = $this->redirectResponse($this->path('ojs_message_message_user_folder_show', array('folderName' => $currentFolder->getName() )));
+        $response = $this->redirectResponse($this->path('okulbilisim_message_user_folder_show', array('folderName' => $currentFolder->getName() )));
 
         $this->dispatch(MessageEvents::USER_MESSAGE_MARK_AS_UNREAD_RESPONSE, new UserMessageResponseEvent($this->getRequest(), $response, $envelope->getMessage()));
 
@@ -222,7 +222,7 @@ class UserMessageController extends UserMessageBaseController
         $currentFolder = $this->getFolderHelper()->filterFolderByName($folders, $envelope->getFolder()->getName());
         $this->getEnvelopeModel()->delete($envelope, $folders)->flush();
 
-        $response = $this->redirectResponse($this->path('ojs_message_message_user_folder_show', array('folderName' => $currentFolder->getName() )));
+        $response = $this->redirectResponse($this->path('okulbilisim_message_user_folder_show', array('folderName' => $currentFolder->getName() )));
 
         $this->dispatch(MessageEvents::USER_MESSAGE_DELETE_RESPONSE, new UserMessageResponseEvent($this->getRequest(), $response, $envelope->getMessage()));
 

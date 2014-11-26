@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,16 +11,16 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Model\FrontModel;
+namespace Okulbilisim\MessageBundle\Model\FrontModel;
 
 use Symfony\Component\Security\Core\User\UserInterface;
-use OjsMessage\MessageBundle\Model\FrontModel\BaseModel;
-use OjsMessage\MessageBundle\Model\FrontModel\ModelInterface;
-use OjsMessage\MessageBundle\Entity\Registry;
+use Okulbilisim\MessageBundle\Model\FrontModel\BaseModel;
+use Okulbilisim\MessageBundle\Model\FrontModel\ModelInterface;
+use Okulbilisim\MessageBundle\Entity\Registry;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -34,7 +34,7 @@ class RegistryModel extends BaseModel implements ModelInterface
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Entity\Registry
+     * @return \Okulbilisim\MessageBundle\Entity\Registry
      */
     public function createRegistry()
     {
@@ -45,7 +45,7 @@ class RegistryModel extends BaseModel implements ModelInterface
      *
      * @access public
      * @param  \Symfony\Component\Security\Core\User\UserInterface $user
-     * @return \OjsMessage\MessageBundle\Entity\Registry
+     * @return \Okulbilisim\MessageBundle\Entity\Registry
      */
     public function findOrCreateOneRegistryForUser(UserInterface $user)
     {
@@ -62,7 +62,7 @@ class RegistryModel extends BaseModel implements ModelInterface
      *
      * @access public
      * @param  int                                        $userId
-     * @return \OjsMessage\MessageBundle\Entity\Registry
+     * @return \Okulbilisim\MessageBundle\Entity\Registry
      */
     public function findOneRegistryForUserById($userId)
     {
@@ -80,7 +80,7 @@ class RegistryModel extends BaseModel implements ModelInterface
      *
      * @access public
      * @param  \Symfony\Component\Security\Core\User\UserInterface $user
-     * @return \OjsMessage\MessageBundle\Entity\Registry
+     * @return \Okulbilisim\MessageBundle\Entity\Registry
      */
     public function setupDefaults(UserInterface $user)
     {

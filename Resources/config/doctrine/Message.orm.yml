@@ -1,4 +1,4 @@
-OjsMessage\MessageBundle\Entity\Message:
+Okulbilisim\MessageBundle\Entity\Message:
     type: entity
     table: cc_message_message
     id:
@@ -19,7 +19,7 @@ OjsMessage\MessageBundle\Entity\Message:
             column: send_to
     manyToOne:
         thread:
-            targetEntity: OjsMessage\MessageBundle\Entity\Thread
+            targetEntity: Okulbilisim\MessageBundle\Entity\Thread
             inversedBy: messages
             cascade: ["persist"]
             joinColumn:
@@ -35,5 +35,5 @@ OjsMessage\MessageBundle\Entity\Message:
                 onDelete: SET NULL
     oneToMany:
         envelopes:
-            targetEntity: OjsMessage\MessageBundle\Entity\Envelope
+            targetEntity: Okulbilisim\MessageBundle\Entity\Envelope
             mappedBy: message

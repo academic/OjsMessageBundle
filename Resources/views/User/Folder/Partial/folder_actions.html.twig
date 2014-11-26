@@ -1,13 +1,13 @@
 {%- spaceless -%}
-<a class="btn btn-danger" href="{{- path('ojs_message_message_user_mail_compose') -}}">
-		{{- 'link.message.compose' | trans({}, 'OjsMessageMessageBundle') -}}
+<a class="btn btn-danger" href="{{- path('okulbilisim_message_user_mail_compose') -}}">
+		{{- 'link.message.compose' | trans({}, 'OkulbilisimMessageBundle') -}}
 </a>
 
-<input type="submit" id="submit[delete]" name="submit[delete]" class="btn btn-danger" value="{{- 'link.message.delete' |trans({}, 'OjsMessageMessageBundle') -}}">
+<input type="submit" id="submit[delete]" name="submit[delete]" class="btn btn-danger" value="{{- 'link.message.delete' |trans({}, 'OkulbilisimMessageBundle') -}}">
 
-<input type="submit" id="submit[mark_as_read]" name="submit[mark_as_read]" class="btn btn-default" value="{{- 'link.message.mark_as_read' |trans({}, 'OjsMessageMessageBundle') -}}">
+<input type="submit" id="submit[mark_as_read]" name="submit[mark_as_read]" class="btn btn-default" value="{{- 'link.message.mark_as_read' |trans({}, 'OkulbilisimMessageBundle') -}}">
 
-<input type="submit" id="submit[mark_as_unread]" name="submit[mark_as_unread]" class="btn btn-default" value="{{- 'link.message.mark_as_unread' |trans({}, 'OjsMessageMessageBundle') -}}">
+<input type="submit" id="submit[mark_as_unread]" name="submit[mark_as_unread]" class="btn btn-default" value="{{- 'link.message.mark_as_unread' |trans({}, 'OkulbilisimMessageBundle') -}}">
 
 <select name="select_move_to">
 		{%- for row, folder in folders -%}
@@ -15,5 +15,5 @@
 		{%- endfor -%}
 </select>
 
-<input type="submit" id="submit[move_to]" name="submit[move_to]" class="btn btn-default" value="{{- 'link.message.move_to' |trans({}, 'OjsMessageMessageBundle') -}}">
+<input type="submit" id="submit[move_to]" name="submit[move_to]" class="btn btn-default" value="{{- 'link.message.move_to' |trans({}, 'OkulbilisimMessageBundle') -}}">
 {%- endspaceless -%}

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,16 +11,16 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Model\Component\Gateway;
+namespace Okulbilisim\MessageBundle\Model\Component\Gateway;
 
 use Doctrine\ORM\QueryBuilder;
 
-use OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface;
-use OjsMessage\MessageBundle\Model\Component\Gateway\BaseGateway;
+use Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface;
+use Okulbilisim\MessageBundle\Model\Component\Gateway\BaseGateway;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>

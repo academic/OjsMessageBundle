@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,14 +11,14 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Component\Crumbs\Factory;
+namespace Okulbilisim\MessageBundle\Component\Crumbs\Factory;
 
 use Symfony\Bundle\FrameworkBundle\Translation\Translator;
 use Symfony\Bundle\FrameworkBundle\Routing\Router;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -68,7 +68,7 @@ class CrumbTrail
      * @param  string $bundle
      * @return string
      */
-    protected function trans($message, $params = array(), $bundle = 'OjsMessageMessageBundle')
+    protected function trans($message, $params = array(), $bundle = 'OkulbilisimMessageBundle')
     {
         return $this->translator->trans($message, $params, $bundle);
     }
@@ -109,7 +109,7 @@ class CrumbTrail
             }
 
             if (! isset($label['bundle'])) {
-                $label['bundle'] = 'OjsMessageMessageBundle';
+                $label['bundle'] = 'OkulbilisimMessageBundle';
             }
 
             $labelTranslated = $this->trans($label['label'], $label['params'], $label['bundle']);

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,7 +11,7 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\features\bootstrap;
+namespace Okulbilisim\MessageBundle\features\bootstrap;
 
 use Behat\Behat\Context\BehatContext;
 use Behat\Gherkin\Node\TableNode;
@@ -19,18 +19,18 @@ use Behat\Symfony2Extension\Context\KernelAwareInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
-use OjsMessage\MessageBundle\Tests\Functional\src\Entity\User;
+use Okulbilisim\MessageBundle\Tests\Functional\src\Entity\User;
 
-use OjsMessage\MessageBundle\Entity\Folder;
-use OjsMessage\MessageBundle\Entity\Message;
-use OjsMessage\MessageBundle\Entity\Envelope;
-use OjsMessage\MessageBundle\Entity\Thread;
+use Okulbilisim\MessageBundle\Entity\Folder;
+use Okulbilisim\MessageBundle\Entity\Message;
+use Okulbilisim\MessageBundle\Entity\Envelope;
+use Okulbilisim\MessageBundle\Entity\Thread;
 
 /**
  *
  * Features context.
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>

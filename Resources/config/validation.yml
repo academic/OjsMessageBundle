@@ -1,15 +1,15 @@
 #namespaces:
-#    OjsMessageMessageBundle: OjsMessage\MessageBundle\Form\Validator\Constraints\
+#    OkulbilisimMessageBundle: Okulbilisim\MessageBundle\Form\Validator\Constraints\
 #
 
-#%ojs_message_message.entity.message.class%:
-OjsMessage\MessageBundle\Entity\Message:
+#%okulbilisim_message.entity.message.class%:
+Okulbilisim\MessageBundle\Entity\Message:
     properties:
         sendTo:
             - Type: { type: string, groups: [message_send] }
             - NotBlank: { groups: [message_send] }
             - Length: { max: 255, groups: [message_send] }
-            - OjsMessage\MessageBundle\Form\Validator\Constraints\SendTo: {  groups: [message_send] }
+            - Okulbilisim\MessageBundle\Form\Validator\Constraints\SendTo: {  groups: [message_send] }
         subject:
             - Type: { type: string, groups: [message_send] }
             - NotBlank: { groups: [message_send] }

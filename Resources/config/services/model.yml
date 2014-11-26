@@ -8,44 +8,44 @@ services:
     # Models.
     #
 
-    ojs_message_message.model.folder:
-        class: %ojs_message_message.model.folder.class%
+    okulbilisim_message.model.folder:
+        class: %okulbilisim_message.model.folder.class%
         arguments:
             - @event_dispatcher
-            - @ojs_message_message.repository.folder
-            - @ojs_message_message.manager.folder
+            - @okulbilisim_message.repository.folder
+            - @okulbilisim_message.manager.folder
 
-    ojs_message_message.model.envelope:
-        class: %ojs_message_message.model.envelope.class%
+    okulbilisim_message.model.envelope:
+        class: %okulbilisim_message.model.envelope.class%
         arguments:
             - @event_dispatcher
-            - @ojs_message_message.repository.envelope
-            - @ojs_message_message.manager.envelope
+            - @okulbilisim_message.repository.envelope
+            - @okulbilisim_message.manager.envelope
 
-    ojs_message_message.model.message:
-        class: %ojs_message_message.model.message.class%
+    okulbilisim_message.model.message:
+        class: %okulbilisim_message.model.message.class%
         arguments:
             - @event_dispatcher
-            - @ojs_message_message.repository.message
-            - @ojs_message_message.manager.message
+            - @okulbilisim_message.repository.message
+            - @okulbilisim_message.manager.message
 
-    ojs_message_message.model.thread:
-        class: %ojs_message_message.model.thread.class%
+    okulbilisim_message.model.thread:
+        class: %okulbilisim_message.model.thread.class%
         arguments:
             - @event_dispatcher
-            - @ojs_message_message.repository.thread
-            - @ojs_message_message.manager.thread
+            - @okulbilisim_message.repository.thread
+            - @okulbilisim_message.manager.thread
 
-    ojs_message_message.model.user:
-        class: %ojs_message_message.model.user.class%
+    okulbilisim_message.model.user:
+        class: %okulbilisim_message.model.user.class%
         arguments:
             - @event_dispatcher
-            - @ojs_message_message.repository.user
-            - @ojs_message_message.manager.user
+            - @okulbilisim_message.repository.user
+            - @okulbilisim_message.manager.user
 
-    ojs_message_message.model.registry:
-        class: %ojs_message_message.model.registry.class%
+    okulbilisim_message.model.registry:
+        class: %okulbilisim_message.model.registry.class%
         arguments:
             - @event_dispatcher
-            - @ojs_message_message.repository.registry
-            - @ojs_message_message.manager.registry
+            - @okulbilisim_message.repository.registry
+            - @okulbilisim_message.manager.registry

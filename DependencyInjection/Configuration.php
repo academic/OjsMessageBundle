@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,7 +11,7 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\DependencyInjection;
+namespace Okulbilisim\MessageBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
@@ -22,7 +22,7 @@ use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html#cookbook-bundles-extension-config-class}
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -38,7 +38,7 @@ class Configuration implements ConfigurationInterface
      * @access protected
      * @var string $defaultValueLayoutTemplate
      */
-    protected $defaultValueLayoutTemplate = 'OjsMessageMessageBundle::base.html.twig';
+    protected $defaultValueLayoutTemplate = 'OkulbilisimMessageBundle::base.html.twig';
 
     /**
      *
@@ -62,7 +62,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('ojs_message_message');
+        $rootNode = $treeBuilder->root('okulbilisim_message');
 
         $rootNode
             ->children()
@@ -98,7 +98,7 @@ class Configuration implements ConfigurationInterface
      *
      * @access private
      * @param  \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition $node
-     * @return \OjsMessage\MessageBundle\DependencyInjection\Configuration
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\Configuration
      */
     private function addEntitySection(ArrayNodeDefinition $node)
     {
@@ -114,35 +114,35 @@ class Configuration implements ConfigurationInterface
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Entity\Folder')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Entity\Folder')->end()
                             ->end()
                         ->end()
                         ->arrayNode('envelope')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Entity\Envelope')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Entity\Envelope')->end()
                             ->end()
                         ->end()
                         ->arrayNode('message')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Entity\Message')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Entity\Message')->end()
                             ->end()
                         ->end()
                         ->arrayNode('thread')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Entity\Thread')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Entity\Thread')->end()
                             ->end()
                         ->end()
                         ->arrayNode('registry')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Entity\Registry')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Entity\Registry')->end()
                             ->end()
                         ->end()
                         ->arrayNode('user')
@@ -167,7 +167,7 @@ class Configuration implements ConfigurationInterface
      *
      * @access private
      * @param  \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition $node
-     * @return \OjsMessage\MessageBundle\DependencyInjection\Configuration
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\Configuration
      */
     private function addRepositorySection(ArrayNodeDefinition $node)
     {
@@ -182,42 +182,42 @@ class Configuration implements ConfigurationInterface
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Repository\FolderRepository')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Repository\FolderRepository')->end()
                             ->end()
                         ->end()
                         ->arrayNode('envelope')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Repository\EnvelopeRepository')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Repository\EnvelopeRepository')->end()
                             ->end()
                         ->end()
                         ->arrayNode('message')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Repository\MessageRepository')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Repository\MessageRepository')->end()
                             ->end()
                         ->end()
                         ->arrayNode('registry')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Repository\RegistryRepository')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Repository\RegistryRepository')->end()
                             ->end()
                         ->end()
                         ->arrayNode('thread')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Repository\ThreadRepository')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Repository\ThreadRepository')->end()
                             ->end()
                         ->end()
                         ->arrayNode('user')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Repository\UserRepository')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Repository\UserRepository')->end()
                             ->end()
                         ->end()
                     ->end()
@@ -232,7 +232,7 @@ class Configuration implements ConfigurationInterface
      *
      * @access private
      * @param  \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition $node
-     * @return \OjsMessage\MessageBundle\DependencyInjection\Configuration
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\Configuration
      */
     private function addGatewaySection(ArrayNodeDefinition $node)
     {
@@ -247,42 +247,42 @@ class Configuration implements ConfigurationInterface
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Gateway\FolderGateway')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Gateway\FolderGateway')->end()
                             ->end()
                         ->end()
                         ->arrayNode('envelope')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Gateway\EnvelopeGateway')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Gateway\EnvelopeGateway')->end()
                             ->end()
                         ->end()
                         ->arrayNode('message')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Gateway\MessageGateway')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Gateway\MessageGateway')->end()
                             ->end()
                         ->end()
                         ->arrayNode('thread')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Gateway\ThreadGateway')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Gateway\ThreadGateway')->end()
                             ->end()
                         ->end()
                         ->arrayNode('registry')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Gateway\RegistryGateway')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Gateway\RegistryGateway')->end()
                             ->end()
                         ->end()
                         ->arrayNode('user')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Gateway\UserGateway')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Gateway\UserGateway')->end()
                             ->end()
                         ->end()
                     ->end()
@@ -297,7 +297,7 @@ class Configuration implements ConfigurationInterface
      *
      * @access private
      * @param  \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition $node
-     * @return \OjsMessage\MessageBundle\DependencyInjection\Configuration
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\Configuration
      */
     private function addManagerSection(ArrayNodeDefinition $node)
     {
@@ -312,42 +312,42 @@ class Configuration implements ConfigurationInterface
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Manager\FolderManager')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Manager\FolderManager')->end()
                             ->end()
                         ->end()
                         ->arrayNode('envelope')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager')->end()
                             ->end()
                         ->end()
                         ->arrayNode('message')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Manager\MessageManager')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Manager\MessageManager')->end()
                             ->end()
                         ->end()
                         ->arrayNode('thread')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Manager\ThreadManager')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Manager\ThreadManager')->end()
                             ->end()
                         ->end()
                         ->arrayNode('registry')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Manager\RegistryManager')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Manager\RegistryManager')->end()
                             ->end()
                         ->end()
                         ->arrayNode('user')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\Component\Manager\UserManager')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\Component\Manager\UserManager')->end()
                             ->end()
                         ->end()
                     ->end()
@@ -362,7 +362,7 @@ class Configuration implements ConfigurationInterface
      *
      * @access private
      * @param  \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition $node
-     * @return \OjsMessage\MessageBundle\DependencyInjection\Configuration
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\Configuration
      */
     private function addModelSection(ArrayNodeDefinition $node)
     {
@@ -377,42 +377,42 @@ class Configuration implements ConfigurationInterface
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\FrontModel\FolderModel')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\FrontModel\FolderModel')->end()
                             ->end()
                         ->end()
                         ->arrayNode('envelope')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\FrontModel\EnvelopeModel')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\FrontModel\EnvelopeModel')->end()
                             ->end()
                         ->end()
                         ->arrayNode('message')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\FrontModel\MessageModel')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\FrontModel\MessageModel')->end()
                             ->end()
                         ->end()
                         ->arrayNode('thread')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\FrontModel\ThreadModel')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\FrontModel\ThreadModel')->end()
                             ->end()
                         ->end()
                         ->arrayNode('registry')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\FrontModel\RegistryModel')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\FrontModel\RegistryModel')->end()
                             ->end()
                         ->end()
                         ->arrayNode('user')
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Model\FrontModel\UserModel')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Model\FrontModel\UserModel')->end()
                             ->end()
                         ->end()
                     ->end()
@@ -427,7 +427,7 @@ class Configuration implements ConfigurationInterface
      *
      * @access private
      * @param  \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition $node
-     * @return \OjsMessage\MessageBundle\DependencyInjection\Configuration
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\Configuration
      */
     private function addFormSection(ArrayNodeDefinition $node)
     {
@@ -446,7 +446,7 @@ class Configuration implements ConfigurationInterface
                                     ->addDefaultsIfNotSet()
                                     ->canBeUnset()
                                     ->children()
-                                        ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Form\Type\User\MessageFormType')->end()
+                                        ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Form\Type\User\MessageFormType')->end()
                                     ->end()
                                 ->end()
                             ->end()
@@ -459,21 +459,21 @@ class Configuration implements ConfigurationInterface
                                     ->addDefaultsIfNotSet()
                                     ->canBeUnset()
                                     ->children()
-                                        ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Form\Handler\User\MessageFormHandler')->end()
+                                        ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Form\Handler\User\MessageFormHandler')->end()
                                     ->end()
                                 ->end()
                                 ->arrayNode('message_reply')
                                     ->addDefaultsIfNotSet()
                                     ->canBeUnset()
                                     ->children()
-                                        ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Form\Handler\User\MessageReplyFormHandler')->end()
+                                        ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Form\Handler\User\MessageReplyFormHandler')->end()
                                     ->end()
                                 ->end()
                                 ->arrayNode('message_forward')
                                     ->addDefaultsIfNotSet()
                                     ->canBeUnset()
                                     ->children()
-                                        ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Form\Handler\User\MessageForwardFormHandler')->end()
+                                        ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Form\Handler\User\MessageForwardFormHandler')->end()
                                     ->end()
                                 ->end()
                             ->end()
@@ -486,7 +486,7 @@ class Configuration implements ConfigurationInterface
                                     ->addDefaultsIfNotSet()
                                     ->canBeUnset()
                                     ->children()
-                                        ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Form\Validator\SendToValidator')->end()
+                                        ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Form\Validator\SendToValidator')->end()
                                     ->end()
                                 ->end()
                             ->end()
@@ -503,7 +503,7 @@ class Configuration implements ConfigurationInterface
      *
      * @access private
      * @param  \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition $node
-     * @return \OjsMessage\MessageBundle\DependencyInjection\Configuration
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\Configuration
      */
     private function addComponentSection(ArrayNodeDefinition $node)
     {
@@ -522,7 +522,7 @@ class Configuration implements ConfigurationInterface
                                     ->addDefaultsIfNotSet()
                                     ->canBeUnset()
                                     ->children()
-                                        ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Component\Dashboard\DashboardIntegrator')->end()
+                                        ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Component\Dashboard\DashboardIntegrator')->end()
                                     ->end()
                                 ->end()
                             ->end()
@@ -535,14 +535,14 @@ class Configuration implements ConfigurationInterface
                                     ->addDefaultsIfNotSet()
                                     ->canBeUnset()
                                     ->children()
-                                        ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Component\TwigExtension\RegistryExtension')->end()
+                                        ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Component\TwigExtension\RegistryExtension')->end()
                                     ->end()
                                 ->end()
                                 ->arrayNode('folder_list')
                                     ->addDefaultsIfNotSet()
                                     ->canBeUnset()
                                     ->children()
-                                        ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Component\TwigExtension\FolderListExtension')->end()
+                                        ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Component\TwigExtension\FolderListExtension')->end()
                                     ->end()
                                 ->end()
                             ->end()
@@ -551,7 +551,7 @@ class Configuration implements ConfigurationInterface
                             ->addDefaultsIfNotSet()
                             ->canBeUnset()
                             ->children()
-                                ->scalarNode('class')->defaultValue('OjsMessage\MessageBundle\Component\FloodControl')->end()
+                                ->scalarNode('class')->defaultValue('Okulbilisim\MessageBundle\Component\FloodControl')->end()
                             ->end()
                         ->end()
                     ->end()
@@ -566,7 +566,7 @@ class Configuration implements ConfigurationInterface
      *
      * @access protected
      * @param  \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition $node
-     * @return \OjsMessage\MessageBundle\DependencyInjection\Configuration
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\Configuration
      */
     protected function addSEOSection(ArrayNodeDefinition $node)
     {
@@ -590,7 +590,7 @@ class Configuration implements ConfigurationInterface
      *
      * @access private
      * @param  \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition $node
-     * @return \OjsMessage\MessageBundle\DependencyInjection\Configuration
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\Configuration
      */
     private function addFolderSection(ArrayNodeDefinition $node)
     {
@@ -623,7 +623,7 @@ class Configuration implements ConfigurationInterface
      *
      * @access private
      * @param  \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition $node
-     * @return \OjsMessage\MessageBundle\DependencyInjection\Configuration
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\Configuration
      */
     private function addMessageSection(ArrayNodeDefinition $node)
     {
@@ -670,7 +670,7 @@ class Configuration implements ConfigurationInterface
      *
      * @access private
      * @param  \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition $node
-     * @return \OjsMessage\MessageBundle\DependencyInjection\Configuration
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\Configuration
      */
     private function addQuotasSection(ArrayNodeDefinition $node)
     {

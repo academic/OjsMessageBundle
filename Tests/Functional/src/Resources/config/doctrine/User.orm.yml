@@ -1,4 +1,4 @@
-OjsMessage\MessageBundle\Tests\Functional\src\Entity\User:
+Okulbilisim\MessageBundle\Tests\Functional\src\Entity\User:
     type: entity
     table: cc_user
     id:

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,15 +11,15 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Model\Component\Manager;
+namespace Okulbilisim\MessageBundle\Model\Component\Manager;
 
-use OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface;
-use OjsMessage\MessageBundle\Model\Component\Manager\BaseManager;
-use OjsMessage\MessageBundle\Entity\Message;
+use Okulbilisim\MessageBundle\Model\Component\Manager\ManagerInterface;
+use Okulbilisim\MessageBundle\Model\Component\Manager\BaseManager;
+use Okulbilisim\MessageBundle\Entity\Message;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -33,7 +33,7 @@ class MessageManager extends BaseManager implements ManagerInterface
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Entity\Message
+     * @return \Okulbilisim\MessageBundle\Entity\Message
      */
     public function createMessage()
     {

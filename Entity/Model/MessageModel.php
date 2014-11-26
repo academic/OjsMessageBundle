@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,14 +11,14 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Entity\Model;
+namespace Okulbilisim\MessageBundle\Entity\Model;
 
 use Symfony\Component\Security\Core\User\UserInterface;
-use OjsMessage\MessageBundle\Entity\Thread;
+use Okulbilisim\MessageBundle\Entity\Thread;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -37,7 +37,7 @@ abstract class MessageModel
     protected $envelopes = null;
 
     /**
-     * @var \OjsMessage\MessageBundle\Entity\Thread $thread
+     * @var \Okulbilisim\MessageBundle\Entity\Thread $thread
      */
     protected $thread = null;
 
@@ -69,7 +69,7 @@ abstract class MessageModel
      * Set envelopes
      *
      * @param $envelopes
-     * @return \OjsMessage\MessageBundle\Entity\Message
+     * @return \Okulbilisim\MessageBundle\Entity\Message
      */
     public function setEnvelopes($envelopes = null)
     {
@@ -81,7 +81,7 @@ abstract class MessageModel
     /**
      * Get thread
      *
-     * @return \OjsMessage\MessageBundle\Entity\Thread
+     * @return \Okulbilisim\MessageBundle\Entity\Thread
      */
     public function getThread()
     {
@@ -91,8 +91,8 @@ abstract class MessageModel
     /**
      * Set thread
      *
-     * @param  \OjsMessage\MessageBundle\Entity\Thread  $thread
-     * @return \OjsMessage\MessageBundle\Entity\Message
+     * @param  \Okulbilisim\MessageBundle\Entity\Thread  $thread
+     * @return \Okulbilisim\MessageBundle\Entity\Message
      */
     public function setThread(Thread $thread)
     {
@@ -115,7 +115,7 @@ abstract class MessageModel
      * Set sentFromUser
      *
      * @param  \Symfony\Component\Security\Core\User\UserInterface $sentFromUser
-     * @return \OjsMessage\MessageBundle\Entity\Envelope
+     * @return \Okulbilisim\MessageBundle\Entity\Envelope
      */
     public function setSentFromUser(UserInterface $sentFromUser = null)
     {

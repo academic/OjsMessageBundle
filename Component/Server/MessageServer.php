@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,33 +11,33 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Component\Server;
+namespace Okulbilisim\MessageBundle\Component\Server;
 
 use Symfony\Component\EventDispatcher\EventDispatcherInterface ;
 use Symfony\Component\Security\Core\User\UserInterface;
 
-use OjsMessage\MessageBundle\Component\Dispatcher\MessageEvents;
-use OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageEvent;
-use OjsMessage\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveEvent;
-use OjsMessage\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveFailedInboxFullEvent;
-use OjsMessage\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveFailedOutboxFullEvent;
+use Okulbilisim\MessageBundle\Component\Dispatcher\MessageEvents;
+use Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageEvent;
+use Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveEvent;
+use Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveFailedInboxFullEvent;
+use Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveFailedOutboxFullEvent;
 
-use OjsMessage\MessageBundle\Component\Helper\QuotaHelper;
-use OjsMessage\MessageBundle\Component\Helper\FolderHelper;
+use Okulbilisim\MessageBundle\Component\Helper\QuotaHelper;
+use Okulbilisim\MessageBundle\Component\Helper\FolderHelper;
 
-use OjsMessage\MessageBundle\Model\FrontModel\FolderModel;
-use OjsMessage\MessageBundle\Model\FrontModel\MessageModel;
-use OjsMessage\MessageBundle\Model\FrontModel\EnvelopeModel;
-use OjsMessage\MessageBundle\Model\FrontModel\UserModel;
+use Okulbilisim\MessageBundle\Model\FrontModel\FolderModel;
+use Okulbilisim\MessageBundle\Model\FrontModel\MessageModel;
+use Okulbilisim\MessageBundle\Model\FrontModel\EnvelopeModel;
+use Okulbilisim\MessageBundle\Model\FrontModel\UserModel;
 
-use OjsMessage\MessageBundle\Entity\Folder;
-use OjsMessage\MessageBundle\Entity\Message;
-use OjsMessage\MessageBundle\Entity\Envelope;
-use OjsMessage\MessageBundle\Entity\Thread;
+use Okulbilisim\MessageBundle\Entity\Folder;
+use Okulbilisim\MessageBundle\Entity\Message;
+use Okulbilisim\MessageBundle\Entity\Envelope;
+use Okulbilisim\MessageBundle\Entity\Thread;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -58,42 +58,42 @@ class MessageServer
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Model\FrontModel\FolderModel $folderModel
+     * @var \Okulbilisim\MessageBundle\Model\FrontModel\FolderModel $folderModel
      */
     protected $folderModel;
 
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Model\FrontModel\MessageModel $messageModel
+     * @var \Okulbilisim\MessageBundle\Model\FrontModel\MessageModel $messageModel
      */
     protected $messageModel;
 
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Model\FrontModel\EnvelopeModel $envelopeModel
+     * @var \Okulbilisim\MessageBundle\Model\FrontModel\EnvelopeModel $envelopeModel
      */
     protected $envelopeModel;
 
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Model\FrontModel\UserModel $userModel
+     * @var \Okulbilisim\MessageBundle\Model\FrontModel\UserModel $userModel
      */
     protected $userModel;
 
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Component\Helper\QuotaHelper $quotaHelper
+     * @var \Okulbilisim\MessageBundle\Component\Helper\QuotaHelper $quotaHelper
      */
     protected $quotaHelper;
 
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Component\Helper\FolderHelper $folderHelper
+     * @var \Okulbilisim\MessageBundle\Component\Helper\FolderHelper $folderHelper
      */
     protected $folderHelper;
 
@@ -111,12 +111,12 @@ class MessageServer
      *
      * @access public
      * @param \Symfony\Component\EventDispatcher\EventDispatcherInterface $dispatcher
-     * @param \OjsMessage\MessageBundle\Model\FrontModel\FolderModel     $folderModel
-     * @param \OjsMessage\MessageBundle\Model\FrontModel\MessageModel    $messageModel
-     * @param \OjsMessage\MessageBundle\Model\FrontModel\EnvelopeModel   $envelopeModel
-     * @param \OjsMessage\MessageBundle\Model\FrontModel\UserModel       $userModel
-     * @param \OjsMessage\MessageBundle\Component\Helper\QuotaHelper     $quotaHelper
-     * @param \OjsMessage\MessageBundle\Component\Helper\FolderHelper    $folderHelper
+     * @param \Okulbilisim\MessageBundle\Model\FrontModel\FolderModel     $folderModel
+     * @param \Okulbilisim\MessageBundle\Model\FrontModel\MessageModel    $messageModel
+     * @param \Okulbilisim\MessageBundle\Model\FrontModel\EnvelopeModel   $envelopeModel
+     * @param \Okulbilisim\MessageBundle\Model\FrontModel\UserModel       $userModel
+     * @param \Okulbilisim\MessageBundle\Component\Helper\QuotaHelper     $quotaHelper
+     * @param \Okulbilisim\MessageBundle\Component\Helper\FolderHelper    $folderHelper
      */
     public function __construct(EventDispatcherInterface  $dispatcher, FolderModel $folderModel,
      MessageModel $messageModel, EnvelopeModel $envelopeModel, UserModel $userModel, QuotaHelper $quotaHelper, FolderHelper $folderHelper)
@@ -133,7 +133,7 @@ class MessageServer
     /**
      *
      * @access public
-     * @param \OjsMessage\MessageBundle\Entity\Message $message
+     * @param \Okulbilisim\MessageBundle\Entity\Message $message
      * @param bool                                      $isFlagged
      */
     public function sendMessage($request, Message $message, $isFlagged)
@@ -167,7 +167,7 @@ class MessageServer
     /**
      *
      * @access public
-     * @param \OjsMessage\MessageBundle\Entity\Message $message
+     * @param \Okulbilisim\MessageBundle\Entity\Message $message
      * @param bool                                      $isFlagged
      */
     public function saveDraft($request, Message $message, $isFlagged)
@@ -184,7 +184,7 @@ class MessageServer
     /**
      *
      * @access public
-     * @param \OjsMessage\MessageBundle\Entity\Message           $message
+     * @param \Okulbilisim\MessageBundle\Entity\Message           $message
      * @param \Symfony\Component\Security\Core\User\UserInterface $recipient
      * @param int                                                 $mode
      * @param bool                                                $isFlagged
@@ -242,8 +242,8 @@ class MessageServer
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Message                         $message
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\MessageManager
+     * @param  \Okulbilisim\MessageBundle\Entity\Message                         $message
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\MessageManager
      */
     public function getRecipients(Message $message)
     {

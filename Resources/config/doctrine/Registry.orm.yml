@@ -1,4 +1,4 @@
-OjsMessage\MessageBundle\Entity\Registry:
+Okulbilisim\MessageBundle\Entity\Registry:
     type: entity
     table: cc_message_registry
     id:

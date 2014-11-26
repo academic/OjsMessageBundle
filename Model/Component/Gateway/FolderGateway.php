@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,18 +11,18 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Model\Component\Gateway;
+namespace Okulbilisim\MessageBundle\Model\Component\Gateway;
 
 use Doctrine\ORM\QueryBuilder;
 
-use OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface;
-use OjsMessage\MessageBundle\Model\Component\Gateway\BaseGateway;
+use Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface;
+use Okulbilisim\MessageBundle\Model\Component\Gateway\BaseGateway;
 
-use OjsMessage\MessageBundle\Entity\Folder;
+use Okulbilisim\MessageBundle\Entity\Folder;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -103,8 +103,8 @@ class FolderGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Folder                            $folder
-     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @param  \Okulbilisim\MessageBundle\Entity\Folder                            $folder
+     * @return \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function saveFolder(Folder $folder)
     {
@@ -116,8 +116,8 @@ class FolderGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Folder                            $folder
-     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @param  \Okulbilisim\MessageBundle\Entity\Folder                            $folder
+     * @return \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function updateFolder(Folder $folder)
     {
@@ -129,8 +129,8 @@ class FolderGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Folder                            $folder
-     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @param  \Okulbilisim\MessageBundle\Entity\Folder                            $folder
+     * @return \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function deleteFolder(Folder $folder)
     {
@@ -142,7 +142,7 @@ class FolderGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Entity\Folder
+     * @return \Okulbilisim\MessageBundle\Entity\Folder
      */
     public function createFolder()
     {

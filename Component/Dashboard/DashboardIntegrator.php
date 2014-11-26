@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,13 +11,13 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Component\Dashboard;
+namespace Okulbilisim\MessageBundle\Component\Dashboard;
 
 use CCDNComponent\DashboardBundle\Component\Integrator\Model\BuilderInterface;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -37,18 +37,18 @@ class DashboardIntegrator
     {
         $builder
             ->addCategory('account')
-                ->setLabel('dashboard.categories.account', array(), 'OjsMessageMessageBundle')
+                ->setLabel('dashboard.categories.account', array(), 'OkulbilisimMessageBundle')
                 ->addPages()
                     ->addPage('account')
-                        ->setLabel('dashboard.pages.account', array(), 'OjsMessageMessageBundle')
+                        ->setLabel('dashboard.pages.account', array(), 'OkulbilisimMessageBundle')
                     ->end()
                 ->end()
                 ->addLinks()
                     ->addLink('messages')
                         ->setAuthRole('ROLE_USER')
-                        ->setRoute('ojs_message_message_user_index')
+                        ->setRoute('okulbilisim_message_user_index')
                         ->setIcon('/bundles/ccdncomponentcommon/images/icons/Black/32x32/32x32_email.png')
-                        ->setLabel('title.folder.index', array(), 'OjsMessageMessageBundle')
+                        ->setLabel('title.folder.index', array(), 'OkulbilisimMessageBundle')
                     ->end()
                 ->end()
             ->end()

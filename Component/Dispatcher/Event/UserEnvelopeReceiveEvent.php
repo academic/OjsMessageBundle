@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,17 +11,17 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Component\Dispatcher\Event;
+namespace Okulbilisim\MessageBundle\Component\Dispatcher\Event;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\HttpFoundation\Request;
 
-use OjsMessage\MessageBundle\Entity\Envelope;
+use Okulbilisim\MessageBundle\Entity\Envelope;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -42,7 +42,7 @@ class UserEnvelopeReceiveEvent extends Event
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Entity\Envelope $envelope
+     * @var \Okulbilisim\MessageBundle\Entity\Envelope $envelope
      */
     protected $envelope;
 
@@ -64,7 +64,7 @@ class UserEnvelopeReceiveEvent extends Event
      *
      * @access public
      * @param \Symfony\Component\HttpFoundation\Request           $request
-     * @param \OjsMessage\MessageBundle\Entity\Envelope          $envelope
+     * @param \Okulbilisim\MessageBundle\Entity\Envelope          $envelope
      * @param \Symfony\Component\Security\Core\User\UserInterface $recipient
      * @param array                                               $folders
      */
@@ -89,7 +89,7 @@ class UserEnvelopeReceiveEvent extends Event
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Entity\Envelope
+     * @return \Okulbilisim\MessageBundle\Entity\Envelope
      */
     public function getEnvelope()
     {

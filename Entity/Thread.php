@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,13 +11,13 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Entity;
+namespace Okulbilisim\MessageBundle\Entity;
 
-use OjsMessage\MessageBundle\Entity\Model\ThreadModel;
+use Okulbilisim\MessageBundle\Entity\Model\ThreadModel;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>

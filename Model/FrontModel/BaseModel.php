@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,15 +11,15 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Model\FrontModel;
+namespace Okulbilisim\MessageBundle\Model\FrontModel;
 
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface;
-use OjsMessage\MessageBundle\Model\Component\Repository\RepositoryInterface;
+use Okulbilisim\MessageBundle\Model\Component\Manager\ManagerInterface;
+use Okulbilisim\MessageBundle\Model\Component\Repository\RepositoryInterface;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -34,14 +34,14 @@ abstract class BaseModel
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Model\Component\Repository\RepositoryInterface
+     * @var \Okulbilisim\MessageBundle\Model\Component\Repository\RepositoryInterface
      */
     protected $repository;
 
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface
+     * @var \Okulbilisim\MessageBundle\Model\Component\Manager\ManagerInterface
      */
     protected $manager;
 
@@ -56,8 +56,8 @@ abstract class BaseModel
      *
      * @access public
      * @param \Symfony\Component\EventDispatcher\EventDispatcherInterface               $dispatcher
-     * @param \OjsMessage\MessageBundle\Model\Component\Repository\RepositoryInterface $repository
-     * @param \OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface       $manager
+     * @param \Okulbilisim\MessageBundle\Model\Component\Repository\RepositoryInterface $repository
+     * @param \Okulbilisim\MessageBundle\Model\Component\Manager\ManagerInterface       $manager
      */
     public function __construct(EventDispatcherInterface $dispatcher, RepositoryInterface $repository, ManagerInterface $manager)
     {
@@ -73,7 +73,7 @@ abstract class BaseModel
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Model\Component\Repository\RepositoryInterface
+     * @return \Okulbilisim\MessageBundle\Model\Component\Repository\RepositoryInterface
      */
     public function getRepository()
     {
@@ -83,7 +83,7 @@ abstract class BaseModel
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\ManagerInterface
      */
     public function getManager()
     {

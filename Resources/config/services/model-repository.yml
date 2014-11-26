@@ -8,32 +8,32 @@ services:
     # Repositories.
     #
 
-    ojs_message_message.repository.folder:
-        class: %ojs_message_message.repository.folder.class%
+    okulbilisim_message.repository.folder:
+        class: %okulbilisim_message.repository.folder.class%
         arguments:
-            - @ojs_message_message.gateway.folder
+            - @okulbilisim_message.gateway.folder
 
-    ojs_message_message.repository.envelope:
-        class: %ojs_message_message.repository.envelope.class%
+    okulbilisim_message.repository.envelope:
+        class: %okulbilisim_message.repository.envelope.class%
         arguments:
-            - @ojs_message_message.gateway.envelope
+            - @okulbilisim_message.gateway.envelope
 
-    ojs_message_message.repository.message:
-        class: %ojs_message_message.repository.message.class%
+    okulbilisim_message.repository.message:
+        class: %okulbilisim_message.repository.message.class%
         arguments:
-            - @ojs_message_message.gateway.message
+            - @okulbilisim_message.gateway.message
 
-    ojs_message_message.repository.thread:
-        class: %ojs_message_message.repository.thread.class%
+    okulbilisim_message.repository.thread:
+        class: %okulbilisim_message.repository.thread.class%
         arguments:
-            - @ojs_message_message.gateway.thread
+            - @okulbilisim_message.gateway.thread
 
-    ojs_message_message.repository.registry:
-        class: %ojs_message_message.repository.registry.class%
+    okulbilisim_message.repository.registry:
+        class: %okulbilisim_message.repository.registry.class%
         arguments:
-            - @ojs_message_message.gateway.registry
+            - @okulbilisim_message.gateway.registry
 
-    ojs_message_message.repository.user:
-        class: %ojs_message_message.repository.user.class%
+    okulbilisim_message.repository.user:
+        class: %okulbilisim_message.repository.user.class%
         arguments:
-            - @ojs_message_message.gateway.user
+            - @okulbilisim_message.gateway.user

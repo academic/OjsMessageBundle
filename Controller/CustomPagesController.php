@@ -1,8 +1,8 @@
 <?php
 
-namespace OjsMessage\MessageBundle\Controller;
+namespace Okulbilisim\MessageBundle\Controller;
 
-use OjsMessage\MessageBundle\Controller\BaseController as Controller;
+use Okulbilisim\MessageBundle\Controller\BaseController as Controller;
 
 class CustomPagesController extends Controller {
 
@@ -13,7 +13,7 @@ class CustomPagesController extends Controller {
      */
     public function showLicenceAction() {
 
-        return $this->renderResponse('OjsMessageMessageBundle::licence.html.');
+        return $this->renderResponse('OkulbilisimMessageBundle::licence.html.');
     }
 
 }

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,15 +11,15 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Model\Component\Repository;
+namespace Okulbilisim\MessageBundle\Model\Component\Repository;
 
 use Doctrine\ORM\QueryBuilder;
-use OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface;
-use OjsMessage\MessageBundle\Model\FrontModel\ModelInterface;
+use Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface;
+use Okulbilisim\MessageBundle\Model\FrontModel\ModelInterface;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -35,21 +35,21 @@ abstract class BaseRepository
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface $gateway
+     * @var \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface $gateway
      */
     protected $gateway;
 
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Model\FrontModel\ModelInterface $model
+     * @var \Okulbilisim\MessageBundle\Model\FrontModel\ModelInterface $model
      */
     protected $model;
 
     /**
      *
      * @access public
-     * @param \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface $gateway
+     * @param \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface $gateway
      */
     public function __construct(GatewayInterface $gateway)
     {
@@ -59,8 +59,8 @@ abstract class BaseRepository
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Model\FrontModel\ModelInterface                $model
-     * @return \OjsMessage\MessageBundle\Model\Component\Repository\RepositoryInterface
+     * @param  \Okulbilisim\MessageBundle\Model\FrontModel\ModelInterface                $model
+     * @return \Okulbilisim\MessageBundle\Model\Component\Repository\RepositoryInterface
      */
     public function setModel(ModelInterface $model)
     {
@@ -72,7 +72,7 @@ abstract class BaseRepository
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @return \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function getGateway()
     {

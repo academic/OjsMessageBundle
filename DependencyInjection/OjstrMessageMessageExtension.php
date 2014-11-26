@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,7 +11,7 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\DependencyInjection;
+namespace Okulbilisim\MessageBundle\DependencyInjection;
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -23,7 +23,7 @@ use Symfony\Component\Config\FileLocator;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -32,7 +32,7 @@ use Symfony\Component\Config\FileLocator;
  * 
  *
  */
-class OjsMessageMessageExtension extends Extension
+class OkulbilisimMessageExtension extends Extension
 {
     /**
      *
@@ -41,7 +41,7 @@ class OjsMessageMessageExtension extends Extension
      */
     public function getAlias()
     {
-        return 'ojs_message_message';
+        return 'okulbilisim_message';
     }
 
     /**
@@ -65,8 +65,8 @@ class OjsMessageMessageExtension extends Extension
         $this->getComponentSection($config, $container);
 
         // Configuration stuff.
-        $container->setParameter('ojs_message_message.template.engine', $config['template']['engine']);
-        $container->setParameter('ojs_message_message.template.pager_theme', $config['template']['pager_theme']);
+        $container->setParameter('okulbilisim_message.template.engine', $config['template']['engine']);
+        $container->setParameter('okulbilisim_message.template.pager_theme', $config['template']['pager_theme']);
 
         $this->getQuotasSection($config, $container);
         $this->getSEOSection($config, $container);
@@ -90,21 +90,21 @@ class OjsMessageMessageExtension extends Extension
      * @access private
      * @param  array                                                                      $config
      * @param  \Symfony\Component\DependencyInjection\ContainerBuilder                    $container
-     * @return \OjsMessage\MessageBundle\DependencyInjection\OjsMessageMessageExtension
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\OkulbilisimMessageExtension
      */
     private function getEntitySection(array $config, ContainerBuilder $container)
     {
-        $container->setParameter('ojs_message_message.entity.folder.class', $config['entity']['folder']['class']);
-        $container->setParameter('ojs_message_message.entity.message.class', $config['entity']['message']['class']);
-        $container->setParameter('ojs_message_message.entity.envelope.class', $config['entity']['envelope']['class']);
-        $container->setParameter('ojs_message_message.entity.registry.class', $config['entity']['registry']['class']);
-        $container->setParameter('ojs_message_message.entity.thread.class', $config['entity']['thread']['class']);
+        $container->setParameter('okulbilisim_message.entity.folder.class', $config['entity']['folder']['class']);
+        $container->setParameter('okulbilisim_message.entity.message.class', $config['entity']['message']['class']);
+        $container->setParameter('okulbilisim_message.entity.envelope.class', $config['entity']['envelope']['class']);
+        $container->setParameter('okulbilisim_message.entity.registry.class', $config['entity']['registry']['class']);
+        $container->setParameter('okulbilisim_message.entity.thread.class', $config['entity']['thread']['class']);
 
         if (! array_key_exists('class', $config['entity']['user'])) {
             throw new \Exception('You must set the class of the User entity in "app/config/config.yml" or some imported configuration file.');
         }
 
-        $container->setParameter('ojs_message_message.entity.user.class', $config['entity']['user']['class']);
+        $container->setParameter('okulbilisim_message.entity.user.class', $config['entity']['user']['class']);
 
         return $this;
     }
@@ -114,16 +114,16 @@ class OjsMessageMessageExtension extends Extension
      * @access private
      * @param  array                                                                      $config
      * @param  \Symfony\Component\DependencyInjection\ContainerBuilder                    $container
-     * @return \OjsMessage\MessageBundle\DependencyInjection\OjsMessageMessageExtension
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\OkulbilisimMessageExtension
      */
     private function getRepositorySection(array $config, ContainerBuilder $container)
     {
-        $container->setParameter('ojs_message_message.repository.folder.class', $config['repository']['folder']['class']);
-        $container->setParameter('ojs_message_message.repository.envelope.class', $config['repository']['envelope']['class']);
-        $container->setParameter('ojs_message_message.repository.message.class', $config['repository']['message']['class']);
-        $container->setParameter('ojs_message_message.repository.thread.class', $config['repository']['thread']['class']);
-        $container->setParameter('ojs_message_message.repository.registry.class', $config['repository']['registry']['class']);
-        $container->setParameter('ojs_message_message.repository.user.class', $config['repository']['user']['class']);
+        $container->setParameter('okulbilisim_message.repository.folder.class', $config['repository']['folder']['class']);
+        $container->setParameter('okulbilisim_message.repository.envelope.class', $config['repository']['envelope']['class']);
+        $container->setParameter('okulbilisim_message.repository.message.class', $config['repository']['message']['class']);
+        $container->setParameter('okulbilisim_message.repository.thread.class', $config['repository']['thread']['class']);
+        $container->setParameter('okulbilisim_message.repository.registry.class', $config['repository']['registry']['class']);
+        $container->setParameter('okulbilisim_message.repository.user.class', $config['repository']['user']['class']);
 
         return $this;
     }
@@ -133,16 +133,16 @@ class OjsMessageMessageExtension extends Extension
      * @access private
      * @param  array                                                                      $config
      * @param  \Symfony\Component\DependencyInjection\ContainerBuilder                    $container
-     * @return \OjsMessage\MessageBundle\DependencyInjection\OjsMessageMessageExtension
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\OkulbilisimMessageExtension
      */
     private function getGatewaySection(array $config, ContainerBuilder $container)
     {
-        $container->setParameter('ojs_message_message.gateway.folder.class', $config['gateway']['folder']['class']);
-        $container->setParameter('ojs_message_message.gateway.envelope.class', $config['gateway']['envelope']['class']);
-        $container->setParameter('ojs_message_message.gateway.message.class', $config['gateway']['message']['class']);
-        $container->setParameter('ojs_message_message.gateway.thread.class', $config['gateway']['thread']['class']);
-        $container->setParameter('ojs_message_message.gateway.registry.class', $config['gateway']['registry']['class']);
-        $container->setParameter('ojs_message_message.gateway.user.class', $config['gateway']['user']['class']);
+        $container->setParameter('okulbilisim_message.gateway.folder.class', $config['gateway']['folder']['class']);
+        $container->setParameter('okulbilisim_message.gateway.envelope.class', $config['gateway']['envelope']['class']);
+        $container->setParameter('okulbilisim_message.gateway.message.class', $config['gateway']['message']['class']);
+        $container->setParameter('okulbilisim_message.gateway.thread.class', $config['gateway']['thread']['class']);
+        $container->setParameter('okulbilisim_message.gateway.registry.class', $config['gateway']['registry']['class']);
+        $container->setParameter('okulbilisim_message.gateway.user.class', $config['gateway']['user']['class']);
 
         return $this;
     }
@@ -152,16 +152,16 @@ class OjsMessageMessageExtension extends Extension
      * @access private
      * @param  array                                                                      $config
      * @param  \Symfony\Component\DependencyInjection\ContainerBuilder                    $container
-     * @return \OjsMessage\MessageBundle\DependencyInjection\OjsMessageMessageExtension
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\OkulbilisimMessageExtension
      */
     private function getManagerSection(array $config, ContainerBuilder $container)
     {
-        $container->setParameter('ojs_message_message.manager.folder.class', $config['manager']['folder']['class']);
-        $container->setParameter('ojs_message_message.manager.envelope.class', $config['manager']['envelope']['class']);
-        $container->setParameter('ojs_message_message.manager.message.class', $config['manager']['message']['class']);
-        $container->setParameter('ojs_message_message.manager.thread.class', $config['manager']['thread']['class']);
-        $container->setParameter('ojs_message_message.manager.registry.class', $config['manager']['registry']['class']);
-        $container->setParameter('ojs_message_message.manager.user.class', $config['manager']['user']['class']);
+        $container->setParameter('okulbilisim_message.manager.folder.class', $config['manager']['folder']['class']);
+        $container->setParameter('okulbilisim_message.manager.envelope.class', $config['manager']['envelope']['class']);
+        $container->setParameter('okulbilisim_message.manager.message.class', $config['manager']['message']['class']);
+        $container->setParameter('okulbilisim_message.manager.thread.class', $config['manager']['thread']['class']);
+        $container->setParameter('okulbilisim_message.manager.registry.class', $config['manager']['registry']['class']);
+        $container->setParameter('okulbilisim_message.manager.user.class', $config['manager']['user']['class']);
 
         return $this;
     }
@@ -171,16 +171,16 @@ class OjsMessageMessageExtension extends Extension
      * @access private
      * @param  array                                                                      $config
      * @param  \Symfony\Component\DependencyInjection\ContainerBuilder                    $container
-     * @return \OjsMessage\MessageBundle\DependencyInjection\OjsMessageMessageExtension
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\OkulbilisimMessageExtension
      */
     private function getModelSection(array $config, ContainerBuilder $container)
     {
-        $container->setParameter('ojs_message_message.model.folder.class', $config['model']['folder']['class']);
-        $container->setParameter('ojs_message_message.model.envelope.class', $config['model']['envelope']['class']);
-        $container->setParameter('ojs_message_message.model.message.class', $config['model']['message']['class']);
-        $container->setParameter('ojs_message_message.model.thread.class', $config['model']['thread']['class']);
-        $container->setParameter('ojs_message_message.model.registry.class', $config['model']['registry']['class']);
-        $container->setParameter('ojs_message_message.model.user.class', $config['model']['user']['class']);
+        $container->setParameter('okulbilisim_message.model.folder.class', $config['model']['folder']['class']);
+        $container->setParameter('okulbilisim_message.model.envelope.class', $config['model']['envelope']['class']);
+        $container->setParameter('okulbilisim_message.model.message.class', $config['model']['message']['class']);
+        $container->setParameter('okulbilisim_message.model.thread.class', $config['model']['thread']['class']);
+        $container->setParameter('okulbilisim_message.model.registry.class', $config['model']['registry']['class']);
+        $container->setParameter('okulbilisim_message.model.user.class', $config['model']['user']['class']);
 
         return $this;
     }
@@ -190,15 +190,15 @@ class OjsMessageMessageExtension extends Extension
      * @access private
      * @param  array                                                                      $config
      * @param  \Symfony\Component\DependencyInjection\ContainerBuilder                    $container
-     * @return \OjsMessage\MessageBundle\DependencyInjection\OjsMessageMessageExtension
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\OkulbilisimMessageExtension
      */
     private function getFormSection(array $config, ContainerBuilder $container)
     {
-        $container->setParameter('ojs_message_message.form.type.message.class', $config['form']['type']['message']['class']);
-        $container->setParameter('ojs_message_message.form.handler.message.class', $config['form']['handler']['message']['class']);
-        $container->setParameter('ojs_message_message.form.handler.message_reply.class', $config['form']['handler']['message_reply']['class']);
-        $container->setParameter('ojs_message_message.form.handler.message_forward.class', $config['form']['handler']['message_forward']['class']);
-        $container->setParameter('ojs_message_message.form.validator.send_to.class', $config['form']['validator']['send_to']['class']);
+        $container->setParameter('okulbilisim_message.form.type.message.class', $config['form']['type']['message']['class']);
+        $container->setParameter('okulbilisim_message.form.handler.message.class', $config['form']['handler']['message']['class']);
+        $container->setParameter('okulbilisim_message.form.handler.message_reply.class', $config['form']['handler']['message_reply']['class']);
+        $container->setParameter('okulbilisim_message.form.handler.message_forward.class', $config['form']['handler']['message_forward']['class']);
+        $container->setParameter('okulbilisim_message.form.validator.send_to.class', $config['form']['validator']['send_to']['class']);
 
         return $this;
     }
@@ -208,16 +208,16 @@ class OjsMessageMessageExtension extends Extension
      * @access private
      * @param  array                                                                      $config
      * @param  \Symfony\Component\DependencyInjection\ContainerBuilder                    $container
-     * @return \OjsMessage\MessageBundle\DependencyInjection\OjsMessageMessageExtension
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\OkulbilisimMessageExtension
      */
     private function getComponentSection(array $config, ContainerBuilder $container)
     {
-        $container->setParameter('ojs_message_message.component.dashboard.integrator.class', $config['component']['dashboard']['integrator']['class']);
+        $container->setParameter('okulbilisim_message.component.dashboard.integrator.class', $config['component']['dashboard']['integrator']['class']);
 
-        $container->setParameter('ojs_message_message.component.twig_extension.registry.class', $config['component']['twig_extension']['registry']['class']);
-        $container->setParameter('ojs_message_message.component.twig_extension.folder_list.class', $config['component']['twig_extension']['folder_list']['class']);
+        $container->setParameter('okulbilisim_message.component.twig_extension.registry.class', $config['component']['twig_extension']['registry']['class']);
+        $container->setParameter('okulbilisim_message.component.twig_extension.folder_list.class', $config['component']['twig_extension']['folder_list']['class']);
 
-        $container->setParameter('ojs_message_message.component.flood_control.class', $config['component']['flood_control']['class']);
+        $container->setParameter('okulbilisim_message.component.flood_control.class', $config['component']['flood_control']['class']);
 
         return $this;
     }
@@ -227,11 +227,11 @@ class OjsMessageMessageExtension extends Extension
      * @access private
      * @param  array                                                                      $config
      * @param  \Symfony\Component\DependencyInjection\ContainerBuilder                    $container
-     * @return \OjsMessage\MessageBundle\DependencyInjection\OjsMessageMessageExtension
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\OkulbilisimMessageExtension
      */
     private function getSEOSection(array $config, ContainerBuilder $container)
     {
-        $container->setParameter('ojs_message_message.seo.title_length', $config['seo']['title_length']);
+        $container->setParameter('okulbilisim_message.seo.title_length', $config['seo']['title_length']);
 
         return $this;
     }
@@ -241,14 +241,14 @@ class OjsMessageMessageExtension extends Extension
      * @access private
      * @param  array                                                                      $config
      * @param  \Symfony\Component\DependencyInjection\ContainerBuilder                    $container
-     * @return \OjsMessage\MessageBundle\DependencyInjection\OjsMessageMessageExtension
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\OkulbilisimMessageExtension
      */
     private function getFolderSection(array $config, ContainerBuilder $container)
     {
-        $container->setParameter('ojs_message_message.folder.show.layout_template', $config['folder']['show']['layout_template']);
-        $container->setParameter('ojs_message_message.folder.show.messages_per_page', $config['folder']['show']['messages_per_page']);
-        $container->setParameter('ojs_message_message.folder.show.subject_truncate', $config['folder']['show']['subject_truncate']);
-        $container->setParameter('ojs_message_message.folder.show.sent_datetime_format', $config['folder']['show']['sent_datetime_format']);
+        $container->setParameter('okulbilisim_message.folder.show.layout_template', $config['folder']['show']['layout_template']);
+        $container->setParameter('okulbilisim_message.folder.show.messages_per_page', $config['folder']['show']['messages_per_page']);
+        $container->setParameter('okulbilisim_message.folder.show.subject_truncate', $config['folder']['show']['subject_truncate']);
+        $container->setParameter('okulbilisim_message.folder.show.sent_datetime_format', $config['folder']['show']['sent_datetime_format']);
 
         return $this;
     }
@@ -258,18 +258,18 @@ class OjsMessageMessageExtension extends Extension
      * @access private
      * @param  array                                                                      $config
      * @param  \Symfony\Component\DependencyInjection\ContainerBuilder                    $container
-     * @return \OjsMessage\MessageBundle\DependencyInjection\OjsMessageMessageExtension
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\OkulbilisimMessageExtension
      */
     private function getMessageSection(array $config, ContainerBuilder $container)
     {
-        $container->setParameter('ojs_message_message.message.flood_control.send_limit', $config['message']['flood_control']['send_limit']);
-        $container->setParameter('ojs_message_message.message.flood_control.block_for_minutes', $config['message']['flood_control']['block_for_minutes']);
+        $container->setParameter('okulbilisim_message.message.flood_control.send_limit', $config['message']['flood_control']['send_limit']);
+        $container->setParameter('okulbilisim_message.message.flood_control.block_for_minutes', $config['message']['flood_control']['block_for_minutes']);
 
-        $container->setParameter('ojs_message_message.message.show.layout_template', $config['message']['show']['layout_template']);
-        $container->setParameter('ojs_message_message.message.show.sent_datetime_format', $config['message']['show']['sent_datetime_format']);
+        $container->setParameter('okulbilisim_message.message.show.layout_template', $config['message']['show']['layout_template']);
+        $container->setParameter('okulbilisim_message.message.show.sent_datetime_format', $config['message']['show']['sent_datetime_format']);
 
-        $container->setParameter('ojs_message_message.message.compose.layout_template', $config['message']['compose']['layout_template']);
-        $container->setParameter('ojs_message_message.message.compose.form_theme', $config['message']['compose']['form_theme']);
+        $container->setParameter('okulbilisim_message.message.compose.layout_template', $config['message']['compose']['layout_template']);
+        $container->setParameter('okulbilisim_message.message.compose.form_theme', $config['message']['compose']['form_theme']);
 
         return $this;
     }
@@ -279,11 +279,11 @@ class OjsMessageMessageExtension extends Extension
      * @access private
      * @param  array                                                                      $config
      * @param  \Symfony\Component\DependencyInjection\ContainerBuilder                    $container
-     * @return \OjsMessage\MessageBundle\DependencyInjection\OjsMessageMessageExtension
+     * @return \Okulbilisim\MessageBundle\DependencyInjection\OkulbilisimMessageExtension
      */
     private function getQuotasSection(array $config, ContainerBuilder $container)
     {
-        $container->setParameter('ojs_message_message.quotas.max_messages', $config['quotas']['max_messages']);
+        $container->setParameter('okulbilisim_message.quotas.max_messages', $config['quotas']['max_messages']);
 
         return $this;
     }

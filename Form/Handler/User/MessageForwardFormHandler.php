@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,25 +11,25 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Form\Handler\User;
+namespace Okulbilisim\MessageBundle\Form\Handler\User;
 
 use Symfony\Component\Form\Form;
 use Symfony\Component\Form\FormFactory;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
-use OjsMessage\MessageBundle\Form\Handler\BaseFormHandler;
-use OjsMessage\MessageBundle\Model\FrontModel\ModelInterface;
-use OjsMessage\MessageBundle\Entity\Message;
+use Okulbilisim\MessageBundle\Form\Handler\BaseFormHandler;
+use Okulbilisim\MessageBundle\Model\FrontModel\ModelInterface;
+use Okulbilisim\MessageBundle\Entity\Message;
 
-use OjsMessage\MessageBundle\Component\Server\MessageServer;
-use OjsMessage\MessageBundle\Component\FloodControl;
-use OjsMessage\MessageBundle\Component\Dispatcher\MessageEvents;
-use OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageFloodEvent;
+use Okulbilisim\MessageBundle\Component\Server\MessageServer;
+use Okulbilisim\MessageBundle\Component\FloodControl;
+use Okulbilisim\MessageBundle\Component\Dispatcher\MessageEvents;
+use Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageFloodEvent;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -43,14 +43,14 @@ class MessageForwardFormHandler extends BaseFormHandler
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Form\Type\MessageFormType $messageFormType
+     * @var \Okulbilisim\MessageBundle\Form\Type\MessageFormType $messageFormType
      */
     protected $messageFormType;
 
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Model\FrontModel\ModelInterface $model
+     * @var \Okulbilisim\MessageBundle\Model\FrontModel\ModelInterface $model
      */
     protected $model;
 
@@ -71,21 +71,21 @@ class MessageForwardFormHandler extends BaseFormHandler
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Entity\Message $forwardingMessage
+     * @var \Okulbilisim\MessageBundle\Entity\Message $forwardingMessage
      */
     protected $forwardingMessage;
 
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Component\FloodControl $floodControl
+     * @var \Okulbilisim\MessageBundle\Component\FloodControl $floodControl
      */
     protected $floodControl;
 
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Component\Server\MessageServer $messageServer
+     * @var \Okulbilisim\MessageBundle\Component\Server\MessageServer $messageServer
      */
     protected $messageServer;
 
@@ -94,10 +94,10 @@ class MessageForwardFormHandler extends BaseFormHandler
      * @access public
      * @param Symfony\Component\EventDispatcher\EventDispatcherInterface $dispatcher
      * @param \Symfony\Component\Form\FormFactory                        $factory
-     * @param \OjsMessage\MessageBundle\Form\Type\MessageFormType       $messageFormType
-     * @param \OjsMessage\MessageBundle\Model\FrontModel\ModelInterface $model
-     * @param |OjsMessage\MessageBundle\Component\FloodControl          $floodControl
-     * @param \OjsMessage\MessageBundle\Component\Server\MessageServer  $messageServer
+     * @param \Okulbilisim\MessageBundle\Form\Type\MessageFormType       $messageFormType
+     * @param \Okulbilisim\MessageBundle\Model\FrontModel\ModelInterface $model
+     * @param |Okulbilisim\MessageBundle\Component\FloodControl          $floodControl
+     * @param \Okulbilisim\MessageBundle\Component\Server\MessageServer  $messageServer
      */
     public function __construct(EventDispatcherInterface  $dispatcher, FormFactory $factory, $messageFormType, ModelInterface $model, FloodControl $floodControl, MessageServer $messageServer)
     {
@@ -113,7 +113,7 @@ class MessageForwardFormHandler extends BaseFormHandler
      *
      * @access public
      * @param  \Symfony\Component\Security\Core\User\UserInterface        $sender
-     * @return \OjsMessage\MessageBundle\Form\Handler\MessageFormHandler
+     * @return \Okulbilisim\MessageBundle\Form\Handler\MessageFormHandler
      */
     public function setSender(UserInterface $sender)
     {
@@ -126,7 +126,7 @@ class MessageForwardFormHandler extends BaseFormHandler
      *
      * @access public
      * @param  \Symfony\Component\Security\Core\User\UserInterface        $sender
-     * @return \OjsMessage\MessageBundle\Form\Handler\MessageFormHandler
+     * @return \Okulbilisim\MessageBundle\Form\Handler\MessageFormHandler
      */
     public function setRecipient(UserInterface $recipient)
     {
@@ -138,8 +138,8 @@ class MessageForwardFormHandler extends BaseFormHandler
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Message                  $forwardingMessage
-     * @return \OjsMessage\MessageBundle\Form\Handler\MessageFormHandler
+     * @param  \Okulbilisim\MessageBundle\Entity\Message                  $forwardingMessage
+     * @return \Okulbilisim\MessageBundle\Form\Handler\MessageFormHandler
      */
     public function setMessageToForward(Message $forwardingMessage)
     {
@@ -219,8 +219,8 @@ class MessageForwardFormHandler extends BaseFormHandler
     /**
      *
      * @access protected
-     * @param  \OjsMessage\MessageBundle\Entity\Message                  $message
-     * @return \OjsMessage\MessageBundle\Model\FrontModel\ModelInterface
+     * @param  \Okulbilisim\MessageBundle\Entity\Message                  $message
+     * @return \Okulbilisim\MessageBundle\Model\FrontModel\ModelInterface
      */
     protected function onSuccess(Message $message, $isFlagged)
     {

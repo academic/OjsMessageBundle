@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,7 +11,7 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Model\Component\Gateway;
+namespace Okulbilisim\MessageBundle\Model\Component\Gateway;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\QueryBuilder;
@@ -19,7 +19,7 @@ use Knp\Component\Pager\Paginator;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -206,7 +206,7 @@ abstract class BaseGateway
      *
      * @access public
      * @param  Object                                                              $entity
-     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @return \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function persist($item)
     {
@@ -219,7 +219,7 @@ abstract class BaseGateway
      *
      * @access public
      * @param  Object                                                              $entity
-     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @return \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function remove($item)
     {
@@ -231,7 +231,7 @@ abstract class BaseGateway
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @return \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function flush()
     {
@@ -244,7 +244,7 @@ abstract class BaseGateway
      *
      * @access public
      * @param  Object                                                              $entity
-     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @return \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function refresh($entity)
     {

@@ -1,4 +1,4 @@
-OjsMessage\MessageBundle\Entity\Folder:
+Okulbilisim\MessageBundle\Entity\Folder:
     type: entity
     table: cc_message_folder
     id:
@@ -35,5 +35,5 @@ OjsMessage\MessageBundle\Entity\Folder:
                 onDelete: SET NULL
     oneToMany:
         envelopes:
-            targetEntity: OjsMessage\MessageBundle\Entity\Envelope
+            targetEntity: Okulbilisim\MessageBundle\Entity\Envelope
             mappedBy: folder

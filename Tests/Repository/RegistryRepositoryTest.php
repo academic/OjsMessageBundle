@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,9 +11,9 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Tests\Repository;
+namespace Okulbilisim\MessageBundle\Tests\Repository;
 
-use OjsMessage\MessageBundle\Tests\TestBase;
+use Okulbilisim\MessageBundle\Tests\TestBase;
 
 class RegistryRepositoryTest extends TestBase
 {
@@ -25,6 +25,6 @@ class RegistryRepositoryTest extends TestBase
 		$registryFound = $this->getRegistryModel()->findOneRegistryForUserById($user->getId());
 
 		$this->assertNotNull($registryFound);
-		$this->assertInstanceOf('OjsMessage\MessageBundle\Entity\Registry', $registryFound);
+		$this->assertInstanceOf('Okulbilisim\MessageBundle\Entity\Registry', $registryFound);
 	}
 }

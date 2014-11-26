@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,16 +11,16 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Model\Component\Manager;
+namespace Okulbilisim\MessageBundle\Model\Component\Manager;
 
-use OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface;
-use OjsMessage\MessageBundle\Model\Component\Manager\BaseManager;
-use OjsMessage\MessageBundle\Entity\Folder;
-use OjsMessage\MessageBundle\Entity\Envelope;
+use Okulbilisim\MessageBundle\Model\Component\Manager\ManagerInterface;
+use Okulbilisim\MessageBundle\Model\Component\Manager\BaseManager;
+use Okulbilisim\MessageBundle\Entity\Folder;
+use Okulbilisim\MessageBundle\Entity\Envelope;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -38,7 +38,7 @@ class EnvelopeManager extends BaseManager implements ManagerInterface
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Entity\Envelope
+     * @return \Okulbilisim\MessageBundle\Entity\Envelope
      */
     public function createEnvelope()
     {
@@ -57,8 +57,8 @@ class EnvelopeManager extends BaseManager implements ManagerInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Envelope                         $envelope
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager
+     * @param  \Okulbilisim\MessageBundle\Entity\Envelope                         $envelope
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager
      */
     public function markAsRead(Envelope $envelope)
     {
@@ -75,7 +75,7 @@ class EnvelopeManager extends BaseManager implements ManagerInterface
      *
      * @access public
      * @param  array                                                              $envelopes
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager
      */
     public function bulkMarkAsRead($envelopes)
     {
@@ -92,8 +92,8 @@ class EnvelopeManager extends BaseManager implements ManagerInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Envelope                         $envelope
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager
+     * @param  \Okulbilisim\MessageBundle\Entity\Envelope                         $envelope
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager
      */
     public function markAsUnread(Envelope $envelope)
     {
@@ -110,7 +110,7 @@ class EnvelopeManager extends BaseManager implements ManagerInterface
      *
      * @access public
      * @param  array                                                              $envelopes
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager
      */
     public function bulkMarkAsUnread($envelopes)
     {
@@ -127,8 +127,8 @@ class EnvelopeManager extends BaseManager implements ManagerInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Envelope                         $envelope,
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager
+     * @param  \Okulbilisim\MessageBundle\Entity\Envelope                         $envelope,
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager
      */
     protected function hardDelete(Envelope $envelope)
     {
@@ -148,9 +148,9 @@ class EnvelopeManager extends BaseManager implements ManagerInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Envelope                         $envelope,
+     * @param  \Okulbilisim\MessageBundle\Entity\Envelope                         $envelope,
      * @param  array                                                              $folders
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager
      */
     public function delete(Envelope $envelope, $folders)
     {
@@ -178,7 +178,7 @@ class EnvelopeManager extends BaseManager implements ManagerInterface
      * @access public
      * @param  array                                                              $envelopes
      * @param  array                                                              $folders
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager
      */
     public function bulkDelete($envelopes, $folders)
     {
@@ -211,8 +211,8 @@ class EnvelopeManager extends BaseManager implements ManagerInterface
      *
      * @access public
      * @param  array                                                              $envelopes
-     * @param  \OjsMessage\MessageBundle\Entity\Folder                           $moveTo
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager
+     * @param  \Okulbilisim\MessageBundle\Entity\Folder                           $moveTo
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager
      */
     public function bulkMoveToFolder($envelopes, Folder $moveTo)
     {

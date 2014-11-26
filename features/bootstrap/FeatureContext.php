@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,20 +11,20 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\features\bootstrap;
+namespace Okulbilisim\MessageBundle\features\bootstrap;
 
 use Behat\MinkExtension\Context\RawMinkContext;
 use Behat\Symfony2Extension\Context\KernelAwareInterface;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use OjsMessage\MessageBundle\features\bootstrap\WebUser;
+use Okulbilisim\MessageBundle\features\bootstrap\WebUser;
 
 /**
  *
  * Features context.
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>

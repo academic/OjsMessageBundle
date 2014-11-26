@@ -1,88 +1,88 @@
 parameters:
 
     # Service Parameters defined in app/config.
-    ojs_message_message.component.server.message.class: OjsMessage\MessageBundle\Component\Server\MessageServer
-    ojs_message_message.component.helper.pagination_config.class: OjsMessage\MessageBundle\Component\Helper\PaginationConfigHelper
-    ojs_message_message.component.crumb_builder.class: OjsMessage\MessageBundle\Component\Crumbs\CrumbBuilder
-    ojs_message_message.component.crumb_factory.class: OjsMessage\MessageBundle\Component\Crumbs\Factory\CrumbFactory
-    ojs_message_message.component.helper.folder.class: OjsMessage\MessageBundle\Component\Helper\FolderHelper
-    ojs_message_message.component.helper.quota.class:  OjsMessage\MessageBundle\Component\Helper\QuotaHelper
-    ojs_message_message.component.event_listener.flash.class: OjsMessage\MessageBundle\Component\Dispatcher\Listener\FlashListener
-    ojs_message_message.component.event_listener.stats.class: OjsMessage\MessageBundle\Component\Dispatcher\Listener\StatListener
+    okulbilisim_message.component.server.message.class: Okulbilisim\MessageBundle\Component\Server\MessageServer
+    okulbilisim_message.component.helper.pagination_config.class: Okulbilisim\MessageBundle\Component\Helper\PaginationConfigHelper
+    okulbilisim_message.component.crumb_builder.class: Okulbilisim\MessageBundle\Component\Crumbs\CrumbBuilder
+    okulbilisim_message.component.crumb_factory.class: Okulbilisim\MessageBundle\Component\Crumbs\Factory\CrumbFactory
+    okulbilisim_message.component.helper.folder.class: Okulbilisim\MessageBundle\Component\Helper\FolderHelper
+    okulbilisim_message.component.helper.quota.class:  Okulbilisim\MessageBundle\Component\Helper\QuotaHelper
+    okulbilisim_message.component.event_listener.flash.class: Okulbilisim\MessageBundle\Component\Dispatcher\Listener\FlashListener
+    okulbilisim_message.component.event_listener.stats.class: Okulbilisim\MessageBundle\Component\Dispatcher\Listener\StatListener
 
 services:
 
-    ojs_message_message.component.server.message:
-        class: %ojs_message_message.component.server.message.class%
+    okulbilisim_message.component.server.message:
+        class: %okulbilisim_message.component.server.message.class%
         arguments:
             - @event_dispatcher
-            - @ojs_message_message.model.folder
-            - @ojs_message_message.model.message
-            - @ojs_message_message.model.envelope
-            - @ojs_message_message.model.user
-            - @ojs_message_message.component.helper.quota
-            - @ojs_message_message.component.helper.folder
+            - @okulbilisim_message.model.folder
+            - @okulbilisim_message.model.message
+            - @okulbilisim_message.model.envelope
+            - @okulbilisim_message.model.user
+            - @okulbilisim_message.component.helper.quota
+            - @okulbilisim_message.component.helper.folder
 
-    ojs_message_message.component.helper.folder:
-        class: %ojs_message_message.component.helper.folder.class%
+    okulbilisim_message.component.helper.folder:
+        class: %okulbilisim_message.component.helper.folder.class%
         arguments:
-            - @ojs_message_message.model.folder
+            - @okulbilisim_message.model.folder
 
-    ojs_message_message.component.helper.quota:
-        class: %ojs_message_message.component.helper.quota.class%
+    okulbilisim_message.component.helper.quota:
+        class: %okulbilisim_message.component.helper.quota.class%
         arguments:
-            - %ojs_message_message.quotas.max_messages%
+            - %okulbilisim_message.quotas.max_messages%
 
-    ojs_message_message.component.helper.pagination_config:
-        class: %ojs_message_message.component.helper.pagination_config.class%
+    okulbilisim_message.component.helper.pagination_config:
+        class: %okulbilisim_message.component.helper.pagination_config.class%
         arguments:
-            - %ojs_message_message.folder.show.messages_per_page%
+            - %okulbilisim_message.folder.show.messages_per_page%
 
     #
     # Dashboard Integrator.
     #
-    ojs_message_message.component.dashboard.integrator:
-        class: %ojs_message_message.component.dashboard.integrator.class%
+    okulbilisim_message.component.dashboard.integrator:
+        class: %okulbilisim_message.component.dashboard.integrator.class%
         tags:
             - { name: ojs_component_dashboard.integrator }
 
-    ojs_message_message.component.flood_control:
-        class: %ojs_message_message.component.flood_control.class%
+    okulbilisim_message.component.flood_control:
+        class: %okulbilisim_message.component.flood_control.class%
         arguments:
             - @security.context
             - @session
             - %kernel.environment%
-            - %ojs_message_message.message.flood_control.send_limit%
-            - %ojs_message_message.message.flood_control.block_for_minutes%
+            - %okulbilisim_message.message.flood_control.send_limit%
+            - %okulbilisim_message.message.flood_control.block_for_minutes%
 
     #
     # Event Subscribers.
     #
-    ojs_message_message.component.event_listener.flash:
-        class: %ojs_message_message.component.event_listener.flash.class%
+    okulbilisim_message.component.event_listener.flash:
+        class: %okulbilisim_message.component.event_listener.flash.class%
         arguments: [@session]
         tags:
             - { name: kernel.event_subscriber }
 
-    ojs_message_message.component.event_listener.stats:
-        class: %ojs_message_message.component.event_listener.stats.class%
+    okulbilisim_message.component.event_listener.stats:
+        class: %okulbilisim_message.component.event_listener.stats.class%
         arguments:
-            - @ojs_message_message.model.folder
-            - @ojs_message_message.model.envelope
-            - @ojs_message_message.model.registry
+            - @okulbilisim_message.model.folder
+            - @okulbilisim_message.model.envelope
+            - @okulbilisim_message.model.registry
         tags:
             - { name: kernel.event_subscriber }
 
     #
     # Crumbs.
     #
-    ojs_message_message.component.crumb_factory:
-        class: %ojs_message_message.component.crumb_factory.class%
+    okulbilisim_message.component.crumb_factory:
+        class: %okulbilisim_message.component.crumb_factory.class%
         arguments:
             - @translator
             - @router
 
-    ojs_message_message.component.crumb_builder:
-        class: %ojs_message_message.component.crumb_builder.class%
+    okulbilisim_message.component.crumb_builder:
+        class: %okulbilisim_message.component.crumb_builder.class%
         arguments:
-            - @ojs_message_message.component.crumb_factory
+            - @okulbilisim_message.component.crumb_factory

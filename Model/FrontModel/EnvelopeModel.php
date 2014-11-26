@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,19 +11,19 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Model\FrontModel;
+namespace Okulbilisim\MessageBundle\Model\FrontModel;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 
-use OjsMessage\MessageBundle\Model\FrontModel\BaseModel;
-use OjsMessage\MessageBundle\Model\FrontModel\ModelInterface;
+use Okulbilisim\MessageBundle\Model\FrontModel\BaseModel;
+use Okulbilisim\MessageBundle\Model\FrontModel\ModelInterface;
 
-use OjsMessage\MessageBundle\Entity\Folder;
-use OjsMessage\MessageBundle\Entity\Envelope;
+use Okulbilisim\MessageBundle\Entity\Folder;
+use Okulbilisim\MessageBundle\Entity\Envelope;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -41,7 +41,7 @@ class EnvelopeModel extends BaseModel implements ModelInterface
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Entity\Envelope
+     * @return \Okulbilisim\MessageBundle\Entity\Envelope
      */
     public function createEnvelope()
     {
@@ -53,7 +53,7 @@ class EnvelopeModel extends BaseModel implements ModelInterface
      * @access public
      * @param  int                                        $envelopeId
      * @param  int                                        $userId
-     * @return \OjsMessage\MessageBundle\Entity\Envelope
+     * @return \Okulbilisim\MessageBundle\Entity\Envelope
      */
     public function findEnvelopeByIdForUser($envelopeId, $userId)
     {
@@ -113,7 +113,7 @@ class EnvelopeModel extends BaseModel implements ModelInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Envelope
+     * @param  \Okulbilisim\MessageBundle\Entity\Envelope
      */
     public function saveEnvelope(Envelope $envelope)
     {
@@ -123,8 +123,8 @@ class EnvelopeModel extends BaseModel implements ModelInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Envelope                         $envelope
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager
+     * @param  \Okulbilisim\MessageBundle\Entity\Envelope                         $envelope
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager
      */
     public function markAsRead(Envelope $envelope)
     {
@@ -135,7 +135,7 @@ class EnvelopeModel extends BaseModel implements ModelInterface
      *
      * @access public
      * @param  array                                                              $envelopes
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager
      */
     public function bulkMarkAsRead($envelopes)
     {
@@ -146,7 +146,7 @@ class EnvelopeModel extends BaseModel implements ModelInterface
      *
      * @access public
      * @param  Envelope                                                           $envelope
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager
      */
     public function markAsUnread(Envelope $envelope)
     {
@@ -157,7 +157,7 @@ class EnvelopeModel extends BaseModel implements ModelInterface
      *
      * @access public
      * @param  array                                                              $envelopes
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager
      */
     public function bulkMarkAsUnread($envelopes)
     {
@@ -167,9 +167,9 @@ class EnvelopeModel extends BaseModel implements ModelInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Envelope                         $envelope
+     * @param  \Okulbilisim\MessageBundle\Entity\Envelope                         $envelope
      * @param  array                                                              $folders
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager
      */
     public function delete(Envelope $envelope, $folders)
     {
@@ -182,7 +182,7 @@ class EnvelopeModel extends BaseModel implements ModelInterface
      * @param  array                                                              $envelopes
      * @param  array                                                              $folders
      * @param  \Symfony\Component\Security\Core\User\UserInterfaces               $user
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager
      */
     public function bulkDelete($envelopes, $folders, UserInterface $user)
     {
@@ -193,8 +193,8 @@ class EnvelopeModel extends BaseModel implements ModelInterface
      *
      * @access public
      * @param  array                                                              $envelopes
-     * @param  \OjsMessage\MessageBundle\Entity\Folder                           $moveTo
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\EnvelopeManager
+     * @param  \Okulbilisim\MessageBundle\Entity\Folder                           $moveTo
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\EnvelopeManager
      */
     public function bulkMoveToFolder($envelopes, Folder $moveTo)
     {

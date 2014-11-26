@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,11 +11,11 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Component\Dispatcher;
+namespace Okulbilisim\MessageBundle\Component\Dispatcher;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -31,7 +31,7 @@ final class MessageEvents
      * The USER_MESSAGE_CREATE_INITIALISE event occurs when the Message creation process is initalised.
      *
      * This event allows you to modify the default values of the Message entity object before binding the form.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
      */
     const USER_MESSAGE_CREATE_INITIALISE = 'ojs_message.user.message.create.initialise';
 
@@ -40,7 +40,7 @@ final class MessageEvents
      * The USER_MESSAGE_CREATE_SUCCESS event occurs when the Message creation process is successful before persisting.
      *
      * This event allows you to modify the values of the Message entity object after form submission before persisting.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
      */
     const USER_MESSAGE_CREATE_SUCCESS = 'ojs_message.user.message.create.success';
 
@@ -49,7 +49,7 @@ final class MessageEvents
      * The USER_MESSAGE_CREATE_COMPLETE event occurs when the Message creation process is completed successfully after persisting.
      *
      * This event allows you to modify the values of the Message entity after persisting.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
      */
     const USER_MESSAGE_CREATE_COMPLETE = 'ojs_message.user.message.create.complete';
 
@@ -58,7 +58,7 @@ final class MessageEvents
      * The USER_MESSAGE_CREATE_RESPONSE event occurs when the Message creation process finishes and returns a HTTP response.
      *
      * This event allows you to modify the default values of the response object returned from the controller action.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent instance.
      */
     const USER_MESSAGE_CREATE_RESPONSE = 'ojs_message.user.message.create.response';
 
@@ -67,7 +67,7 @@ final class MessageEvents
      * The USER_MESSAGE_CREATE_FLOODED event occurs when the message create process fails due to flooding being raised.
      *
      * This event allows you to modify the request object and set a flash message from the controller action.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageFloodEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageFloodEvent instance.
      */
     const USER_MESSAGE_CREATE_FLOODED = 'ojs_message.user.message.create.flooded';
 
@@ -76,7 +76,7 @@ final class MessageEvents
      * The USER_MESSAGE_CREATE_REPLY_INITIALISE event occurs when the Message creation process is initalised.
      *
      * This event allows you to modify the default values of the Message entity object before binding the form.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
      */
     const USER_MESSAGE_CREATE_REPLY_INITIALISE = 'ojs_message.user.message.create_reply.initialise';
 
@@ -85,7 +85,7 @@ final class MessageEvents
      * The USER_MESSAGE_CREATE_REPLY_SUCCESS event occurs when the Message creation process is successful before persisting.
      *
      * This event allows you to modify the values of the Message entity object after form submission before persisting.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
      */
     const USER_MESSAGE_CREATE_REPLY_SUCCESS = 'ojs_message.user.message.create_reply.success';
 
@@ -94,7 +94,7 @@ final class MessageEvents
      * The USER_MESSAGE_CREATE_REPLY_COMPLETE event occurs when the Message creation process is completed successfully after persisting.
      *
      * This event allows you to modify the values of the Message entity after persisting.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
      */
     const USER_MESSAGE_CREATE_REPLY_COMPLETE = 'ojs_message.user.message.create_reply.complete';
 
@@ -103,7 +103,7 @@ final class MessageEvents
      * The USER_MESSAGE_CREATE_REPLY_RESPONSE event occurs when the Message creation process finishes and returns a HTTP response.
      *
      * This event allows you to modify the default values of the response object returned from the controller action.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent instance.
      */
     const USER_MESSAGE_CREATE_REPLY_RESPONSE = 'ojs_message.user.message.create_reply.response';
 
@@ -112,7 +112,7 @@ final class MessageEvents
      * The USER_MESSAGE_CREATE_FLOODED event occurs when the message create reply process fails due to flooding being raised.
      *
      * This event allows you to modify the request object and set a flash message from the controller action.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageFloodEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageFloodEvent instance.
      */
     const USER_MESSAGE_CREATE_REPLY_FLOODED = 'ojs_message.user.message.create_reply.flooded';
 
@@ -121,7 +121,7 @@ final class MessageEvents
      * The USER_MESSAGE_CREATE_FORWARD_INITIALISE event occurs when the Message creation process is initalised.
      *
      * This event allows you to modify the default values of the Message entity object before binding the form.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
      */
     const USER_MESSAGE_CREATE_FORWARD_INITIALISE = 'ojs_message.user.message.create_forward.initialise';
 
@@ -130,7 +130,7 @@ final class MessageEvents
      * The USER_MESSAGE_CREATE_FORWARD_SUCCESS event occurs when the Message creation process is successful before persisting.
      *
      * This event allows you to modify the values of the Message entity object after form submission before persisting.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
      */
     const USER_MESSAGE_CREATE_FORWARD_SUCCESS = 'ojs_message.user.message.create_forward.success';
 
@@ -139,7 +139,7 @@ final class MessageEvents
      * The USER_MESSAGE_CREATE_FORWARD_COMPLETE event occurs when the Message creation process is completed successfully after persisting.
      *
      * This event allows you to modify the values of the Message entity after persisting.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageEvent instance.
      */
     const USER_MESSAGE_CREATE_FORWARD_COMPLETE = 'ojs_message.user.message.create_forward.complete';
 
@@ -148,7 +148,7 @@ final class MessageEvents
      * The USER_MESSAGE_CREATE_FORWARD_RESPONSE event occurs when the Message creation process finishes and returns a HTTP response.
      *
      * This event allows you to modify the default values of the response object returned from the controller action.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent instance.
      */
     const USER_MESSAGE_CREATE_FORWARD_RESPONSE = 'ojs_message.user.message.create_forward.response';
 
@@ -157,7 +157,7 @@ final class MessageEvents
      * The USER_MESSAGE_CREATE_FLOODED event occurs when the message create forward process fails due to flooding being raised.
      *
      * This event allows you to modify the request object and set a flash message from the controller action.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageFloodEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageFloodEvent instance.
      */
     const USER_MESSAGE_CREATE_FORWARD_FLOODED = 'ojs_message.user.message.create_forward.flooded';
 
@@ -166,7 +166,7 @@ final class MessageEvents
      * The USER_ENVELOPE_RECEIVE_COMPLETE event occurs when the envelope receiving process is completed after persisting.
      *
      * This event allows you to modify the request object and set a flash message.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveEvent instance.
      */
     const USER_ENVELOPE_RECEIVE_COMPLETE = 'ojs_message.user.envelope.receive.complete';
 
@@ -175,7 +175,7 @@ final class MessageEvents
      * The USER_ENVELOPE_RECEIVE_FAILED_INBOX_FULL event occurs when the envelope receiving process fails due to users inbox being full.
      *
      * This event allows you to modify the request object and set a flash message.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveFailedInboxFullEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveFailedInboxFullEvent instance.
      */
     const USER_ENVELOPE_RECEIVE_FAILED_INBOX_FULL = 'ojs_message.user.envelope.receive.failed.inbox_full';
     /**
@@ -183,7 +183,7 @@ final class MessageEvents
      * The USER_ENVELOPE_RECEIVE_FAILED_OUTBOX_FULL event occurs when the envelope receiving process fails due to users outbox being full.
      *
      * This event allows you to modify the request object and set a flash message.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveFailedOutboxFullEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveFailedOutboxFullEvent instance.
      */
     const USER_ENVELOPE_RECEIVE_FAILED_OUTBOX_FULL = 'ojs_message.user.envelope.receive.failed.outbox_full';
 
@@ -192,7 +192,7 @@ final class MessageEvents
      * The USER_MESSAGE_DRAFT_SEND_RESPONSE event occurs when the Message draft sending process finishes and returns a HTTP response.
      *
      * This event allows you to modify the default values of the response object returned from the controller action.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent instance.
      */
     const USER_MESSAGE_DRAFT_SEND_RESPONSE = 'ojs_message.user.message.draft_send.response';
 
@@ -201,7 +201,7 @@ final class MessageEvents
      * The USER_MESSAGE_MARK_AS_READ_RESPONSE event occurs when the Message mark as read process finishes and returns a HTTP response.
      *
      * This event allows you to modify the default values of the response object returned from the controller action.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent instance.
      */
     const USER_MESSAGE_MARK_AS_READ_RESPONSE = 'ojs_message.user.message.mark_as_unread.response';
 
@@ -210,7 +210,7 @@ final class MessageEvents
      * The USER_MESSAGE_MARK_AS_UNREAD_RESPONSE event occurs when the Message mark as unread process finishes and returns a HTTP response.
      *
      * This event allows you to modify the default values of the response object returned from the controller action.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent instance.
      */
     const USER_MESSAGE_MARK_AS_UNREAD_RESPONSE = 'ojs_message.user.message.mark_as_unread.response';
 
@@ -219,7 +219,7 @@ final class MessageEvents
      * The USER_MESSAGE_DELETE_RESPONSE event occurs when the Message delete process finishes and returns a HTTP response.
      *
      * This event allows you to modify the default values of the response object returned from the controller action.
-     * The event listener method receives a OjsMessage\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent instance.
+     * The event listener method receives a Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserMessageResponseEvent instance.
      */
     const USER_MESSAGE_DELETE_RESPONSE = 'ojs_message.user.message.delete.response';
 }

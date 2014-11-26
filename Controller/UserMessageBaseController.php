@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,14 +11,14 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Controller;
+namespace Okulbilisim\MessageBundle\Controller;
 
-use OjsMessage\MessageBundle\Controller\BaseController;
-use OjsMessage\MessageBundle\Entity\Envelope;
+use Okulbilisim\MessageBundle\Controller\BaseController;
+use Okulbilisim\MessageBundle\Entity\Envelope;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -33,11 +33,11 @@ class UserMessageBaseController extends BaseController
      *
      * @access protected
      * @param  int                                                        $userId
-     * @return \OjsMessage\MessageBundle\Form\Handler\MessageFormHandler
+     * @return \Okulbilisim\MessageBundle\Form\Handler\MessageFormHandler
      */
     protected function getFormHandlerToSendMessage($userId = null)
     {
-        $formHandler = $this->container->get('ojs_message_message.form.handler.message');
+        $formHandler = $this->container->get('okulbilisim_message.form.handler.message');
         $formHandler->setRequest($this->getRequest());
 
         $formHandler->setSender($this->getUser());
@@ -55,13 +55,13 @@ class UserMessageBaseController extends BaseController
     /**
      *
      * @access protected
-     * @param \OjsMessage\MessageBundle\Entity\Envelope
+     * @param \Okulbilisim\MessageBundle\Entity\Envelope
      * @param  int                                                             $userId
-     * @return \OjsMessage\MessageBundle\Form\Handler\MessageReplyFormHandler
+     * @return \Okulbilisim\MessageBundle\Form\Handler\MessageReplyFormHandler
      */
     protected function getFormHandlerToReplyToMessage(Envelope $inResponseEnvelope, $userId = null)
     {
-        $formHandler = $this->container->get('ojs_message_message.form.handler.message_reply');
+        $formHandler = $this->container->get('okulbilisim_message.form.handler.message_reply');
         $formHandler->setRequest($this->getRequest());
 
         $formHandler->setSender($this->getUser());
@@ -81,13 +81,13 @@ class UserMessageBaseController extends BaseController
     /**
      *
      * @access protected
-     * @param \OjsMessage\MessageBundle\Entity\Envelope
+     * @param \Okulbilisim\MessageBundle\Entity\Envelope
      * @param  int                                                               $userId
-     * @return \OjsMessage\MessageBundle\Form\Handler\MessageForwardFormHandler
+     * @return \Okulbilisim\MessageBundle\Form\Handler\MessageForwardFormHandler
      */
     protected function getFormHandlerToForwardMessage(Envelope $envelopeToForward, $userId = null)
     {
-        $formHandler = $this->container->get('ojs_message_message.form.handler.message_forward');
+        $formHandler = $this->container->get('okulbilisim_message.form.handler.message_forward');
         $formHandler->setRequest($this->getRequest());
 
         $formHandler->setSender($this->getUser());

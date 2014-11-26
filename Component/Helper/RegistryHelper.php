@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,14 +11,14 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Component\Helper;
+namespace Okulbilisim\MessageBundle\Component\Helper;
 
 use Symfony\Component\Security\Core\User\UserInterface;
-use OjsMessage\MessageBundle\Model\FrontModel\RegistryModel;
+use Okulbilisim\MessageBundle\Model\FrontModel\RegistryModel;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -32,14 +32,14 @@ class RegistryHelper
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Model\FrontModel\RegistryModel $registryModel
+     * @var \Okulbilisim\MessageBundle\Model\FrontModel\RegistryModel $registryModel
      */
     protected $registryModel;
 
     /**
      *
      * @access public
-     * @param \OjsMessage\MessageBundle\Model\FrontModel\RegistryModel $registryModel
+     * @param \Okulbilisim\MessageBundle\Model\FrontModel\RegistryModel $registryModel
      */
     public function __construct(RegistryModel $registryModel)
     {

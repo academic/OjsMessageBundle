@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,16 +11,16 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Component\Crumbs\Factory;
+namespace Okulbilisim\MessageBundle\Component\Crumbs\Factory;
 
 use Symfony\Bundle\FrameworkBundle\Translation\Translator;
 use Symfony\Bundle\FrameworkBundle\Routing\Router;
 
-use OjsMessage\MessageBundle\Component\Crumbs\Factory\CrumbTrail;
+use Okulbilisim\MessageBundle\Component\Crumbs\Factory\CrumbTrail;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>

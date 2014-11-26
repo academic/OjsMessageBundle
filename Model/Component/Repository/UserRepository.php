@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,15 +11,15 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Model\Component\Repository;
+namespace Okulbilisim\MessageBundle\Model\Component\Repository;
 
-use OjsMessage\MessageBundle\Model\Component\Repository\BaseRepository;
-use OjsMessage\MessageBundle\Model\Component\Repository\RepositoryInterface;
+use Okulbilisim\MessageBundle\Model\Component\Repository\BaseRepository;
+use Okulbilisim\MessageBundle\Model\Component\Repository\RepositoryInterface;
 
 /**
  * ThreadRepository
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,13 +11,13 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Entity\Model;
+namespace Okulbilisim\MessageBundle\Entity\Model;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -59,7 +59,7 @@ abstract class RegistryModel
      * Set ownedBy
      *
      * @param  \Symfony\Component\Security\Core\User\UserInterface $ownedByUser
-     * @return \OjsMessage\MessageBundle\Entity\Registry
+     * @return \Okulbilisim\MessageBundle\Entity\Registry
      */
     public function setOwnedByUser(UserInterface $ownedByUser = null)
     {

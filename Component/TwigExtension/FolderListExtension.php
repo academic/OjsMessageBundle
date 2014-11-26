@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,10 +11,10 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Component\TwigExtension;
+namespace Okulbilisim\MessageBundle\Component\TwigExtension;
 
 use Symfony\Component\Security\Core\SecurityContext;
-use OjsMessage\MessageBundle\Component\Helper\FolderHelper;
+use Okulbilisim\MessageBundle\Component\Helper\FolderHelper;
 
 /**
  *
@@ -26,7 +26,7 @@ class FolderListExtension extends \Twig_Extension
     /**
      *
      * @access protected
-     * @var \OjsMessage\MessageBundle\Component\Helper\FolderHelper $folderHelper
+     * @var \Okulbilisim\MessageBundle\Component\Helper\FolderHelper $folderHelper
      */
     protected $folderModel;
 
@@ -40,7 +40,7 @@ class FolderListExtension extends \Twig_Extension
     /**
      *
      * @access public
-     * @param \OjsMessage\MessageBundle\Component\Helper\FolderHelper $folderHelper
+     * @param \Okulbilisim\MessageBundle\Component\Helper\FolderHelper $folderHelper
      * @param \Symfony\Component\Security\Core\SecurityContext         $securityContext
      */
     public function __construct(FolderHelper $folderHelper, SecurityContext $securityContext)

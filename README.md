@@ -1,7 +1,7 @@
-OjsMessageBundle
+OkulbilisimBundle
 =================================
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/okulbilisim/OjsMessageBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/okulbilisim/OjsMessageBundle/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/okulbilisim/OkulbilisimBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/okulbilisim/OkulbilisimBundle/?branch=master)
 
 **Warning** : This repo is under heavy customization please use original repo 
  http://github.com/codeconsortium/CCDNMessageMessageBundle

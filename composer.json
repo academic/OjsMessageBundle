@@ -2,7 +2,7 @@
     "name": "okulbilisim/ojs-message-bundle",
     "description": "Messaging Bundle for Ojs.io",
     "keywords": ["message", "symfony"],
-    "homepage": "http://github.com/hasantayyar/OjsMessageBundle",
+    "homepage": "http://github.com/hasantayyar/OkulbilisimBundle",
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
@@ -45,7 +45,7 @@
         "reecefowell/jquery-checkboxes": "dev-master"
     },
     "autoload": {
-        "psr-0": {"OjsMessage\\MessageBundle": ""}
+        "psr-0": {"Okulbilisim\\MessageBundle": ""}
     },
-    "target-dir": "OjsMessage/MessageBundle"
+    "target-dir": "Okulbilisim/MessageBundle"
 }

@@ -1,9 +1,9 @@
-{% extends 'OjsMessageMessageBundle:Common:Layout/base.html.twig' %}
+{% extends 'OkulbilisimMessageBundle:Common:Layout/base.html.twig' %}
 
-{% set LayoutTemplate = ojs_message_message.message.show.layout_template %}
+{% set LayoutTemplate = okulbilisim_message.message.show.layout_template %}
 
 {% block title %}
-	{{- 'title.message.show' |trans({'%message_subject%': envelope.getMessage().getSubject() }, 'OjsMessageMessageBundle') |slice(0, ojs_message_message.seo.title_length) -}}
+	{{- 'title.message.show' |trans({'%message_subject%': envelope.getMessage().getSubject() }, 'OkulbilisimMessageBundle') |slice(0, okulbilisim_message.seo.title_length) -}}
 {% endblock %}
 
 
@@ -15,10 +15,10 @@
 		{%- if thread |length -%}
 			{%- for envelope in thread.getEnvelopes() -%}
     <div class="btn-toolbar">
-					{%- include 'OjsMessageMessageBundle:User:Message/Partial/message_actions.html.twig' -%}
+					{%- include 'OkulbilisimMessageBundle:User:Message/Partial/message_actions.html.twig' -%}
     </div>
 
-				{%- include 'OjsMessageMessageBundle:User:Message/Partial/item_message.html.twig' with {'envelope': envelope} -%}
+				{%- include 'OkulbilisimMessageBundle:User:Message/Partial/item_message.html.twig' with {'envelope': envelope} -%}
 			{%- endfor -%}
 		{%- endif -%}
 </section>

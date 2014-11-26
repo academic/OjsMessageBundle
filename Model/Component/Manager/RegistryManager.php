@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,17 +11,17 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Model\Component\Manager;
+namespace Okulbilisim\MessageBundle\Model\Component\Manager;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 
-use OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface;
-use OjsMessage\MessageBundle\Model\Component\Manager\BaseManager;
-use OjsMessage\MessageBundle\Entity\Registry;
+use Okulbilisim\MessageBundle\Model\Component\Manager\ManagerInterface;
+use Okulbilisim\MessageBundle\Model\Component\Manager\BaseManager;
+use Okulbilisim\MessageBundle\Entity\Registry;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -35,7 +35,7 @@ class RegistryManager extends BaseManager implements ManagerInterface
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Entity\Registry
+     * @return \Okulbilisim\MessageBundle\Entity\Registry
      */
     public function createRegistry()
     {
@@ -53,7 +53,7 @@ class RegistryManager extends BaseManager implements ManagerInterface
      *
      * @access public
      * @param  \Symfony\Component\Security\Core\User\UserInterface              $user
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\FolderManager
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\FolderManager
      */
     public function setupDefaults(UserInterface $user)
     {

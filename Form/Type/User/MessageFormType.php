@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,7 +11,7 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Form\Type\User;
+namespace Okulbilisim\MessageBundle\Form\Type\User;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -19,7 +19,7 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -56,21 +56,21 @@ class MessageFormType extends AbstractType {
                 ->add('send_to', 'text', array(
                     'data' => $options['send_to'],
                     'label' => 'form.label.to',
-                    'translation_domain' => 'OjsMessageMessageBundle',
+                    'translation_domain' => 'OkulbilisimMessageBundle',
                     'attr' => array('class' => 'form-control')
                         )
                 )
                 ->add('subject', 'text', array(
                     'data' => $options['subject'],
                     'label' => 'form.label.subject',
-                    'translation_domain' => 'OjsMessageMessageBundle',
+                    'translation_domain' => 'OkulbilisimMessageBundle',
                     'attr' => array('class' => 'form-control')
                         )
                 )
                 ->add('body', 'textarea', array(
                     'data' => $options['body'],
                     'label' => 'form.label.body',
-                    'translation_domain' => 'OjsMessageMessageBundle',
+                    'translation_domain' => 'OkulbilisimMessageBundle',
                     'attr' => array('class' => 'form-control')
                         )
                 )
@@ -78,7 +78,7 @@ class MessageFormType extends AbstractType {
                     'required' => false,
                     'mapped' => false,
                     'label' => 'form.label.flagged',
-                    'translation_domain' => 'OjsMessageMessageBundle',
+                    'translation_domain' => 'OkulbilisimMessageBundle',
                         )
                 )
         ;

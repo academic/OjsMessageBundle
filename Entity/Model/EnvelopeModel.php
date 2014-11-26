@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,17 +11,17 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Entity\Model;
+namespace Okulbilisim\MessageBundle\Entity\Model;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 
-use OjsMessage\MessageBundle\Entity\Message;
-use OjsMessage\MessageBundle\Entity\Thread;
-use OjsMessage\MessageBundle\Entity\Folder;
+use Okulbilisim\MessageBundle\Entity\Message;
+use Okulbilisim\MessageBundle\Entity\Thread;
+use Okulbilisim\MessageBundle\Entity\Folder;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -36,13 +36,13 @@ abstract class EnvelopeModel
 {
     /**
      *
-     * @var \OjsMessage\MessageBundle\Entity\Folder $folder
+     * @var \Okulbilisim\MessageBundle\Entity\Folder $folder
      */
     protected $folder = null;
 
     /**
      *
-     * @var \OjsMessage\MessageBundle\Entity\Message $message
+     * @var \Okulbilisim\MessageBundle\Entity\Message $message
      */
     protected $message = null;
 
@@ -59,7 +59,7 @@ abstract class EnvelopeModel
 
     /**
      *
-     * @var \OjsMessage\MessageBundle\Entity\Thread $thread
+     * @var \Okulbilisim\MessageBundle\Entity\Thread $thread
      */
     protected $thread = null;
 
@@ -75,7 +75,7 @@ abstract class EnvelopeModel
     /**
      * Get folder
      *
-     * @return \OjsMessage\MessageBundle\Entity\Folder
+     * @return \Okulbilisim\MessageBundle\Entity\Folder
      */
     public function getFolder()
     {
@@ -85,8 +85,8 @@ abstract class EnvelopeModel
     /**
      * Set folder
      *
-     * @param  \OjsMessage\MessageBundle\Entity\Folder   $folder
-     * @return \OjsMessage\MessageBundle\Entity\Envelope
+     * @param  \Okulbilisim\MessageBundle\Entity\Folder   $folder
+     * @return \Okulbilisim\MessageBundle\Entity\Envelope
      */
     public function setFolder(Folder $folder = null)
     {
@@ -98,7 +98,7 @@ abstract class EnvelopeModel
     /**
      * Get message
      *
-     * @return \OjsMessage\MessageBundle\Entity\Message
+     * @return \Okulbilisim\MessageBundle\Entity\Message
      */
     public function getMessage()
     {
@@ -108,8 +108,8 @@ abstract class EnvelopeModel
     /**
      * Set message
      *
-     * @param  \OjsMessage\MessageBundle\Entity\Message  $message
-     * @return \OjsMessage\MessageBundle\Entity\Envelope
+     * @param  \Okulbilisim\MessageBundle\Entity\Message  $message
+     * @return \Okulbilisim\MessageBundle\Entity\Envelope
      */
     public function setMessage(Message $message)
     {
@@ -121,7 +121,7 @@ abstract class EnvelopeModel
     /**
      * Get thread
      *
-     * @return \OjsMessage\MessageBundle\Entity\Thread
+     * @return \Okulbilisim\MessageBundle\Entity\Thread
      */
     public function getThread()
     {
@@ -131,8 +131,8 @@ abstract class EnvelopeModel
     /**
      * Set thread
      *
-     * @param  \OjsMessage\MessageBundle\Entity\Thread  $thread
-     * @return \OjsMessage\MessageBundle\Entity\Message
+     * @param  \Okulbilisim\MessageBundle\Entity\Thread  $thread
+     * @return \Okulbilisim\MessageBundle\Entity\Message
      */
     public function setThread(Thread $thread)
     {
@@ -155,7 +155,7 @@ abstract class EnvelopeModel
      * Set ownedByUser
      *
      * @param  \Symfony\Component\Security\Core\User\UserInterface $ownedByUser
-     * @return \OjsMessage\MessageBundle\Entity\Envelope
+     * @return \Okulbilisim\MessageBundle\Entity\Envelope
      */
     public function setOwnedByUser(UserInterface $ownedByUser = null)
     {
@@ -178,7 +178,7 @@ abstract class EnvelopeModel
      * Set sentToUser
      *
      * @param  \Symfony\Component\Security\Core\User\UserInterface $sentToUser
-     * @return \OjsMessage\MessageBundle\Entity\Envelope
+     * @return \Okulbilisim\MessageBundle\Entity\Envelope
      */
     public function setSentToUser(UserInterface $sentToUser = null)
     {

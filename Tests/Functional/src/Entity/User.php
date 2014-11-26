@@ -1,6 +1,6 @@
 <?php
 
-namespace OjsMessage\MessageBundle\Tests\Functional\src\Entity;
+namespace Okulbilisim\MessageBundle\Tests\Functional\src\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 

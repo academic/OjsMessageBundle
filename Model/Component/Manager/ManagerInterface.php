@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,16 +11,16 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Model\Component\Manager;
+namespace Okulbilisim\MessageBundle\Model\Component\Manager;
 
 use Symfony\Component\EventDispatcher\EventDispatcherInterface ;
 use Doctrine\ORM\QueryBuilder;
-use OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface;
-use OjsMessage\MessageBundle\Model\FrontModel\ModelInterface;
+use Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface;
+use Okulbilisim\MessageBundle\Model\FrontModel\ModelInterface;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -35,22 +35,22 @@ interface ManagerInterface
      *
      * @access public
      * @param \Symfony\Component\EventDispatcher\EventDispatcherInterface         $dispatcher
-     * @param \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface $gateway
+     * @param \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface $gateway
      */
     public function __construct(EventDispatcherInterface  $dispatcher, GatewayInterface $gateway);
 
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Model\FrontModel\ModelInterface                $model
-     * @return \OjsMessage\MessageBundle\Model\Component\Repository\RepositoryInterface
+     * @param  \Okulbilisim\MessageBundle\Model\FrontModel\ModelInterface                $model
+     * @return \Okulbilisim\MessageBundle\Model\Component\Repository\RepositoryInterface
      */
     public function setModel(ModelInterface $model);
 
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @return \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function getGateway();
 
@@ -98,7 +98,7 @@ interface ManagerInterface
      *
      * @access public
      * @param  Object                                                              $entity
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\ManagerInterface
      */
     public function persist($entity);
 
@@ -106,14 +106,14 @@ interface ManagerInterface
      *
      * @access public
      * @param  Object                                                              $entity
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\ManagerInterface
      */
     public function remove($entity);
 
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\ManagerInterface
      */
     public function flush();
 
@@ -121,7 +121,7 @@ interface ManagerInterface
      *
      * @access public
      * @param  Object                                                              $entity
-     * @return \OjsMessage\MessageBundle\Model\Component\Manager\ManagerInterface
+     * @return \Okulbilisim\MessageBundle\Model\Component\Manager\ManagerInterface
      */
     public function refresh($entity);
 }

@@ -17,7 +17,7 @@ class AppKernel extends Kernel {
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
-            new OjsMessage\MessageBundle\OjsMessageMessageBundle(),
+            new Okulbilisim\MessageBundle\OkulbilisimMessageBundle(),
         );
     }
 
@@ -32,14 +32,14 @@ class AppKernel extends Kernel {
      * @return string
      */
     public function getCacheDir() {
-        return sys_get_temp_dir() . '/OjsMessageMessageBundle/cache/' . $this->getEnvironment();
+        return sys_get_temp_dir() . '/OkulbilisimMessageBundle/cache/' . $this->getEnvironment();
     }
 
     /**
      * @return string
      */
     public function getLogDir() {
-        return sys_get_temp_dir() . '/OjsMessageMessageBundle/logs';
+        return sys_get_temp_dir() . '/OkulbilisimMessageBundle/logs';
     }
 
 }

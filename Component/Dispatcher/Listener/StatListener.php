@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,19 +11,19 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Component\Dispatcher\Listener;
+namespace Okulbilisim\MessageBundle\Component\Dispatcher\Listener;
 
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use OjsMessage\MessageBundle\Component\Dispatcher\MessageEvents;
-use OjsMessage\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveEvent;
-use OjsMessage\MessageBundle\Model\FrontModel\FolderModel;
-use OjsMessage\MessageBundle\Model\FrontModel\EnvelopeModel;
-use OjsMessage\MessageBundle\Model\FrontModel\RegistryModel;
+use Okulbilisim\MessageBundle\Component\Dispatcher\MessageEvents;
+use Okulbilisim\MessageBundle\Component\Dispatcher\Event\UserEnvelopeReceiveEvent;
+use Okulbilisim\MessageBundle\Model\FrontModel\FolderModel;
+use Okulbilisim\MessageBundle\Model\FrontModel\EnvelopeModel;
+use Okulbilisim\MessageBundle\Model\FrontModel\RegistryModel;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -37,30 +37,30 @@ class StatListener implements EventSubscriberInterface
     /**
      *
      * @access private
-     * @var \OjsMessage\MessageBundle\Model\FrontModel\FolderModel $folderModel
+     * @var \Okulbilisim\MessageBundle\Model\FrontModel\FolderModel $folderModel
      */
     protected $folderModel;
 
     /**
      *
      * @access private
-     * @var \OjsMessage\MessageBundle\Model\FrontModel\EnvelopeModel $envelopeModel
+     * @var \Okulbilisim\MessageBundle\Model\FrontModel\EnvelopeModel $envelopeModel
      */
     protected $envelopeModel;
 
     /**
      *
      * @access private
-     * @var \OjsMessage\MessageBundle\Model\FrontModel\RegistryModel $registryModel
+     * @var \Okulbilisim\MessageBundle\Model\FrontModel\RegistryModel $registryModel
      */
     protected $registryModel;
 
     /**
      *
      * @access public
-     * @param \OjsMessage\MessageBundle\Model\FrontModel\EnvelopeModel $envelopeModel
-     * @param \OjsMessage\MessageBundle\Model\FrontModel\RegistryModel $registryModel
-     * @param \OjsMessage\MessageBundle\Model\FrontModel\FolderModel   $folderModel
+     * @param \Okulbilisim\MessageBundle\Model\FrontModel\EnvelopeModel $envelopeModel
+     * @param \Okulbilisim\MessageBundle\Model\FrontModel\RegistryModel $registryModel
+     * @param \Okulbilisim\MessageBundle\Model\FrontModel\FolderModel   $folderModel
      */
     public function __construct(FolderModel $folderModel, EnvelopeModel $envelopeModel, RegistryModel $registryModel)
     {

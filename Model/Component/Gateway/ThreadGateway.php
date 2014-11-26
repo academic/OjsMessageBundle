@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OjsMessage MessageBundle
+ * This file is part of the Okulbilisim MessageBundle
  *
  * (c) CodeConsortium <http://www.codeconsortium.com/>
  *
@@ -11,18 +11,18 @@
  * file that was distributed with this source code.
  */
 
-namespace OjsMessage\MessageBundle\Model\Component\Gateway;
+namespace Okulbilisim\MessageBundle\Model\Component\Gateway;
 
 use Doctrine\ORM\QueryBuilder;
 
-use OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface;
-use OjsMessage\MessageBundle\Model\Component\Gateway\BaseGateway;
+use Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface;
+use Okulbilisim\MessageBundle\Model\Component\Gateway\BaseGateway;
 
-use OjsMessage\MessageBundle\Entity\Thread;
+use Okulbilisim\MessageBundle\Entity\Thread;
 
 /**
  *
- * @category OjsMessage
+ * @category Okulbilisim
  * @package  MessageBundle
  *
  * @author   Reece Fowell <reece@codeconsortium.com>
@@ -101,8 +101,8 @@ class ThreadGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Thread                            $thread
-     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @param  \Okulbilisim\MessageBundle\Entity\Thread                            $thread
+     * @return \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function saveThread(Thread $thread)
     {
@@ -114,8 +114,8 @@ class ThreadGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Thread                            $thread
-     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @param  \Okulbilisim\MessageBundle\Entity\Thread                            $thread
+     * @return \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function updateThread(Thread $thread)
     {
@@ -127,8 +127,8 @@ class ThreadGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @param  \OjsMessage\MessageBundle\Entity\Thread                            $thread
-     * @return \OjsMessage\MessageBundle\Model\Component\Gateway\GatewayInterface
+     * @param  \Okulbilisim\MessageBundle\Entity\Thread                            $thread
+     * @return \Okulbilisim\MessageBundle\Model\Component\Gateway\GatewayInterface
      */
     public function deleteThread(Thread $thread)
     {
@@ -140,7 +140,7 @@ class ThreadGateway extends BaseGateway implements GatewayInterface
     /**
      *
      * @access public
-     * @return \OjsMessage\MessageBundle\Entity\Thread
+     * @return \Okulbilisim\MessageBundle\Entity\Thread
      */
     public function createThread()
     {
