@@ -1,11 +1,7 @@
-messages_bundle_licence:
-    pattern:  /{_locale}/messages/licence
-    defaults: { _controller: OkulbilisimMessageBundle:CustomPages:showLicence, _locale: en }
-    
 OkulbilisimMessageBundle-User-Folder:
     resource: "@OkulbilisimMessageBundle/Resources/config/routing/user-folder.yml"
-    prefix: /{_locale}/messages
+    prefix: /messages
 
 OkulbilisimMessageBundle-User-Message:
     resource: "@OkulbilisimMessageBundle/Resources/config/routing/user-message.yml"
-    prefix: /{_locale}/messages
+    prefix: /messages
