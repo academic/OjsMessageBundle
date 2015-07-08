@@ -1,20 +1,20 @@
 okulbilisim_message_user_index:
-    pattern:  /
+    path:  /
     defaults: { _controller: OkulbilisimMessageBundle:UserFolder:showFolderByName, _locale: en, folderName: inbox, page: 1 }
 
 #
 # Folders.
 #
 okulbilisim_message_user_folder_show:
-    pattern:  /folder/{folderName}
+    path:  /folder/{folderName}
     defaults: { _controller: OkulbilisimMessageBundle:UserFolder:showFolderByName, _locale: en, folderName: inbox, page: 1 }
     requirements:
         folderName: inbox|sent|drafts|junk|trash
 
 okulbilisim_message_user_folder_show_by_id:
-    pattern:  /folder/{folderId}
+    path:  /folder/{folderId}
     defaults: { _controller: OkulbilisimMessageBundle:UserFolder:showFolderById, _locale: en, page: 1 }
 
 okulbilisim_message_user_folder_mail_bulk_action:
-    pattern:  /folder/{folderName}/process-checked
+    path:  /folder/{folderName}/process-checked
     defaults: { _controller: OkulbilisimMessageBundle:UserFolder:folderBulk, _locale: en }
